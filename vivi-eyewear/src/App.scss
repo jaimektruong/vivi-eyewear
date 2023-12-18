@@ -1,0 +1,31 @@
+:root {
+  --color-primary: #162d5a;
+  --color-secondary: #204387;
+  --header-height: 88px;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.inner {
+  width: 1120px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.red {
+  border: 1px solid red;
+}
+
+.green {
+  border: 1px solid green;
+}
+
+.yellow {
+  border: 1px solid yellow;
+}

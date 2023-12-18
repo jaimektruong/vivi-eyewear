@@ -1,0 +1,29 @@
+.footer__brand {
+  background-color: var(--color-secondary);
+  height: 88px;
+  margin: auto 0;
+}
+
+.footer__brand--image {
+  width: 72px;
+  padding: 8px 8px 8px 0px;
+}
+
+.footer__brand--text {
+  font-size: 2rem;
+  display: inline-block;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.footer__info {
+  background-color: var(--color-primary);
+}
+
+.footer__info--text {
+  color: white;
+  font-size: 1rem;
+}
