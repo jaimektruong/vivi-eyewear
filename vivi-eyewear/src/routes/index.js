@@ -1,15 +1,12 @@
 import HomePage from "../pages/HomePage/HomePage";
 import TypeProductPage from "../pages/TypeProductPage/TypeProductPage";
 import ProductDetailsPage from "../pages/ProductDetailsPage/ProductDetailsPage";
+import ProductsPage from "../pages/ProductsPage/ProductsPage";
 export const routes = [
   {
     path: "/vivi-eyewear",
     page: HomePage,
     isShowHeader: true,
-  },
-  {
-    path: "*",
-    page: HomePage,
   },
   {
     path: "/vivi-eyewear/type",
@@ -18,7 +15,16 @@ export const routes = [
   },
   {
     path: "/vivi-eyewear/products",
-    page: ProductDetailsPage,
-    isShowHeader: true,
+    page: ProductsPage,
+    isShowHeader: false,
+  },
+  {
+    path: "/vivi-eyewear/products/:id",
+    page: ProductsPage,
+    isShowHeader: false,
+  },
+  {
+    path: "*",
+    page: HomePage,
   },
 ];
