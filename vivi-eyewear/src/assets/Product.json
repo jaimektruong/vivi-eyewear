@@ -1,0 +1,38 @@
+[
+  {
+    "name": "GN000001",
+    "image": "GN000001",
+    "price": 500000,
+    "material": "mylon",
+    "shape": "square",
+    "size": "53 - 19 - 145",
+    "description": "Gọng kính này từ bộ sưu tập MYKITA MYLON được chế tạo bằng công nghệ in 3D được gọi là thiêu kết laser chọn lọc. MYLON là vật liệu công nghệ cao đặc biệt nhẹ và bền, được làm thủ công ở Berlin - Đức"
+  },
+  {
+    "name": "GN000002",
+    "image": "GN000002",
+    "price": 700000,
+    "material": "mylon",
+    "shape": "aviator",
+    "size": "53 - 19 - 140",
+    "description": "Gọng kính này từ bộ sưu tập MYKITA MYLON, được làm bằng MYLON - một vật liệu đặc biệt nhẹ và có độ bền cao. Được làm thủ công ở Berlin - Đức"
+  },
+  {
+    "name": "GN000003",
+    "image": "GN000003",
+    "price": 650000,
+    "material": "mylon",
+    "shape": "rectangle",
+    "size": "53 - 19 - 145",
+    "description": "Được làm bằng MYLON - một vật liệu đặc biệt nhẹ và có độ bền cao Được làm thủ công ở Berlin. Gọng kính này từ bộ sưu tập MYKITA MYLON, được làm bằng MYLON - một vật liệu đặc biệt nhẹ và có độ bền cao, được làm thủ công ở Berlin - Đức"
+  }, 
+  {
+    "name": "GN000004",
+    "image": "GN000004",
+    "price": 750000,
+    "material": "mylon",
+    "shape": "rectangle",
+    "size": "53 - 19 - 145",
+    "description": "Được làm bằng MYLON - một vật liệu đặc biệt nhẹ và có độ bền cao Được làm thủ công ở Berlin. Gọng kính này từ bộ sưu tập MYKITA MYLON, được làm bằng MYLON - một vật liệu đặc biệt nhẹ và có độ bền cao, được làm thủ công ở Berlin - Đức"
+  }, 
+]
