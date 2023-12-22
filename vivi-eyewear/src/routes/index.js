@@ -2,12 +2,11 @@ import HomePage from "../pages/HomePage/HomePage";
 import TypeProductPage from "../pages/TypeProductPage/TypeProductPage";
 import ProductDetailsPage from "../pages/ProductDetailsPage/ProductDetailsPage";
 import AboutUsPage from "../pages/AboutUsPage/AboutUsPage";
-<<<<<<< HEAD
 import PaymentPage from "../pages/PaymentPage/PaymentPage"
-=======
 import ProductsPage from "../pages/ProductsPage/ProductsPage";
+import DeliveryPage from "../pages/DeliveryPage/DeliveryPage";
 
->>>>>>> 88192a605845e5cbaf60b174077a5cad863053f1
+
 export const routes = [
   {
     path: "/vivi-eyewear",
@@ -48,4 +47,9 @@ export const routes = [
     page: PaymentPage,
     isShowHeader: true,
   },
+  {
+    path: "/Delivery",
+    page: DeliveryPage,
+    isShowHeader: true,
+  }
 ];
