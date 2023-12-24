@@ -7,28 +7,7 @@ function Footer() {
   return (
     <footer className="container-fluid d-flex flex-column p-0">
       <div className="footer__brand">
-        <div className="container">
-          <div className="align-middle ps-5">
-            <img
-              className="footer__brand--image align-middle"
-              src={Logo}
-              alt="logo"
-            />
-            <h1 className="footer__brand--text align-middle">Vivi Eyewear</h1>
-          </div>
-        </div>
-      </div>
-      <div className="footer__info footer__info--text">
-        <div className="container" style={{ maxWidth: "max-content" }}>
-          <div className="p-5">
-            <div className="row w-100">
-              <div className="col-lg-3 col-md-6 mb-4 mb-md-0 py-5">
-                <h5 className="text-uppercase">Sản phẩm</h5>
-                <ul className="list-unstyled mb-0 text-white">
-                  <li>
-                    <Link className="nav-link" to="#!">
-                      Gọng kính
-                    </Link>
+        
                   </li>
                   <li>
                     <a className="nav-link" href="#!">
