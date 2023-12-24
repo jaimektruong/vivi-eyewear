@@ -1,6 +1,6 @@
 import HomePage from "../pages/HomePage/HomePage";
 import TypeProductPage from "../pages/TypeProductPage/TypeProductPage";
-import ProductDetailsPage from "../pages/ProductDetailsPage/ProductDetailsPage";
+//import ProductDetailsPage from "../pages/ProductDetailsPage/ProductDetailsPage";
 import AboutUsPage from "../pages/AboutUsPage/AboutUsPage";
 import PaymentPage from "../pages/PaymentPage/PaymentPage"
 import ProductsPage from "../pages/ProductsPage/ProductsPage";
@@ -33,17 +33,17 @@ export const routes = [
     page: HomePage,
   },
   {
-    path: "/about-us",
+    path: "/vivi-eyewear/about-us",
     page: AboutUsPage,
     isShowHeader: true,
   },
   {
-    path: "/about-us",
+    path: "/vivi-eyewear/about-us",
     page: AboutUsPage,
     isShowHeader: true,
   },
   {
-    path: "/payment",
+    path: "/vivi-eyewear/payment",
     page: PaymentPage,
     isShowHeader: true,
   },
