@@ -2,7 +2,7 @@ import "./WarrantyPage.scss";
 function WarrantyPage() {
   return (
     <div className="inner">
-      <div className="content" style={{ textAlign: "center"}}>
+      <div className="content">
         <h2 className="title">Chính sách bảo hành</h2> <br/>
         <p>1. Bảo hành 1 đổi 1 trong 180 ngày sau khi mua hàng nếu lớp váng dầu của tròng kính gặp vấn đề về kỹ thuật như xô váng, mất váng mà không phải do nhiệt hay tác động vật lý như trầy xước, nứt, vỡ(Virtual Vision Eyewear)</p> <br/>
 
