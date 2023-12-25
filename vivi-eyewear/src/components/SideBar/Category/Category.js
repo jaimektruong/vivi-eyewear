@@ -8,31 +8,25 @@ function Category({ handleChange }) {
       <div>
         <label className="sidebar-label-container">
           <input onChange={handleChange} type="radio" value="" name="test" />
-          <span className="checkmark"></span>All
+          <span className="checkmark"></span>Tất cả
         </label>
 
         <Input
           handleChange={handleChange}
-          value="sneakers"
-          title="Sneakers"
+          value="Nhựa"
+          title="Nhựa"
           name="test"
         />
         <Input
           handleChange={handleChange}
-          value="flats"
-          title="Flats"
+          value="Thép không gỉ"
+          title="Thép không gỉ"
           name="test"
         />
         <Input
           handleChange={handleChange}
-          value="sandals"
-          title="Sandals"
-          name="test"
-        />
-        <Input
-          handleChange={handleChange}
-          value="heels"
-          title="Heels"
+          value="Thép không gỉ nhẹ"
+          title="Thép không gỉ nhẹ"
           name="test"
         />
       </div>
