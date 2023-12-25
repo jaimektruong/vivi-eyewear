@@ -7,42 +7,42 @@ function Color({ handleChange }) {
       <h2 className="sidebar-title price-title">Color</h2>
       <label className="sidebar-label-container">
         <input onChange={handleChange} type="radio" value="" name="test1" />
-        <span className="checkmark all"></span>All
+        <span className="checkmark all"></span>Tất cả
       </label>
       <Input
         handleChange={handleChange}
-        value="black"
-        title="Black"
+        value="Đen"
+        title="Đen"
         name="test1"
         color="black"
       />
       <Input
         handleChange={handleChange}
-        value="blue"
-        title="Blue"
+        value="Nâu"
+        title="Nâu"
         name="test1"
-        color="blue"
+        color="brown"
       />
       <Input
         handleChange={handleChange}
-        value="red"
-        title="Red"
+        value="Đỏ"
+        title="Đỏ"
         name="test1"
         color="red"
       />
       <Input
         handleChange={handleChange}
-        value="green"
-        title="Green"
+        value="Hồng"
+        title="Hồng"
         name="test1"
-        color="green"
+        color="pink"
       />
       <Input
         handleChange={handleChange}
-        value="white"
-        title="White"
+        value="Xanh"
+        title="Xanh"
         name="test1"
-        color="white"
+        color="blue"
       />
 
       <label className="sidebar-label-container">
