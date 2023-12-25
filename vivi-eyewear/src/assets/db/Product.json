@@ -1,3 +1,4 @@
+
 [
   {
     "name": "GN000001",
@@ -189,7 +190,7 @@
   },
   {
     "name": "GR000008",
-    "image": "GR000008",
+    "image": "GR000008.png",
     "price": 950000,
     "type": "Gọng kính râm",
     "material": "Thép không gỉ nhẹ",
@@ -200,7 +201,7 @@
   },
   {
     "name": "GR000009",
-    "image": "GR000009",
+    "image": "GR000009.png",
     "price": 980000,
     "type": "Gọng kính râm",
     "material": "Thép không gỉ nhẹ",
@@ -211,7 +212,7 @@
   },
   {
     "name": "GR000010",
-    "image": "GR000010",
+    "image": "GR000010.png",
     "price": 950000,
     "type": "Gọng kính râm",
     "material": "Thép không gỉ nhẹ",
@@ -222,7 +223,7 @@
   },
   {
     "name": "GR000011",
-    "image": "GR000011",
+    "image": "GR000011.png",
     "price": 850000,
     "type": "Gọng kính râm",
     "material": "Thép không gỉ",
@@ -233,7 +234,7 @@
   },
   {
     "name": "GR000012",
-    "image": "GR000012",
+    "image": "GR000012.png",
     "price": 980000,
     "type": "Gọng kính râm",
     "material": "Thép không gỉ nhẹ",
@@ -244,7 +245,7 @@
   },
   {
     "name": "GR000013",
-    "image": "GR000013",
+    "image": "GR000013.png",
     "price": 870000,
     "type": "Gọng kính râm",
     "material": "Nhựa",
@@ -255,7 +256,7 @@
   },
   {
     "name": "GR000014",
-    "image": "GR000014",
+    "image": "GR000014.png",
     "price": 790000,
     "type": "Gọng kính râm",
     "material": "Thép không gỉ nhẹ",
@@ -266,7 +267,7 @@
   },
   {
     "name": "GR000015",
-    "image": "GR000015",
+    "image": "GR000015.png",
     "price": 800000,
     "type": "Gọng kính râm",
     "material": "Nhựa",
@@ -277,7 +278,7 @@
   },
   {
     "name": "TK000001",
-    "image": "Tk000001.png",
+    "image": "TK000001.png",
     "price": 560000,
     "type": "Tròng kính",
     "material": "Plastic",
@@ -288,7 +289,7 @@
   },
   {
     "name": "TK000002",
-    "image": "Tk000002.png",
+    "image": "TK000002.png",
     "price": 460000,
     "type": "Tròng kính",
     "material": "Plastic",
@@ -299,7 +300,7 @@
   },
   {
     "name": "TK000003",
-    "image": "Tk000003.png",
+    "image": "TK000003.png",
     "price": 336000,
     "type": "Tròng kính",
     "material": "Plastic",
@@ -310,7 +311,7 @@
   },
   {
     "name": "TK000004",
-    "image": "Tk000004.png",
+    "image": "TK000004.png",
     "price": 2520000,
     "type": "Tròng kính",
     "material": "Plastic",
@@ -321,7 +322,7 @@
   },
   {
     "name": "TK000005",
-    "image": "Tk000005.png",
+    "image": "TK000005.png",
     "price": 1050000,
     "type": "Tròng kính",
     "material": "Plastic",

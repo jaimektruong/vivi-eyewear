@@ -1,0 +1,1 @@
+import "../productImage/detail_page/GKL000001.png"

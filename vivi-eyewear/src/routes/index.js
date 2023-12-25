@@ -30,11 +30,6 @@ export const routes = [
     isShowHeader: false,
   },
   {
-    path: "/vivi-eyewear/productsDetails",
-    page: ProductDetailsPage,
-    isShowHeader: true,
-  },
-  {
     path: "*",
     page: HomePage,
   },
