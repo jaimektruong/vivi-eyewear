@@ -29,26 +29,31 @@ export const routes = [
     isShowHeader: false,
   },
   {
+    path: "/vivi-eyewear/productsDetails",
+    page: ProductDetailsPage,
+    isShowHeader: true,
+  },
+  {
     path: "*",
     page: HomePage,
   },
   {
-    path: "/about-us",
+    path: "/vivi-eyewear/about-us",
     page: AboutUsPage,
     isShowHeader: true,
   },
   {
-    path: "/about-us",
+    path: "/vivi-eyewear/about-us",
     page: AboutUsPage,
     isShowHeader: true,
   },
   {
-    path: "/payment",
+    path: "/vivi-eyewear/payment",
     page: PaymentPage,
     isShowHeader: true,
   },
   {
-    path: "/Delivery",
+    path: "/vivi-eyewear/Delivery",
     page: DeliveryPage,
     isShowHeader: true,
   }

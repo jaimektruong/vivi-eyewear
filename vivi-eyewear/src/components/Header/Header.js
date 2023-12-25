@@ -2,9 +2,7 @@ import "./Header.scss";
 import { useState, useRef } from "react";
 import Logo from "../../assets/logo.png";
 import Login from "../Login/Login.js";
-import "../Login/Login.scss";
 import Register from "../Register/Register.js";
-import "../Register/Register.scss";
 import { useNavigate } from "react-router-dom";
 
 function Cart(props) {
@@ -185,7 +183,7 @@ const Header = (props) => {
         {/* Modal Login */}
         <div className="modal-menu">
           <div
-            className="modal fade"
+            className="modal fade hide"
             id="navbModal"
             tabIndex="-1"
             aria-labelledby="exampleModalLabel"

@@ -2,7 +2,7 @@ import "./PaymentPage.scss";
 function PaymentPage(){
     return(
         <div classname= "inner">
-            <div classname="content">
+            <div classname="content" style={{ textAlign: "center"}}>
                 <div classname =" title">Chính sách thanh toán</div>
                 <ul>
                     <li>Giao hàng tận nơi và được kiểm tra hàng trước khi thanh toán.</li>
