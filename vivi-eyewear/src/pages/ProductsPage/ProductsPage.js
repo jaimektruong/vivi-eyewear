@@ -69,15 +69,16 @@ const ProductsPage = () => {
       <div>
         <Header query={query} handleInputChange={handleInputChange} />
         <div className="d-block p-5">
+        <Recommended handleClick={handleClick} />
+
         <div className="d-flex">
-          <div className="col-3 p-5 m-5">
+          <div className="col-3 px-5 mx-5">
             <Sidebar handleChange={handleChange} />
           </div>
           <div className="container row">
           <section className="card-container">{result}</section>
           </div>
         </div>
-          <Recommended handleClick={handleClick} />
         </div>
         <Footer />
       </div>
