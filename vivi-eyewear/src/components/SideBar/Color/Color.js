@@ -4,7 +4,7 @@ import "./Color.scss";
 function Color({ handleChange }) {
   return (
     <div className="ml">
-      <h2 className="sidebar-title price-title">Color</h2>
+      <h2 className="sidebar-title color-title">Color</h2>
       <label className="sidebar-label-container">
         <input onChange={handleChange} type="radio" value="" name="test1" />
         <span className="checkmark all"></span>All
@@ -25,10 +25,10 @@ function Color({ handleChange }) {
       />
       <Input
         handleChange={handleChange}
-        value="Đỏ"
-        title="Đỏ"
+        value="Hồng"
+        title="Hồng"
         name="test1"
-        color="red"
+        color="#f5b9ba"
       />
       <Input
         handleChange={handleChange}
@@ -51,18 +51,6 @@ function Color({ handleChange }) {
         name="test1"
         color="white"
       />{" "}
-      <label className="sidebar-label-container">
-        <input
-          type="radio"
-          onChange={handleChange}
-          value="white"
-          name="test1"
-        />
-        <span
-          className="checkmark"
-          style={{ background: "white", border: "2px solid black" }}
-        ></span>
-      </label>
     </div>
   );
 }

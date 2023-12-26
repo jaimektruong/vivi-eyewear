@@ -3,7 +3,7 @@
   {
     "name": "GN000001",
     "image": "GN000001.png",
-    "price": 500000,
+    "price": "500000",
     "type": "Gọng kính",
     "material": "Nhựa",
     "shape": "Browline",
@@ -14,7 +14,7 @@
   {
     "name": "GN000002",
     "image": "GN000002.png",
-    "price": 700000,
+    "price": "700000",
     "type": "Gọng kính",
     "material": "Nhựa",
     "shape": "Aviator",
@@ -25,7 +25,7 @@
   {
     "name": "GN000003",
     "image": "GN000003.png",
-    "price": 650000,
+    "price": "650000",
     "type": "Gọng kính",
     "material": "Nhựa",
     "shape": "Chữ nhật",
@@ -36,7 +36,7 @@
   {
     "name": "GN000004",
     "image": "GN000004.png",
-    "price": 750000,
+    "price": "750000",
     "type": "Gọng kính",
     "material": "nhựa",
     "shape": "Oval",
@@ -47,7 +47,7 @@
   {
     "name": "GN000005",
     "image": "GN000005.png",
-    "price": 750000,
+    "price": "750000",
     "type": "Gọng kính",
     "material": "Nhựa",
     "shape": "Oval",
@@ -58,7 +58,7 @@
   {
     "name": "GN000006",
     "image": "GN000006.png",
-    "price": 500000,
+    "price": "500000",
     "type": "Gọng kính",
     "material": "Nhựa",
     "shape": "Oval",
@@ -69,7 +69,7 @@
   {
     "name": "GN000007",
     "image": "GN000007.png",
-    "price": 400000,
+    "price": "400000",
     "type": "Gọng kính",
     "material": "Nhựa",
     "shape": "Aviator",
@@ -80,7 +80,7 @@
   {
     "name": "GN000008",
     "image": "GN000008.png",
-    "price": 600000,
+    "price": "600000",
     "type": "Gọng kính",
     "material": "Nhựa",
     "shape": "Browline",
@@ -91,7 +91,7 @@
   {
     "name": "GN000009",
     "image": "GN000009.png",
-    "price": 400000,
+    "price": "400000",
     "type": "Gọng kính",
     "material": "Nhựa",
     "shape": "Tròn",
@@ -103,7 +103,7 @@
   {
     "name": "GN000010",
     "image": "GN000010.png",
-    "price": 900000,
+    "price": "900000",
     "type": "Gọng kính",
     "material": "Nhựa",
     "shape": "Tròn",
@@ -114,7 +114,7 @@
   {
     "name": "GR000001",
     "image": "GR000001.png",
-    "price": 750000,
+    "price": "750000",
     "type": "Gọng kính râm",
     "material": "Thép không gỉ",
     "shape": "Vuông",
@@ -125,7 +125,7 @@
   {
     "name": "GR000002",
     "image": "GR000002.png",
-    "price": 800000,
+    "price": "800000",
     "type": "Gọng kính râm",
     "material": "Thép không gỉ",
     "shape": "Tròn",
@@ -136,7 +136,7 @@
   {
     "name": "GR000003",
     "image": "GR000003.png",
-    "price": 900000,
+    "price": "900000",
     "type": "Gọng kính râm",
     "material": "Thép không gỉ nhẹ",
     "shape": "Vuông",
@@ -147,7 +147,7 @@
   {
     "name": "GR000004",
     "image": "GR000004.png",
-    "price": 850000,
+    "price": "850000",
     "type": "Gọng kính râm",
     "material": "Thép không gỉ nhẹ",
     "shape": "Tròn",
@@ -158,7 +158,7 @@
   {
     "name": "GR000005",
     "image": "GR000005.png",
-    "price": 950000,
+    "price": "950000",
     "type": "Gọng kính râm",
     "material": "Thép không gỉ nhẹ",
     "shape": "Vuông",
@@ -169,7 +169,7 @@
   {
     "name": "GR000006",
     "image": "GR000006.png",
-    "price": 850000,
+    "price": "850000",
     "type": "Gọng kính râm",
     "material": "Nhựa",
     "shape": "Vuông",
@@ -180,7 +180,7 @@
   {
     "name": "GR000007",
     "image": "GR000007.png",
-    "price": 775000,
+    "price": "775000",
     "type": "Gọng kính râm",
     "material": "Nhựa",
     "shape": "Vuông",
@@ -191,7 +191,7 @@
   {
     "name": "GR000008",
     "image": "GR000008.png",
-    "price": 950000,
+    "price": "950000",
     "type": "Gọng kính râm",
     "material": "Thép không gỉ nhẹ",
     "shape": "Tròn",
@@ -202,7 +202,7 @@
   {
     "name": "GR000009",
     "image": "GR000009.png",
-    "price": 980000,
+    "price": "980000",
     "type": "Gọng kính râm",
     "material": "Thép không gỉ nhẹ",
     "shape": "Vuông",
@@ -213,7 +213,7 @@
   {
     "name": "GR000010",
     "image": "GR000010.png",
-    "price": 950000,
+    "price": "950000",
     "type": "Gọng kính râm",
     "material": "Thép không gỉ nhẹ",
     "shape": "Oval",
@@ -224,7 +224,7 @@
   {
     "name": "GR000011",
     "image": "GR000011.png",
-    "price": 850000,
+    "price": "850000",
     "type": "Gọng kính râm",
     "material": "Thép không gỉ",
     "shape": "Tròn",
@@ -235,7 +235,7 @@
   {
     "name": "GR000012",
     "image": "GR000012.png",
-    "price": 980000,
+    "price": "980000",
     "type": "Gọng kính râm",
     "material": "Thép không gỉ nhẹ",
     "shape": "Oval",
@@ -246,7 +246,7 @@
   {
     "name": "GR000013",
     "image": "GR000013.png",
-    "price": 870000,
+    "price": "870000",
     "type": "Gọng kính râm",
     "material": "Nhựa",
     "shape": "Oval",
@@ -257,7 +257,7 @@
   {
     "name": "GR000014",
     "image": "GR000014.png",
-    "price": 790000,
+    "price": "790000",
     "type": "Gọng kính râm",
     "material": "Thép không gỉ nhẹ",
     "shape": "Oval",
@@ -268,7 +268,7 @@
   {
     "name": "GR000015",
     "image": "GR000015.png",
-    "price": 800000,
+    "price": "800000",
     "type": "Gọng kính râm",
     "material": "Nhựa",
     "shape": "Oval",
@@ -279,7 +279,7 @@
   {
     "name": "TK000001",
     "image": "TK000001.png",
-    "price": 560000,
+    "price": "560000",
     "type": "Tròng kính",
     "material": "Plastic",
     "shape": "Tròn",
@@ -290,7 +290,7 @@
   {
     "name": "TK000002",
     "image": "TK000002.png",
-    "price": 460000,
+    "price": "460000",
     "type": "Tròng kính",
     "material": "Plastic",
     "shape": "Tròn",
@@ -301,7 +301,7 @@
   {
     "name": "TK000003",
     "image": "TK000003.png",
-    "price": 336000,
+    "price": "336000",
     "type": "Tròng kính",
     "material": "Plastic",
     "shape": "Tròn",
@@ -312,7 +312,7 @@
   {
     "name": "TK000004",
     "image": "TK000004.png",
-    "price": 2520000,
+    "price": "2520000",
     "type": "Tròng kính",
     "material": "Plastic",
     "shape": "Tròn",
@@ -323,7 +323,7 @@
   {
     "name": "TK000005",
     "image": "TK000005.png",
-    "price": 1050000,
+    "price": "1050000",
     "type": "Tròng kính",
     "material": "Plastic",
     "shape": "Tròn",

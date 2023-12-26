@@ -26,8 +26,7 @@ const ProductsPage = () => {
   const handleClick = (event) => {
     setSelectedCategory(event.target.value);
   };
-
-  function filteredData(products, selected, query) {
+  function filteredData() {
     let filteredItems = products;
 
     if (query) {
@@ -35,18 +34,24 @@ const ProductsPage = () => {
         (item) => item.name.toLowerCase().indexOf(query.toLowerCase()) !== -1
       );
     }
-
-    if (selected) {
-      filteredItems = filteredItems.filter(
-        ({ type, color, material, price, name }) =>
-          type === selected ||
-          color === selected ||
-          material === selected ||
-          price === selected ||
-          name === selected
-      );
+    if (selectedCategory) {
+      filteredItems = filteredItems.filter((item) => {
+        const price = parseInt(item.price);
+        if (selectedCategory === "500000") {
+          return price <= 500000;
+        } else if (selectedCategory === "700000") {
+          return price > 500000 && price <= 700000;
+        } else if (selectedCategory === "800000") {
+          return price > 700000;
+        } else {
+          return (
+            item.type === selectedCategory ||
+            item.color === selectedCategory ||
+            item.material === selectedCategory
+          );
+        }
+      });
     }
-
     return filteredItems.map(({ image, name, price }) => (
       <CardProduct
         key={Math.random()}
@@ -57,15 +62,15 @@ const ProductsPage = () => {
     ));
   }
 
-  const result = filteredData(products, selectedCategory, query);
+  const result = filteredData();
 
   return (
     <>
       <div>
         <Header query={query} handleInputChange={handleInputChange} />
-        <div className="container d-block p-5">
+        <div className="d-block p-5">
         <div className="d-flex">
-          <div className="col-3">
+          <div className="col-3 p-5 m-5">
             <Sidebar handleChange={handleChange} />
           </div>
           <div className="container row">
