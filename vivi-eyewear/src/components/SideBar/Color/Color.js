@@ -4,10 +4,10 @@ import "./Color.scss";
 function Color({ handleChange }) {
   return (
     <div className="ml">
-      <h2 className="sidebar-title price-title">Color</h2>
+      <h2 className="sidebar-title color-title">Color</h2>
       <label className="sidebar-label-container">
         <input onChange={handleChange} type="radio" value="" name="test1" />
-        <span className="checkmark all"></span>All
+        <span className="checkmark all"></span>Tất cả
       </label>
       <Input
         handleChange={handleChange}
@@ -18,24 +18,24 @@ function Color({ handleChange }) {
       />
       <Input
         handleChange={handleChange}
-        value="Xanh dương"
-        title="Xanh dương"
+        value="Nâu"
+        title="Nâu"
         name="test1"
-        color="blue"
+        color="brown"
       />
       <Input
         handleChange={handleChange}
         value="Đỏ"
         title="Đỏ"
         name="test1"
-        color="red"
+        color="#f5b9ba"
       />
       <Input
         handleChange={handleChange}
-        value="Xanh"
-        title="Xanh"
+        value="Hồng"
+        title="Hồng"
         name="test1"
-        color="green"
+        color="pink"
       />
       <Input
         handleChange={handleChange}
@@ -51,6 +51,7 @@ function Color({ handleChange }) {
         name="test1"
         color="white"
       />{" "}
+      <Input value="Xanh" title="Xanh" name="test1" color="blue" />
       <label className="sidebar-label-container">
         <input
           type="radio"

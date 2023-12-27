@@ -1,72 +1,86 @@
 import HomePage from "../pages/HomePage/HomePage";
-import TypeProductPage from "../pages/TypeProductPage/TypeProductPage";
-//import ProductDetailsPage from "../pages/ProductDetailsPage/ProductDetailsPage";
 import AboutUsPage from "../pages/AboutUsPage/AboutUsPage";
-import PaymentPage from "../pages/PaymentPage/PaymentPage"
+import PaymentPage from "../pages/PaymentPage/PaymentPage";
 import ProductsPage from "../pages/ProductsPage/ProductsPage";
 import DeliveryPage from "../pages/DeliveryPage/DeliveryPage";
-import Login from "../pages/LoginPage/Login";
 import Register from "../pages/RegisterPage/Register";
+<<<<<<< HEAD
 import Checkout from "../pages/CheckoutPage/CheckoutPage"
 
+=======
+import ProductDetailsPage from "../pages/ProductDetailsPage/ProductDetailsPage";
+import BlogsPage from "../pages/BlogsPage/BlogsPage";
+import PageNotFound from "../pages/PageNotFound/PageNotFound";
+import LoginPage from "../pages/LoginPage/Login";
+import WarrantyPage from "../pages/WarrantyPage/WarrantyPage";
+>>>>>>> 9b34c7e0124d480325739896843d488e1a576a69
 export const routes = [
   {
-    path: "/vivi-eyewear",
+    path: "/",
     page: HomePage,
     isShowHeader: true,
   },
+
   {
-    path: "/vivi-eyewear/type",
-    page: TypeProductPage,
+    path: "/san-pham/:name",
+    page: ProductDetailsPage,
     isShowHeader: true,
   },
   {
-    path: "/vivi-eyewear/products",
+    path: "/san-pham",
     page: ProductsPage,
     isShowHeader: false,
   },
   {
-    path: "/vivi-eyewear/products/:id",
+    path: "/:type",
     page: ProductsPage,
     isShowHeader: false,
   },
   {
-    path: "*",
-    page: HomePage,
-  },
-  {
-    path: "/vivi-eyewear/about-us",
+    path: "/ve-chung-toi",
     page: AboutUsPage,
     isShowHeader: true,
   },
   {
-    path: "/vivi-eyewear/about-us",
-    page: AboutUsPage,
+    path: "/blogs",
+    page: BlogsPage,
     isShowHeader: true,
   },
   {
-    path: "/vivi-eyewear/payment",
+    path: "/hinh-thuc-thanh-toan",
     page: PaymentPage,
     isShowHeader: true,
   },
   {
-    path: "/vivi-eyewear/Delivery",
+    path: "/chinh-sach-giao-hang",
     page: DeliveryPage,
     isShowHeader: true,
   },
   {
-    path: "/vivi-eyewear/sign-in",
-    page: Login,
+    path: "/chinh-sach-bao-hanh",
+    page: WarrantyPage,
     isShowHeader: true,
   },
   {
-    path: "/vivi-eyewear/sign-up",
+    path: "/sign-in",
+    page: LoginPage,
+    isShowHeader: true,
+  },
+  {
+    path: "/sign-up",
     page: Register,
     isShowHeader: true,
   },
   {
+<<<<<<< HEAD
     path: "/vivi-eyewear/Checkout",
     page: Checkout,
     isShowHeader: true,
   }
+=======
+    path: "/*",
+    page: PageNotFound,
+    isShowHeader: true,
+  },
+>>>>>>> 9b34c7e0124d480325739896843d488e1a576a69
 ];

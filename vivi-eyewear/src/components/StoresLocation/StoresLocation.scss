@@ -1,0 +1,36 @@
+.location__container .find {
+  position: relative;
+  width: 100%;
+}
+
+.location__title .title {
+  position: absolute;
+}
+
+.location__title h2 span {
+  font-size: 1rem;
+  font-weight: normal;
+}
+.location__title h2 {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.button-find {
+  width: 176px;
+  height: 48px;
+  border: none;
+  border-radius: 8px;
+  position: absolute;
+  right: 0;
+  top: 30%;
+}
+
+.btn--color-primary {
+  background-color: var(--color-primary);
+}
+
+.location__content {
+  display: flex;
+  justify-content: space-between;
+}

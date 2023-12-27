@@ -1,0 +1,63 @@
+//flexbox
+.content-box {
+}
+.content-styles {
+  color: #162d5a;
+  font-size: 16;
+}
+
+.gap-8 {
+  gap: 8px;
+}
+.gap-16 {
+  gap: 16px;
+}
+.gap-80 {
+  gap: 80px;
+}
+.button-background {
+  color: #ffffff;
+  background-color: #162d5a;
+}
+.button-size {
+  width: 256px;
+  height: 48px;
+  font-size: 22px;
+}
+
+.title-styles {
+  font-weight: bold;
+  font-size: 16;
+}
+.price-styles {
+  font-size: 22px;
+  font-weight: bold;
+  color: #ffffff;
+  width: 160px;
+  height: 40px;
+  background-color: #162d5a;
+  border-radius: 6px;
+  text-align: center;
+}
+.price-styles p {
+  height: 100%;
+}
+hr {
+  color: #162d5a;
+  height: 1px;
+  background-color: #162d5a;
+  border: none;
+  opacity: 1;
+  margin-top: 40px;
+}
+
+.margin-style-mini-image {
+  margin: 8px;
+}
+p {
+  margin: 0;
+}
+.ilustration-image-resize {
+  width: 560px;
+  height: 400px;
+}
