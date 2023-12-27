@@ -11,6 +11,7 @@ const ProductDetails = () => {
   const handlePlusClick = () => {
     setValue(value + 1);
   };
+  
   return (
     <>
       <div className="d-md-flex">

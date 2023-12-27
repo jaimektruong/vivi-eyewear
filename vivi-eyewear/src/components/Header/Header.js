@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import Logo from "../../assets/logo.png";
@@ -5,12 +6,20 @@ import { Link } from "react-router-dom";
 const Header = ({ handleInputChange, query }) => {
   const [menu, setMenu] = useState("Home");
   const [isProductHovered, setIsProductHovered] = useState(false);
+=======
+
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import Logo from "../../assets/logo.png";
+import "./Header.scss";
+>>>>>>> aa2e1cbcabbc33c9303945eda500058cf0e1769f
 
   const handleProductMouseEnter = () => {
     setIsProductHovered(true);
   };
 
   const navigate = useNavigate();
+<<<<<<< HEAD
   const loginModalRef = useRef();
   const registerModalRef = useRef();
 
@@ -18,6 +27,17 @@ const Header = ({ handleInputChange, query }) => {
     navigate("/vivi-eyewear");
   };
 
+=======
+  const Home = () => {
+    navigate("/vivi-eyewear");
+  };
+  const handleLogin = () => {
+    navigate("/vivi-eyewear/sign-in");
+  };
+  const handleRegister = () => {
+    navigate("/vivi-eyewear/sign-up");
+  };
+>>>>>>> aa2e1cbcabbc33c9303945eda500058cf0e1769f
   return (
     <div
       className="header"
@@ -93,8 +113,7 @@ const Header = ({ handleInputChange, query }) => {
                 <button
                   type="button"
                   className="login-container btn btn-link text-light"
-                  data-bs-toggle="modal"
-                  data-bs-target="#LoginModal"
+                  onClick={handleLogin}
                 >
                   Sign In
                 </button>
@@ -102,8 +121,7 @@ const Header = ({ handleInputChange, query }) => {
                 <button
                   type="button"
                   className="register-container btn btn-link text-light"
-                  data-bs-toggle="modal"
-                  data-bs-target="#RegisterModal"
+                  onClick={handleRegister}
                 >
                   Sign Up
                 </button>
@@ -111,9 +129,12 @@ const Header = ({ handleInputChange, query }) => {
               {/* Modal Login */}
             </div>
           </div>
+<<<<<<< HEAD
           <div className="modal-login">
             {/* Include Login and Register components here */}
           </div>
+=======
+>>>>>>> aa2e1cbcabbc33c9303945eda500058cf0e1769f
 
           <div className="d-md-flex d-none justify-content-around">
             {/* <Cart value="0" /> */}
@@ -122,7 +143,7 @@ const Header = ({ handleInputChange, query }) => {
         {/* Modal Login */}
         <div className="modal-menu">
           <div
-            className="modal fade"
+            className="modal fade hide"
             id="navbModal"
             tabIndex="-1"
             aria-labelledby="exampleModalLabel"
@@ -174,8 +195,8 @@ const Header = ({ handleInputChange, query }) => {
                     <button
                       type="button"
                       className="login-container btn btn-link text-light"
-                      data-bs-toggle="modal"
-                      data-bs-target="#LoginModal"
+                      onClick={handleLogin}
+
                     >
                       Sign In
                     </button>
@@ -183,8 +204,7 @@ const Header = ({ handleInputChange, query }) => {
                     <button
                       type="button"
                       className="register-container btn btn-link text-light"
-                      data-bs-toggle="modal"
-                      data-bs-target="#RegisterModal"
+                      onClick={handleRegister}
                     >
                       Sign Up
                     </button>

@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 import "./ProductsPage.scss";
+<<<<<<< HEAD
+=======
+import Recommended from "../../components/Recommended/Recommended";
+>>>>>>> aa2e1cbcabbc33c9303945eda500058cf0e1769f
 import products from "../../assets/db/Product.json";
 import CardProduct from "../../components/CardProduct/CardProduct";
 import Sidebar from "../../components/SideBar/Sidebar";
@@ -36,15 +40,19 @@ const ProductsPage = () => {
     setQuery(event.target.value);
   };
 
+<<<<<<< HEAD
   const filteredItems = records.filter(
     (product) => product.name.toLowerCase().indexOf(query.toLowerCase()) !== -1
   );
 
+=======
+>>>>>>> aa2e1cbcabbc33c9303945eda500058cf0e1769f
   // Radio Filter
   const handleChange = (event) => {
     setSelectedType(event.target.value);
   };
 
+<<<<<<< HEAD
   function filteredData(records, selected, query) {
     let filteredProducts = records;
 
@@ -79,11 +87,55 @@ const ProductsPage = () => {
   }
 
   const result = filteredData(records, selectedType, query);
+=======
+  // Button Filter
+  const handleClick = (event) => {
+    setSelectedCategory(event.target.value);
+  };
+  function filteredData() {
+    let filteredItems = products;
+
+    if (query) {
+      filteredItems = products.filter(
+        (item) => item.name.toLowerCase().indexOf(query.toLowerCase()) !== -1
+      );
+    }
+    if (selectedCategory) {
+      filteredItems = filteredItems.filter((item) => {
+        const price = parseInt(item.price);
+        if (selectedCategory === "500000") {
+          return price <= 500000;
+        } else if (selectedCategory === "700000") {
+          return price > 500000 && price <= 700000;
+        } else if (selectedCategory === "800000") {
+          return price > 700000;
+        } else {
+          return (
+            item.type === selectedCategory ||
+            item.color === selectedCategory ||
+            item.material === selectedCategory
+          );
+        }
+      });
+    }
+    return filteredItems.map(({ image, name, price }) => (
+      <CardProduct
+        key={Math.random()}
+        img={image}
+        title={name}
+        newPrice={price}
+      />
+    ));
+  }
+
+  const result = filteredData();
+>>>>>>> aa2e1cbcabbc33c9303945eda500058cf0e1769f
 
   return (
     <>
       <div>
         <Header query={query} handleInputChange={handleInputChange} />
+<<<<<<< HEAD
         <div className="product-container">
           <Sidebar handleChange={handleChange} />
           <div className="product-content">
@@ -119,6 +171,19 @@ const ProductsPage = () => {
               </ul>
             </nav>
           </div>
+=======
+        <div className="d-block p-5">
+        <Recommended handleClick={handleClick} />
+
+        <div className="d-flex">
+          <div className="col-3 px-5 mx-5">
+            <Sidebar handleChange={handleChange} />
+          </div>
+          <div className="container row">
+          <section className="card-container">{result}</section>
+          </div>
+        </div>
+>>>>>>> aa2e1cbcabbc33c9303945eda500058cf0e1769f
         </div>
 
         <Footer />
