@@ -4,6 +4,8 @@ import ProductDetailsPage from "../pages/ProductDetailsPage/ProductDetailsPage";
 import AboutUsPage from "../pages/AboutUsPage/AboutUsPage";
 import PaymentPage from "../pages/PaymentPage/PaymentPage";
 import ProductsPage from "../pages/ProductsPage/ProductsPage";
+import BlogsPage from "../pages/BlogsPage/BlogsPage";
+import PageNotFound from "../pages/PageNotFound/PageNotFound";
 
 export const routes = [
   {
@@ -28,8 +30,13 @@ export const routes = [
     isShowHeader: false,
   },
   {
-    path: "/about-us",
+    path: "/ve-chung-toi",
     page: AboutUsPage,
+    isShowHeader: true,
+  },
+  {
+    path: "/blogs",
+    page: BlogsPage,
     isShowHeader: true,
   },
   {
@@ -39,7 +46,7 @@ export const routes = [
   },
   {
     path: "/*",
-    page: HomePage,
+    page: PageNotFound,
     isShowHeader: true,
   },
 ];

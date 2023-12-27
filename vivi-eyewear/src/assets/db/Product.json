@@ -8,6 +8,7 @@
     "shape": "Browline",
     "size": "53 - 19 - 145",
     "color": "Nâu",
+    "featuredFlag": 1,
     "description": "Gọng kính này từ bộ sưu tập MYKITA MYLON được chế tạo bằng công nghệ in 3D được gọi là thiêu kết laser chọn lọc. MYLON là vật liệu công nghệ cao đặc biệt nhẹ và bền, được làm thủ công ở Berlin - Đức."
   },
   {
@@ -19,6 +20,7 @@
     "shape": "Aviator",
     "size": "53 - 19 - 140",
     "color": "Đen",
+    "featuredFlag": 1,
     "description": "Gọng kính này từ bộ sưu tập MYKITA MYLON, được làm bằng MYLON - một vật liệu đặc biệt nhẹ và có độ bền cao. Được làm thủ công ở Berlin - Đức."
   },
   {
@@ -30,6 +32,7 @@
     "shape": "Chữ nhật",
     "size": "53 - 19 - 145",
     "color": "Đen",
+    "featuredFlag": 1,
     "description": "Được làm bằng MYLON - một vật liệu đặc biệt nhẹ và có độ bền cao Được làm thủ công ở Berlin. Gọng kính này từ bộ sưu tập MYKITA MYLON, được làm bằng MYLON - một vật liệu đặc biệt nhẹ và có độ bền cao, được làm thủ công ở Berlin - Đức."
   },
   {
@@ -41,6 +44,7 @@
     "shape": "Oval",
     "size": "53 - 19 - 145",
     "color": "Đen",
+    "featuredFlag": 1,
     "description": "Được làm bằng MYLON - một vật liệu đặc biệt nhẹ và có độ bền cao Được làm thủ công ở Berlin. Gọng kính này từ bộ sưu tập MYKITA MYLON, được làm bằng MYLON - một vật liệu đặc biệt nhẹ và có độ bền cao, được làm thủ công ở Berlin - Đức."
   },
   {
@@ -52,6 +56,7 @@
     "shape": "Oval",
     "size": "49 - 20 - 134",
     "color": "Đỏ",
+    "featuredFlag": 1,
     "description": "Được làm bằng MYLON - một vật liệu đặc biệt nhẹ và có độ bền cao Được làm thủ công ở Berlin. Gọng kính này từ bộ sưu tập MYKITA MYLON. Mặt trước khung có thiết kế thanh mảnh, bản lề xoắn ốc được cấp bằng sáng chế. Càng kính bằng thép không gỉ siêu nhẹ."
   },
   {
@@ -63,6 +68,7 @@
     "shape": "Oval",
     "size": "49 - 20 - 134",
     "color": "Hồng",
+    "featuredFlag": 1,
     "description": "Được làm bằng MYLON - một vật liệu đặc biệt nhẹ và có độ bền cao Được làm thủ công ở Berlin. Gọng kính này từ bộ sưu tập MYKITA MYLON. Mặt trước khung có thiết kế thanh mảnh, bản lề xoắn ốc được cấp bằng sáng chế. Càng kính bằng thép không gỉ siêu nhẹ."
   },
   {
@@ -74,6 +80,7 @@
     "shape": "Aviator",
     "size": "49 - 20 - 145",
     "color": "Xanh",
+    "featuredFlag": 1,
     "description": "Được làm bằng MYLON - không gỉ nhẹ và axetat thanh mảnh, thuộc bộ sưu tập MYKITA LITE. Được làm thủ công ở Berlin."
   },
   {
@@ -85,6 +92,7 @@
     "shape": "Browline",
     "size": "49 - 19 - 140",
     "color": "Trắng",
+    "featuredFlag": 1,
     "description": "Gọng kính này từ bộ sưu tập MYKITA MYLON, được làm bằng MYLON - một vật liệu đặc biệt nhẹ và có độ bền cao. Được làm thủ công ở Berlin - Đức."
   },
   {
@@ -130,6 +138,12 @@
     "shape": "Tròn",
     "size": "50 - 22 - 140",
     "color": "Trắng",
+    "createAt": {
+      "$date": "2023-12-23T08:40:43.096Z"
+    },
+    "updateAt": {
+      "$date": "2023-12-23T08:40:43.096Z"
+    },
     "description": "Được làm bằng thép không gỉ nhẹ và axetat thanh mảnh,  với tròng kính Polarized Pro Hi, được làm thủ công ở Berlin."
   },
   {
@@ -152,6 +166,12 @@
     "shape": "Tròn",
     "size": "47 - 20 - 129",
     "color": "Đen",
+    "createAt": {
+      "$date": "2023-12-23T08:40:43.096Z"
+    },
+    "updateAt": {
+      "$date": "2023-12-23T08:40:43.096Z"
+    },
     "description": "Được làm bằng thép không gỉ nhẹ và axetat thanh mảnh, được làm thủ công ở Berlin."
   },
   {
@@ -163,6 +183,12 @@
     "shape": "Vuông",
     "size": "52 - 20 - 139",
     "color": "Đen",
+    "createAt": {
+      "$date": "2023-12-23T08:40:43.096Z"
+    },
+    "updateAt": {
+      "$date": "2023-12-23T08:40:43.096Z"
+    },
     "description": "Được làm bằng thép không gỉ nhẹ và axetat thanh mảnh, được làm thủ công ở Berlin."
   },
   {
@@ -174,6 +200,12 @@
     "shape": "Vuông",
     "size": "50 - 22 - 142",
     "color": "Đen",
+    "createAt": {
+      "$date": "2023-12-23T08:40:43.096Z"
+    },
+    "updateAt": {
+      "$date": "2023-12-23T08:40:43.096Z"
+    },
     "description": "Được làm bằng MYLON – một vật liệu đặc biệt nhẹ và bền, được làm thủ công ở Berlin."
   },
   {
@@ -240,6 +272,12 @@
     "shape": "Oval",
     "size": "50 - 18 - 125",
     "color": "Vàng",
+    "createAt": {
+      "$date": "2023-12-23T08:40:43.096Z"
+    },
+    "updateAt": {
+      "$date": "2023-12-23T08:40:43.096Z"
+    },
     "description": "Được làm bằng thép không gỉ nhẹ màu Vàng bóng với tròng kính Purple Jelly Solid, được làm thủ công ở Berlin."
   },
   {
@@ -251,6 +289,12 @@
     "shape": "Oval",
     "size": "48 - 24 - 137",
     "color": "Đen - vàng",
+    "createAt": {
+      "$date": "2023-12-23T08:40:43.096Z"
+    },
+    "updateAt": {
+      "$date": "2023-12-23T08:40:43.096Z"
+    },
     "description": "Được làm bằng MYLON – một chất liệu đặc biệt nhẹ và bền, được làm thủ công ở Berlin."
   },
   {
@@ -262,6 +306,12 @@
     "shape": "Oval",
     "size": "50 - 20 - 132",
     "color": "Đen",
+    "createAt": {
+      "$date": "2023-12-23T08:40:43.096Z"
+    },
+    "updateAt": {
+      "$date": "2023-12-23T08:40:43.096Z"
+    },
     "description": "Được làm bằng thép không gỉ nhẹ, được làm thủ công ở Berlin."
   },
   {
@@ -284,6 +334,12 @@
     "shape": "Tròn",
     "size": "72",
     "color": "Trong suốt",
+    "createAt": {
+      "$date": "2023-12-23T08:40:43.096Z"
+    },
+    "updateAt": {
+      "$date": "2023-12-23T08:40:43.096Z"
+    },
     "description": " Kính đơn tròng Cential – Canada BlueChoice 1.56 ASP SHMC Bluecut"
   },
   {
@@ -295,6 +351,12 @@
     "shape": "Tròn",
     "size": "72",
     "color": "Trong suốt",
+    "createAt": {
+      "$date": "2023-12-23T08:40:43.096Z"
+    },
+    "updateAt": {
+      "$date": "2023-12-23T08:40:43.096Z"
+    },
     "description": " KÍNH ĐƠN TRÒNG CENTIAL – CANADA CENTOPIC SUPER AR 1.56 ASP SHMC"
   },
   {
@@ -306,6 +368,12 @@
     "shape": "Tròn",
     "size": "72",
     "color": "Trong suốt",
+    "createAt": {
+      "$date": "2023-12-23T08:40:43.096Z"
+    },
+    "updateAt": {
+      "$date": "2023-12-23T08:40:43.096Z"
+    },
     "description": " KÍNH ĐƠN TRÒNG CHEMI – HÀN QUỐC U2 CRYSTAL 1.56 HC"
   },
   {

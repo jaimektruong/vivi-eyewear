@@ -1,29 +1,16 @@
 import "./Footer.scss";
-import Logo from "../../assets/logo.png";
 import iconAppleStore from "../../assets/appstore.png";
 import iconGooglePlay from "../../assets/googleplay.png";
 import { Link } from "react-router-dom";
 function Footer() {
   return (
     <footer className="container-fluid d-flex flex-column p-0">
-      <div className="footer__brand">
-        <div className="container">
-          <div className="align-middle ps-5">
-            <img
-              className="footer__brand--image align-middle"
-              src={Logo}
-              alt="logo"
-            />
-            <h1 className="footer__brand--text align-middle">Vivi Eyewear</h1>
-          </div>
-        </div>
-      </div>
       <div className="footer__info footer__info--text">
-        <div className="container" style={{ maxWidth: "max-content" }}>
-          <div className="p-5">
-            <div className="row w-100">
-              <div className="col-lg-3 col-md-6 mb-4 mb-md-0 py-5">
-                <h5 className="text-uppercase">Sản phẩm</h5>
+        <div className="inner">
+          <div className="p-5 ">
+            <div className="row d-flex justify-content-between">
+              <div className=" footer__item">
+                <h4 className="footer-title">Sản phẩm</h4>
                 <ul className="list-unstyled mb-0 text-white">
                   <li>
                     <Link className="nav-link" to="#!">
@@ -40,16 +27,11 @@ function Footer() {
                       Tròng kính
                     </a>
                   </li>
-                  <li>
-                    <a className="nav-link" href="#!">
-                      Phụ kiện
-                    </a>
-                  </li>
                 </ul>
               </div>
 
-              <div className="col-lg-3 col-md-6 mb-4 mb-md-0 py-5">
-                <h5 className="text-uppercase">Chính sách</h5>
+              <div className="footer__item">
+                <h4 className="footer-title">Chính sách</h4>
                 <ul className="list-unstyled mb-0">
                   <li>
                     <Link className="nav-link" to="#!">
@@ -74,8 +56,8 @@ function Footer() {
                 </ul>
               </div>
 
-              <div className="col-lg-3 col-md-6 mb-4 mb-md-0 py-5">
-                <h5 className="text-uppercase">Thông tin liên hệ</h5>
+              <div className="footer__item">
+                <h4 className="footer-title">Thông tin liên hệ</h4>
                 <ul className="list-unstyled mb-0">
                   <li>
                     <Link className="nav-link" to="#!">
@@ -95,15 +77,15 @@ function Footer() {
                 </ul>
               </div>
 
-              <div className="col-lg-3 col-md-6 mb-4 mb-md-0 py-5">
-                <h5 className="text-uppercase">Ứng dụng Vivi Eyewear</h5>
+              <div className="footer__item">
+                <h4 className="footer-title">Ứng dụng Vivi Eyewear</h4>
                 <ul className="list-unstyled mb-0 d-flex">
                   <li>
                     <Link className="nav-link" to="#!">
                       <img
                         src={iconAppleStore}
                         alt="apple_store"
-                        style={{ width: "135px" }}
+                        style={{ height: "40px" }}
                       />
                     </Link>
                   </li>
@@ -112,7 +94,7 @@ function Footer() {
                       <img
                         src={iconGooglePlay}
                         alt="google_play"
-                        style={{ width: "135px" }}
+                        style={{ height: "40px" }}
                       />
                     </Link>
                   </li>

@@ -37,7 +37,7 @@ const Header = ({ handleInputChange, query }) => {
             }`}
             onClick={() => setMenu("about-us")}
           >
-            <Link className="nav-link" to="/about-us">
+            <Link className="nav-link" to="/ve-chung-toi">
               Về chúng tôi
             </Link>
           </li>
