@@ -1,32 +1,32 @@
-import "./Category.scss";
+import "./Material.scss";
 import Input from "../../InputFilter/Input";
 
-function Category({ handleChange }) {
+function Material({ handleChange }) {
   return (
     <div className="ml">
       <h2 className="sidebar-title">Category</h2>
       <div>
         <label className="sidebar-label-container">
           <input onChange={handleChange} type="radio" value="" name="test" />
-          <span className="checkmark"></span>All
+          <span className="checkmark"></span>Tất cả
         </label>
 
         <Input
           handleChange={handleChange}
-          value="Gọng kính"
-          title="Gọng kính"
+          value="Nhựa"
+          title="Nhựa"
           name="test"
         />
         <Input
           handleChange={handleChange}
-          value="Gọng kính râm"
-          title="Gọng kính râm"
+          value="Thép không gỉ"
+          title="Thép không gỉ"
           name="test"
         />
         <Input
           handleChange={handleChange}
-          value="Tròng kính"
-          title="Tròng kính"
+          value="Thép không gỉ nhẹ"
+          title="Thép không gỉ nhẹ"
           name="test"
         />
       </div>
@@ -34,4 +34,4 @@ function Category({ handleChange }) {
   );
 }
 
-export default Category;
+export default Material;
