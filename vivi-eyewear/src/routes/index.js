@@ -1,8 +1,13 @@
 import HomePage from "../pages/HomePage/HomePage";
 import TypeProductPage from "../pages/TypeProductPage/TypeProductPage";
-import ProductDetailsPage from "../pages/ProductDetailsPage/ProductDetailsPage";
+//import ProductDetailsPage from "../pages/ProductDetailsPage/ProductDetailsPage";
 import AboutUsPage from "../pages/AboutUsPage/AboutUsPage";
+import PaymentPage from "../pages/PaymentPage/PaymentPage"
 import ProductsPage from "../pages/ProductsPage/ProductsPage";
+import DeliveryPage from "../pages/DeliveryPage/DeliveryPage";
+import Login from "../pages/LoginPage/Login";
+import Register from "../pages/RegisterPage/Register";
+import Checkout from "../pages/CheckoutPage/CheckoutPage"
 
 export const routes = [
   {
@@ -30,18 +35,38 @@ export const routes = [
     page: HomePage,
   },
   {
-    path: "/about-us",
+    path: "/vivi-eyewear/about-us",
     page: AboutUsPage,
     isShowHeader: true,
   },
   {
-    path: "/about-us",
+    path: "/vivi-eyewear/about-us",
     page: AboutUsPage,
     isShowHeader: true,
   },
   {
-    path: "/payment",
+    path: "/vivi-eyewear/payment",
     page: PaymentPage,
     isShowHeader: true,
   },
+  {
+    path: "/vivi-eyewear/Delivery",
+    page: DeliveryPage,
+    isShowHeader: true,
+  },
+  {
+    path: "/vivi-eyewear/sign-in",
+    page: Login,
+    isShowHeader: true,
+  },
+  {
+    path: "/vivi-eyewear/sign-up",
+    page: Register,
+    isShowHeader: true,
+  },
+  {
+    path: "/vivi-eyewear/Checkout",
+    page: Checkout,
+    isShowHeader: true,
+  }
 ];

@@ -1,5 +1,4 @@
 import Card from "../../components/Card/Card";
-import Sidebar from "../../components/SideBar/Sidebar";
 import homeProDuctBG from "../../assets/homeProductBG.jpg";
 import ImageSteper from "../../components/ImageSlider/ImageSlider";
 const TypeProductPage = () => {
@@ -18,10 +17,10 @@ const TypeProductPage = () => {
       <div className="container d-block p-5">
         <div className="d-flex ">
           {" "}
-          <div Sidebar="col-2">
+          {/* <div Sidebar="col-2">
             <Sidebar />
-          </div>
-          <div className="col-10 row">
+          </div> */}
+          <div className="row">
             <div className="col-xxl-3 col-xl-4 col-md-6 d-flex justify-content-center align-items-center">
               <Card />
             </div>

@@ -8,12 +8,12 @@ function Sidebar({ handleChange }) {
   return (
     <>
       <section className="sidebar">
-        <div className="logo-container">
-          <h1>s</h1>
-        </div>
+        <div className="">
         <Category handleChange={handleChange} />
         <Color handleChange={handleChange} />
         <Price handleChange={handleChange} />
+        </div>
+
       </section>
     </>
   );

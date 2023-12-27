@@ -1,11 +1,8 @@
-import "./Header.scss";
-import { useState, useRef } from "react";
-import Logo from "../../assets/logo.png";
-import Login from "../Login/Login.js";
-import "../Login/Login.scss";
-import Register from "../Register/Register.js";
-import "../Register/Register.scss";
+
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Logo from "../../assets/logo.png";
+import "./Header.scss";
 
 function Cart(props) {
   return (
@@ -77,10 +74,14 @@ const Header = (props) => {
     return setInf(numShow);
   };
   const navigate = useNavigate();
-  const loginModalRef = useRef();
-  const registerModalRef = useRef();
   const Home = () => {
     navigate("/vivi-eyewear");
+  };
+  const handleLogin = () => {
+    navigate("/vivi-eyewear/sign-in");
+  };
+  const handleRegister = () => {
+    navigate("/vivi-eyewear/sign-up");
   };
   return (
     <div
@@ -155,8 +156,7 @@ const Header = (props) => {
                 <button
                   type="button"
                   className="login-container btn btn-link text-light"
-                  data-bs-toggle="modal"
-                  data-bs-target="#LoginModal"
+                  onClick={handleLogin}
                 >
                   Sign In
                 </button>
@@ -164,18 +164,13 @@ const Header = (props) => {
                 <button
                   type="button"
                   className="register-container btn btn-link text-light"
-                  data-bs-toggle="modal"
-                  data-bs-target="#RegisterModal"
+                  onClick={handleRegister}
                 >
                   Sign Up
                 </button>
               </div>
               {/* Modal Login */}
             </div>
-          </div>
-          <div className="modal-login">
-            <Login ref={loginModalRef} />
-            <Register ref={registerModalRef} />
           </div>
 
           <div className="d-md-flex d-none justify-content-around">
@@ -185,7 +180,7 @@ const Header = (props) => {
         {/* Modal Login */}
         <div className="modal-menu">
           <div
-            className="modal fade"
+            className="modal fade hide"
             id="navbModal"
             tabIndex="-1"
             aria-labelledby="exampleModalLabel"
@@ -237,8 +232,8 @@ const Header = (props) => {
                     <button
                       type="button"
                       className="login-container btn btn-link text-light"
-                      data-bs-toggle="modal"
-                      data-bs-target="#LoginModal"
+                      onClick={handleLogin}
+
                     >
                       Sign In
                     </button>
@@ -246,8 +241,7 @@ const Header = (props) => {
                     <button
                       type="button"
                       className="register-container btn btn-link text-light"
-                      data-bs-toggle="modal"
-                      data-bs-target="#RegisterModal"
+                      onClick={handleRegister}
                     >
                       Sign Up
                     </button>

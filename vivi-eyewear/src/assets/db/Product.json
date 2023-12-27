@@ -1,7 +1,8 @@
+
 [
   {
     "name": "GN000001",
-    "image": "GN000001",
+    "image": "GN000001.png",
     "price": 500000,
     "type": "Gọng kính",
     "material": "Nhựa",
@@ -12,7 +13,7 @@
   },
   {
     "name": "GN000002",
-    "image": "GN000002",
+    "image": "GN000002.png",
     "price": 700000,
     "type": "Gọng kính",
     "material": "Nhựa",
@@ -23,7 +24,7 @@
   },
   {
     "name": "GN000003",
-    "image": "GN000003",
+    "image": "GN000003.png",
     "price": 650000,
     "type": "Gọng kính",
     "material": "Nhựa",
@@ -34,7 +35,7 @@
   },
   {
     "name": "GN000004",
-    "image": "GN000004",
+    "image": "GN000004.png",
     "price": 750000,
     "type": "Gọng kính",
     "material": "nhựa",
@@ -45,7 +46,7 @@
   },
   {
     "name": "GN000005",
-    "image": "GN000005",
+    "image": "GN000005.png",
     "price": 750000,
     "type": "Gọng kính",
     "material": "Nhựa",
@@ -56,7 +57,7 @@
   },
   {
     "name": "GN000006",
-    "image": "GN000006",
+    "image": "GN000006.png",
     "price": 500000,
     "type": "Gọng kính",
     "material": "Nhựa",
@@ -67,7 +68,7 @@
   },
   {
     "name": "GN000007",
-    "image": "GN000007",
+    "image": "GN000007.png",
     "price": 400000,
     "type": "Gọng kính",
     "material": "Nhựa",
@@ -78,7 +79,7 @@
   },
   {
     "name": "GN000008",
-    "image": "GN000008",
+    "image": "GN000008.png",
     "price": 600000,
     "type": "Gọng kính",
     "material": "Nhựa",
@@ -89,7 +90,7 @@
   },
   {
     "name": "GN000009",
-    "image": "GN000009",
+    "image": "GN000009.png",
     "price": 400000,
     "type": "Gọng kính",
     "material": "Nhựa",
@@ -101,7 +102,7 @@
 
   {
     "name": "GN000010",
-    "image": "GN000010",
+    "image": "GN000010.png",
     "price": 900000,
     "type": "Gọng kính",
     "material": "Nhựa",
@@ -109,10 +110,10 @@
     "size": "49 - 20 - 145",
     "color": "Nâu",
     "description": "Được làm bằng MYLON - không gỉ nhẹ và axetat thanh mảnh, thuộc bộ sưu tập MYKITA LITE. Được làm thủ công ở Berlin."
-  }, 
+  },
   {
     "name": "GR000001",
-    "image": "GR000001",
+    "image": "GR000001.png",
     "price": 750000,
     "type": "Gọng kính râm",
     "material": "Thép không gỉ",
@@ -120,10 +121,10 @@
     "size": "49 - 21 - 135",
     "color": "Đen",
     "description": "Được làm bằng thép không gỉ nhẹ và axetat thanh mảnh, là gọng kính mát hình vuông được làm thủ công ở Berlin."
-  }, 
+  },
   {
     "name": "GR000002",
-    "image": "GR000002",
+    "image": "GR000002.png",
     "price": 800000,
     "type": "Gọng kính râm",
     "material": "Thép không gỉ",
@@ -131,10 +132,10 @@
     "size": "50 - 22 - 140",
     "color": "Trắng",
     "description": "Được làm bằng thép không gỉ nhẹ và axetat thanh mảnh,  với tròng kính Polarized Pro Hi, được làm thủ công ở Berlin."
-  }, 
+  },
   {
     "name": "GR000003",
-    "image": "GR000003",
+    "image": "GR000003.png",
     "price": 900000,
     "type": "Gọng kính râm",
     "material": "Thép không gỉ nhẹ",
@@ -142,10 +143,10 @@
     "size": "55 - 18 - 137",
     "color": "Đen",
     "description": "Được làm bằng thép không gỉ nhẹ và axetat thanh mảnh, với thiết kế viền hình học,  được làm thủ công ở Berlin."
-  }, 
+  },
   {
     "name": "GR000004",
-    "image": "GR000004",
+    "image": "GR000004.png",
     "price": 850000,
     "type": "Gọng kính râm",
     "material": "Thép không gỉ nhẹ",
@@ -153,10 +154,10 @@
     "size": "47 - 20 - 129",
     "color": "Đen",
     "description": "Được làm bằng thép không gỉ nhẹ và axetat thanh mảnh, được làm thủ công ở Berlin."
-  }, 
+  },
   {
     "name": "GR000005",
-    "image": "GR000005",
+    "image": "GR000005.png",
     "price": 950000,
     "type": "Gọng kính râm",
     "material": "Thép không gỉ nhẹ",
@@ -164,10 +165,10 @@
     "size": "52 - 20 - 139",
     "color": "Đen",
     "description": "Được làm bằng thép không gỉ nhẹ và axetat thanh mảnh, được làm thủ công ở Berlin."
-  }, 
+  },
   {
     "name": "GR000006",
-    "image": "GR000006",
+    "image": "GR000006.png",
     "price": 850000,
     "type": "Gọng kính râm",
     "material": "Nhựa",
@@ -175,10 +176,10 @@
     "size": "50 - 22 - 142",
     "color": "Đen",
     "description": "Được làm bằng MYLON – một vật liệu đặc biệt nhẹ và bền, được làm thủ công ở Berlin."
-  }, 
+  },
   {
     "name": "GR000007",
-    "image": "GR000007",
+    "image": "GR000007.png",
     "price": 775000,
     "type": "Gọng kính râm",
     "material": "Nhựa",
@@ -186,10 +187,10 @@
     "size": "50 - 24 - 146",
     "color": "Đen",
     "description": "Được làm bằng MYLON với gọng axetat, được làm thủ công ở Berlin."
-  }, 
+  },
   {
     "name": "GR000008",
-    "image": "GR000008",
+    "image": "GR000008.png",
     "price": 950000,
     "type": "Gọng kính râm",
     "material": "Thép không gỉ nhẹ",
@@ -197,10 +198,10 @@
     "size": "47 - 22 - 129",
     "color": "Bạc",
     "description": "Được làm bằng thép không gỉ nhẹ và axetat thanh mảnh, được làm thủ công ở Berlin."
-  }, 
+  },
   {
     "name": "GR000009",
-    "image": "GR000009",
+    "image": "GR000009.png",
     "price": 980000,
     "type": "Gọng kính râm",
     "material": "Thép không gỉ nhẹ",
@@ -208,10 +209,10 @@
     "size": "51 - 20 - 140",
     "color": "Đen",
     "description": "Được làm bằng thép không gỉ nhẹ và axetat thanh mảnh, được làm thủ công ở Berlin."
-  }, 
+  },
   {
     "name": "GR000010",
-    "image": "GR000010",
+    "image": "GR000010.png",
     "price": 950000,
     "type": "Gọng kính râm",
     "material": "Thép không gỉ nhẹ",
@@ -222,7 +223,7 @@
   },
   {
     "name": "GR000011",
-    "image": "GR000011",
+    "image": "GR000011.png",
     "price": 850000,
     "type": "Gọng kính râm",
     "material": "Thép không gỉ",
@@ -233,7 +234,7 @@
   },
   {
     "name": "GR000012",
-    "image": "GR000012",
+    "image": "GR000012.png",
     "price": 980000,
     "type": "Gọng kính râm",
     "material": "Thép không gỉ nhẹ",
@@ -244,7 +245,7 @@
   },
   {
     "name": "GR000013",
-    "image": "GR000013",
+    "image": "GR000013.png",
     "price": 870000,
     "type": "Gọng kính râm",
     "material": "Nhựa",
@@ -255,7 +256,7 @@
   },
   {
     "name": "GR000014",
-    "image": "GR000014",
+    "image": "GR000014.png",
     "price": 790000,
     "type": "Gọng kính râm",
     "material": "Thép không gỉ nhẹ",
@@ -266,7 +267,7 @@
   },
   {
     "name": "GR000015",
-    "image": "GR000015",
+    "image": "GR000015.png",
     "price": 800000,
     "type": "Gọng kính râm",
     "material": "Nhựa",
@@ -277,7 +278,8 @@
   },
   {
     "name": "TK000001",
-    "image": "TK000001",
+    "image": "TK000001.png",
+
     "price": 560000,
     "type": "Tròng kính",
     "material": "Plastic",
@@ -285,10 +287,10 @@
     "size": "72",
     "color": "Trong suốt",
     "description": " Kính đơn tròng Cential – Canada BlueChoice 1.56 ASP SHMC Bluecut"
-  }, 
+  },
   {
     "name": "TK000002",
-    "image": "TK000002",
+    "image": "TK000002.png",
     "price": 460000,
     "type": "Tròng kính",
     "material": "Plastic",
@@ -296,10 +298,10 @@
     "size": "72",
     "color": "Trong suốt",
     "description": " KÍNH ĐƠN TRÒNG CENTIAL – CANADA CENTOPIC SUPER AR 1.56 ASP SHMC"
-  }, 
+  },
   {
     "name": "TK000003",
-    "image": "TK000003",
+    "image": "TK000003.png",
     "price": 336000,
     "type": "Tròng kính",
     "material": "Plastic",
@@ -307,10 +309,10 @@
     "size": "72",
     "color": "Trong suốt",
     "description": " KÍNH ĐƠN TRÒNG CHEMI – HÀN QUỐC U2 CRYSTAL 1.56 HC"
-  }, 
+  },
   {
     "name": "TK000004",
-    "image": "TK000004",
+    "image": "TK000004.png",
     "price": 2520000,
     "type": "Tròng kính",
     "material": "Plastic",
@@ -318,10 +320,12 @@
     "size": "72",
     "color": "Trong suốt",
     "description": "TRÒNG SIÊU MỎNG CHEMI – HÀN QUỐC U2 CRYSTAL 1.74 HMC"
-  }, 
+  },
   {
     "name": "TK000005",
-    "image": "TK000005",
+
+    "image": "TK000005.png",
+
     "price": 1050000,
     "type": "Tròng kính",
     "material": "Plastic",

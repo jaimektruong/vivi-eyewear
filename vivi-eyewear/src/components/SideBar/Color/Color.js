@@ -11,40 +11,46 @@ function Color({ handleChange }) {
       </label>
       <Input
         handleChange={handleChange}
-        value="black"
-        title="Black"
+        value="Đen"
+        title="Đen"
         name="test1"
         color="black"
       />
       <Input
         handleChange={handleChange}
-        value="blue"
-        title="Blue"
+        value="Xanh dương"
+        title="Xanh dương"
         name="test1"
         color="blue"
       />
       <Input
         handleChange={handleChange}
-        value="red"
-        title="Red"
+        value="Đỏ"
+        title="Đỏ"
         name="test1"
         color="red"
       />
       <Input
         handleChange={handleChange}
-        value="green"
-        title="Green"
+        value="Xanh"
+        title="Xanh"
         name="test1"
         color="green"
       />
       <Input
         handleChange={handleChange}
-        value="white"
+        value="Nâu"
+        title="Nâu"
+        name="test1"
+        color="#894517"
+      />
+      <Input
+        handleChange={handleChange}
+        value="Trắng"
         title="White"
         name="test1"
         color="white"
-      />
-
+      />{" "}
       <label className="sidebar-label-container">
         <input
           type="radio"

@@ -1,15 +1,24 @@
-.modal {
-    --bs-modal-width: 800px;
+.main-image {
+    img {
+        width: 70%;
+        object-fit: cover;
+        transition: transform 1.2s;
+        border-radius: 12px;
+    }
+
 }
-.modal-content {
-    background-color: #f0f2f5;;
+
+img:hover {
+    box-shadow: 0 4px 8px 0 rgba(6, 233, 195, 0.2), 0 6px 20px 0 rgba(6, 233, 195, 0.2);
+    box-sizing: border-box;
 }
+
 .content-right {
     border-radius: 10px;
     background-color: #fff;
     box-shadow: 0 2px 4px rgb(0 0 0 /10%), 0 8px 16px rgb(0 0 0 /10%);
     box-sizing: border-box;
-
+    color: #274d8a;
     .forgot-password {
         text-decoration: none;
         color: #03A9F4;
@@ -26,19 +35,5 @@
         color: #1877f2;
         text-align: center;
         font-weight: 600;
-    }
-}
-.content-left {
-    margin-top: 50px;
-    .brand {
-        text-transform: uppercase;
-        font-size: 30px;
-        color: #1877f2;
-    }
-    .detail {
-        font-size: 25px;
-    }
-    img {
-        width: 300px
     }
 }

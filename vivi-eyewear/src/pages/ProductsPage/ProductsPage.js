@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import "./ProductsPage.scss";
 import Recommended from "../../components/Recommended/Recommended";
-
-import products from "../../db/data";
+import products from "../../assets/db/Product.json";
 import CardProduct from "../../components/CardProduct/CardProduct";
 import Sidebar from "../../components/SideBar/Sidebar";
 import Header from "../../components/Header/Header";
@@ -18,10 +17,6 @@ const ProductsPage = () => {
     setQuery(event.target.value);
   };
 
-  const filteredItems = products.filter(
-    (product) => product.title.toLowerCase().indexOf(query.toLowerCase()) !== -1
-  );
-
   // Radio Filter
   const handleChange = (event) => {
     setSelectedCategory(event.target.value);
@@ -33,31 +28,31 @@ const ProductsPage = () => {
   };
 
   function filteredData(products, selected, query) {
-    let filteredProducts = products;
+    let filteredItems = products;
 
-    // Filtering Input Items
     if (query) {
-      filteredProducts = filteredItems;
-    }
-
-    // Selected Filter
-    if (selected) {
-      filteredProducts = filteredProducts.filter(
-        ({ category, color, company, newPrice, title }) =>
-          category === selected ||
-          color === selected ||
-          company === selected ||
-          newPrice === selected ||
-          title === selected
+      filteredItems = products.filter(
+        (item) => item.name.toLowerCase().indexOf(query.toLowerCase()) !== -1
       );
     }
 
-    return filteredProducts.map(({ img, title, newPrice }) => (
+    if (selected) {
+      filteredItems = filteredItems.filter(
+        ({ type, color, material, price, name }) =>
+          type === selected ||
+          color === selected ||
+          material === selected ||
+          price === selected ||
+          name === selected
+      );
+    }
+
+    return filteredItems.map(({ image, name, price }) => (
       <CardProduct
         key={Math.random()}
-        img={img}
-        title={title}
-        newPrice={newPrice}
+        img={image}
+        title={name}
+        newPrice={price}
       />
     ));
   }
@@ -68,10 +63,16 @@ const ProductsPage = () => {
     <>
       <div>
         <Header query={query} handleInputChange={handleInputChange} />
-        <div>
-          <Sidebar handleChange={handleChange} />
-          <Recommended handleClick={handleClick} />
+        <div className="container d-block p-5">
+        <div className="d-flex">
+          <div className="col-3">
+            <Sidebar handleChange={handleChange} />
+          </div>
+          <div className="container row">
           <section className="card-container">{result}</section>
+          </div>
+        </div>
+          <Recommended handleClick={handleClick} />
         </div>
         <Footer />
       </div>
