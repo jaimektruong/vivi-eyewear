@@ -1,9 +1,5 @@
 import React, { useState } from "react";
 import "./ProductsPage.scss";
-<<<<<<< HEAD
-=======
-import Recommended from "../../components/Recommended/Recommended";
->>>>>>> aa2e1cbcabbc33c9303945eda500058cf0e1769f
 import products from "../../assets/db/Product.json";
 import CardProduct from "../../components/CardProduct/CardProduct";
 import Sidebar from "../../components/SideBar/Sidebar";
@@ -12,14 +8,11 @@ import Footer from "../../components/Footer/Footer";
 import { Link, useParams } from "react-router-dom";
 
 const ProductsPage = () => {
-  // ========= Pagination =========
   const { type } = useParams();
   let Tproducts;
-
   if (type) {
     Tproducts = products.filter((product) => product.type === type);
   } else {
-    // Nếu không có giá trị type, hiển thị tất cả sản phẩm
     Tproducts = products;
   }
 
@@ -30,73 +23,21 @@ const ProductsPage = () => {
   const records = Tproducts.slice(firstIndex, lastIndex);
   const npage = Math.ceil(Tproducts.length / recoordsPerPage);
   const numbers = [...Array(npage + 1).keys()].slice(1);
-  const [selectedType, setSelectedType] = useState(null);
-
-  // ========= Filter ========
-  // Input Filter
+  const [selectedCategory, setSelectedCategory] = useState(null); // Added missing state
   const [query, setQuery] = useState("");
 
   const handleInputChange = (event) => {
     setQuery(event.target.value);
   };
 
-<<<<<<< HEAD
-  const filteredItems = records.filter(
-    (product) => product.name.toLowerCase().indexOf(query.toLowerCase()) !== -1
-  );
-
-=======
->>>>>>> aa2e1cbcabbc33c9303945eda500058cf0e1769f
-  // Radio Filter
   const handleChange = (event) => {
-    setSelectedType(event.target.value);
-  };
-
-<<<<<<< HEAD
-  function filteredData(records, selected, query) {
-    let filteredProducts = records;
-
-    // Filtering Input Items
-    if (query) {
-      filteredProducts = filteredItems;
-    }
-
-    // Selected Filter
-    if (selected) {
-      filteredProducts = filteredProducts.filter(
-        ({ material, color, price, name }) =>
-          material === selected ||
-          color === selected ||
-          price === selected ||
-          name === selected
-      );
-    }
-
-    return filteredProducts.map(({ name, image, price }) => {
-      return (
-        <Link className="nav-link" to={`/products/${name}`}>
-          <CardProduct
-            key={Math.random()}
-            image={image}
-            name={name}
-            price={price}
-          />
-        </Link>
-      );
-    });
-  }
-
-  const result = filteredData(records, selectedType, query);
-=======
-  // Button Filter
-  const handleClick = (event) => {
     setSelectedCategory(event.target.value);
   };
-  function filteredData() {
-    let filteredItems = products;
 
+  function filteredData(records, selectedCategory, query) {
+    let filteredItems = records;
     if (query) {
-      filteredItems = products.filter(
+      filteredItems = records.filter(
         (item) => item.name.toLowerCase().indexOf(query.toLowerCase()) !== -1
       );
     }
@@ -118,76 +59,65 @@ const ProductsPage = () => {
         }
       });
     }
-    return filteredItems.map(({ image, name, price }) => (
-      <CardProduct
-        key={Math.random()}
-        img={image}
-        title={name}
-        newPrice={price}
-      />
+
+    return filteredItems.map(({ name, image_thumb, price }) => (
+      <Link className="nav-link" to={`/san-pham/${name}`} key={name}>
+        <CardProduct image={image_thumb} name={name} price={price} />
+      </Link>
     ));
   }
 
-  const result = filteredData();
->>>>>>> aa2e1cbcabbc33c9303945eda500058cf0e1769f
+  const result = filteredData(records, selectedCategory, query);
 
   return (
     <>
       <div>
         <Header query={query} handleInputChange={handleInputChange} />
-<<<<<<< HEAD
-        <div className="product-container">
-          <Sidebar handleChange={handleChange} />
-          <div className="product-content">
-            <section className="card-container">{result}</section>
-
-            {/* ========= Pagination ========= */}
-            <nav className="pagination-container text-center">
-              <ul className="pagination text-center">
-                <li className="page-item">
-                  <a href="##" className="page-link" onClick={prevPage}>
-                    Prev
-                  </a>
-                </li>
-                {numbers.map((n, i) => (
-                  <li
-                    className={`page-item ${currentPage === n ? "active" : ""}`}
-                    key={i}
-                  >
-                    <a
-                      href="##"
-                      className="page-item"
-                      onClick={() => changeCPage(n)}
-                    >
-                      {n}
+        <div className="d-flex flex-column inner">
+          <div className="d-flex inner gap-2">
+            <div className="">
+              <Sidebar handleChange={handleChange} />
+            </div>
+            <div className="container d-flex flex-column gap-3">
+              <section className="card-container d-flex flex-wrap gap-3">
+                {result}
+              </section>
+              <nav className="text-center pagination-container">
+                <ul className="pagination text-center">
+                  <li className="page-item">
+                    <a href="##" className="page-link" onClick={prevPage}>
+                      Prev
                     </a>
                   </li>
-                ))}
-                <li className="page-item">
-                  <a href="##" className="page-link" onClick={nextPage}>
-                    Next
-                  </a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-=======
-        <div className="d-block p-5">
-        <Recommended handleClick={handleClick} />
-
-        <div className="d-flex">
-          <div className="col-3 px-5 mx-5">
-            <Sidebar handleChange={handleChange} />
-          </div>
-          <div className="container row">
-          <section className="card-container">{result}</section>
+                  {numbers.map((n, i) => (
+                    <li
+                      className={`page-item ${
+                        currentPage === n ? "active" : ""
+                      }`}
+                      key={i}
+                    >
+                      <a
+                        href="##"
+                        className="page-item"
+                        onClick={() => changeCPage(n)}
+                      >
+                        {n}
+                      </a>
+                    </li>
+                  ))}
+                  <li className="page-item">
+                    <a href="##" className="page-link" onClick={nextPage}>
+                      Next
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
           </div>
         </div>
->>>>>>> aa2e1cbcabbc33c9303945eda500058cf0e1769f
-        </div>
-
-        <Footer />
       </div>
+
+      <Footer />
     </>
   );
   function prevPage() {
@@ -195,11 +125,9 @@ const ProductsPage = () => {
       setCurrentPage(currentPage - 1);
     }
   }
-
   function changeCPage(id) {
     setCurrentPage(id);
   }
-
   function nextPage() {
     if (currentPage !== npage) {
       setCurrentPage(currentPage + 1);

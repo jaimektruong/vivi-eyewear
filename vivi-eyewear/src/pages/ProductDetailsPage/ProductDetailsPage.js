@@ -13,8 +13,16 @@ const ProductDetailsPage = () => {
     return <p>Sản phẩm không tồn tại</p>;
   }
 
-  const { image, price, material, color, name, description, size, shape } =
-    product;
+  const {
+    image_detail,
+    price,
+    material,
+    color,
+    name,
+    description,
+    size,
+    shape,
+  } = product;
 
   return (
     <div className="inner">
@@ -26,7 +34,7 @@ const ProductDetailsPage = () => {
           <div className="gap-8 p-2">
             {/* flexbox chứa các hình ảnh */}
             <div className="gap-8">
-              <img src={image} alt={name} />
+              <img src={image_detail} alt={name} />
             </div>
             {/* felxbox chứa thông tin sp*/}
             <div className="gap-8">
