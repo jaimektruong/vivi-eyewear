@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import products from "../../assets/db/Product.json";
 import "./ProductDetailsPage.scss";
 import illustration from "../../assets/minhhoa.jpg";
+import FeaturedProducts from "../../components/FeaturedProducts/FeaturedProducts";
 const ProductDetailsPage = () => {
   const { productName } = useParams();
   const product = products.find(() => products.name === productName);
@@ -60,6 +61,24 @@ const ProductDetailsPage = () => {
                 </div>
                 <div>
                   <p>{shape}</p>
+                </div>
+              </div>
+              <div className="gap-8">
+                <div>
+                  <p className=" title-styles">Thông tin khác</p>
+                </div>
+                <div>
+                  <p>
+                    Chịu trách nhiệm sản phẩm: CTY TNHH ViVi Eyewear <br />
+                    Cảnh báo: Bảo quản trong hộp kính Hướng dẫn sử dụng:
+                    <br />
+                    + Tháo kính bằng 2 tay + Không bỏ kính vào cốp xe hoặc những
+                    nơi có nhiệt độ cao làm biến dạng kính.
+                    <br /> + Không bỏ kính vào túi sách nếu không có hộp kính,
+                    vật dụng nhọn như chìa khóa sẽ làm xước kính. <br />+ Không
+                    rửa kính lau kính bằng các chất có tính tẩy rửa mạnh làm
+                    bong tróc lớp váng phủ.
+                  </p>
                 </div>
               </div>
             </div>
@@ -171,9 +190,9 @@ const ProductDetailsPage = () => {
           </div>
         </div>
         {/* flexbox các sản phẩm gợi ý (dưới cùng) */}
-        <div className="p-2">
-          <div>sp nổi bật</div>
-          <div>sp mới nhất</div>
+
+        <div>
+          <FeaturedProducts></FeaturedProducts>
         </div>
       </div>
     </div>

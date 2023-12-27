@@ -70,6 +70,7 @@ const FeaturedProducts = (props) => {
                           className="img-fluid"
                           alt="100%x280"
                           src={cardF.image_thumb}
+                          width={"196px"}
                         />
                         <div className="card-body">
                           <h4 className="card-title">{cardF.name}</h4>
