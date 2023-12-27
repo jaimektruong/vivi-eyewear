@@ -477,13 +477,9 @@
   },
   {
     "name": "TK000001",
-<<<<<<< HEAD
     "image": "TK000001.png",
-
-=======
     "image_detail": "https://i.imgur.com/oWkErKA.png",
     "image_thumb": "https://i.imgur.com/fjr6BW6.png",
->>>>>>> 9b34c7e0124d480325739896843d488e1a576a69
     "price": 560000,
     "type": "trong-kinh",
     "material": "Nhựa",
@@ -558,14 +554,9 @@
   },
   {
     "name": "TK000005",
-<<<<<<< HEAD
-
     "image": "TK000005.png",
-
-=======
     "image_detail": "https://i.imgur.com/STmvon9.png",
     "image_thumb": "https://i.imgur.com/XVpwjxT.png",
->>>>>>> 9b34c7e0124d480325739896843d488e1a576a69
     "price": 1050000,
     "type": "trong-kinh",
     "material": "Nhựa",
