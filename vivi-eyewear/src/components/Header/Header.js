@@ -1,87 +1,23 @@
-import { useState } from "react";
+import React, { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import Logo from "../../assets/logo.png";
-import "./Header.scss";
+import { Link } from "react-router-dom";
+const Header = ({ handleInputChange, query }) => {
+  const [menu, setMenu] = useState("Home");
+  const [isProductHovered, setIsProductHovered] = useState(false);
 
-function Cart(props) {
-  return (
-    <>
-      <button
-        variant="outline-secondary"
-        size="sm"
-        className="d-flex align-items-center pt-2 pb-2 fs-5 border rounded p-2"
-        style={{ backgroundColor: "transparent", color: "white" }}
-      >
-        <i className="bi bi-cart me-3"></i>
-        Cart
-        <span
-          className="ms-3 text-center"
-          style={{
-            width: "20px",
-            height: "25px",
-            borderRadius: "10px",
-            background: "yellow",
-            color: "#000",
-            fontWeight: "700",
-            fontSize: "15px",
-            lineHeight: "25px",
-          }}
-        >
-          {props.value}
-        </span>
-      </button>
-    </>
-  );
-}
-const BUTTONSTYLE = {
-  width: "fit-content",
-  padding: "0",
-  minWidth: "0",
-};
-
-const TIPS = [
-  { title: "You will better with us" },
-  { title: "See better than yesterday" },
-  { title: "THÊM CAPTION ĐI" },
-];
-
-const TUTORIALS = [
-  {
-    title: "Shopping guide",
-    icon: "📖",
-  },
-  {
-    title: "Customer incentives",
-    icon: "⚙️",
-  },
-  {
-    title: "Contact Info",
-    icon: "	📞",
-  },
-];
-
-const Header = (props) => {
-  const [Inf, setInf] = useState(0);
-
-  const NextHandle = () => {
-    const numShow = Inf + 1 > TIPS.length - 1 ? 0 : Inf + 1;
-    return setInf(numShow);
+  const handleProductMouseEnter = () => {
+    setIsProductHovered(true);
   };
 
-  const BackHandle = () => {
-    const numShow = Inf - 1 < 0 ? TIPS.length - 1 : Inf - 1;
-    return setInf(numShow);
-  };
   const navigate = useNavigate();
+  const loginModalRef = useRef();
+  const registerModalRef = useRef();
+
   const Home = () => {
     navigate("/vivi-eyewear");
   };
-  const handleLogin = () => {
-    navigate("/vivi-eyewear/sign-in");
-  };
-  const handleRegister = () => {
-    navigate("/vivi-eyewear/sign-up");
-  };
+
   return (
     <div
       className="header"
@@ -117,7 +53,7 @@ const Header = (props) => {
               </div>
             </div>
           </div>
-          {/* NAV ở đây */}
+          {/* NAV here */}
           <div className="mobile-toggler d-xl-none">
             <button
               href="#"
@@ -141,6 +77,8 @@ const Header = (props) => {
                 placeholder="Search"
                 aria-label="Search"
                 aria-describedby="search-addon"
+                value={query}
+                onChange={handleInputChange}
               />
               <button type="button" className="btn btn-outline-light">
                 <i className="bi bi-search"></i>{" "}
@@ -149,13 +87,14 @@ const Header = (props) => {
           </div>
 
           <div className="d-none d-xl-flex col-xl-3 justify-content-evenly">
-            <div className="d-flex justify-content-center  align-items-center">
+            <div className="d-flex justify-content-center align-items-center">
               <i className="bi bi-person-circle fs-4"></i>
               <div className="modal-login">
                 <button
                   type="button"
                   className="login-container btn btn-link text-light"
-                  onClick={handleLogin}
+                  data-bs-toggle="modal"
+                  data-bs-target="#LoginModal"
                 >
                   Sign In
                 </button>
@@ -163,7 +102,8 @@ const Header = (props) => {
                 <button
                   type="button"
                   className="register-container btn btn-link text-light"
-                  onClick={handleRegister}
+                  data-bs-toggle="modal"
+                  data-bs-target="#RegisterModal"
                 >
                   Sign Up
                 </button>
@@ -171,9 +111,12 @@ const Header = (props) => {
               {/* Modal Login */}
             </div>
           </div>
+          <div className="modal-login">
+            {/* Include Login and Register components here */}
+          </div>
 
           <div className="d-md-flex d-none justify-content-around">
-            <Cart value="0" />
+            {/* <Cart value="0" /> */}
           </div>
         </div>
         {/* Modal Login */}
@@ -216,23 +159,23 @@ const Header = (props) => {
                 <div className="modal-body">
                   <div className="modal-line">
                     <i className="bi bi-house-door-fill"></i>
-                    <a href="/vivi-eyewear">Home</a>
+                    <Link to="/vivi-eyewear">Home</Link>
                   </div>
                   <div className="modal-line">
                     <i className="bi bi-file-earmark-text-fill"></i>
-                    <a href="/vivi-eyewear/news">News</a>
+                    <Link to="/vivi-eyewear/news">News</Link>
                   </div>
                   <div className="modal-line">
                     <i className="bi bi-telephone-fill"></i>
-                    <a href="/vivi-eyewear/contact">Contact</a>
+                    <Link to="/vivi-eyewear/contact">Contact</Link>
                   </div>
-                  <div className="d-flex justify-content-center  align-items-center">
+                  <div className="d-flex justify-content-center align-items-center">
                     <i className="bi bi-person-circle fs-4"></i>
                     <button
                       type="button"
                       className="login-container btn btn-link text-light"
-                      onClick={handleLogin}
-
+                      data-bs-toggle="modal"
+                      data-bs-target="#LoginModal"
                     >
                       Sign In
                     </button>
@@ -240,7 +183,8 @@ const Header = (props) => {
                     <button
                       type="button"
                       className="register-container btn btn-link text-light"
-                      onClick={handleRegister}
+                      data-bs-toggle="modal"
+                      data-bs-target="#RegisterModal"
                     >
                       Sign Up
                     </button>
@@ -251,47 +195,21 @@ const Header = (props) => {
             </div>
           </div>
         </div>
-      </div>
-      <div
-        className="container d-none d-xl-flex justify-content-evenly"
-        style={{}}
-      >
-        <div className="button d-flex">
-          <button
-            type="button"
-            className="btn"
-            style={BUTTONSTYLE}
-            onClick={BackHandle}
-          >
-            <i className="bi bi-chevron-double-left text"></i>
-          </button>
-          <button
-            type="button"
-            className="btn"
-            style={BUTTONSTYLE}
-            onClick={NextHandle}
-          >
-            <i className="bi bi-chevron-double-right text"></i>
-          </button>
-          <div className="d-flex align-items-center ms-2">
-            {TIPS[Inf].title}
-          </div>
-        </div>
-        <div>
-          {TUTORIALS &&
-            TUTORIALS.map((inf) => {
-              return (
-                <button type="button" className="btn text" key={inf.title}>
-                  <div className="d-flex">
-                    <div className="icon"> {inf.icon}</div>
-                    {inf.title}
-                  </div>
-                </button>
-              );
-            })}
+        <div className="form-inline d-flex">
+          {" "}
+          <input
+            className="form-control mr-sm-2 "
+            type="search"
+            placeholder="Nhập từ khoá cần tìm"
+            aria-label="Search"
+            value={query}
+            onChange={handleInputChange}
+          />
+          <i className="bi bi-search text-black fs-4"></i>
         </div>
       </div>
     </div>
   );
 };
+
 export default Header;
