@@ -10,7 +10,7 @@ import BlogsPage from "../pages/BlogsPage/BlogsPage";
 import PageNotFound from "../pages/PageNotFound/PageNotFound";
 import LoginPage from "../pages/LoginPage/Login";
 import WarrantyPage from "../pages/WarrantyPage/WarrantyPage";
-import AdminSideBar from "../components/AdminSideBar/AdminSideBar";
+import AdminManagementPage from "../pages/AdminAdminMangagementPage/AdminMangagement";
 
 export const routes = [
   {
@@ -70,18 +70,20 @@ export const routes = [
     isShowHeader: true,
   },
   {
-    path: "/vivi-eyewear/Checkout",
+
+    path: "/Checkout",
     page: Checkout,
     isShowHeader: true,
-  },
-  {
-    path: "/a",
-    page: AdminSideBar,
-    isShowHeader: false,
   },
   {
     path: "/*",
     page: PageNotFound,
     isShowHeader: true,
   },
+  {
+    path: "/admin/adminmanagement",
+    page: AdminManagementPage,
+    isShowHeader: true,
+  }
+
 ];
