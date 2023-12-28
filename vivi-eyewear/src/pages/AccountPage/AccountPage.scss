@@ -3,9 +3,9 @@
     display: flex;
     color: rgb(10, 10, 67);
     height: 500px;
-    width: 900px;
-    margin-left: 22%;
-    margin-top: 15px;
+    width: 1000px;
+    margin-left: 50%;
+    margin-top: 5px;
 
 }
 
@@ -19,12 +19,15 @@
     margin: 5px;
     border: 1px solid  rgb(10, 10, 67);
     padding: 20px;
+    margin-left: 20%;
+    background-color: rgb(255, 255, 255);
 }
 
 .box_2 {
     margin-left: 15px;
     border: 1px solid  rgb(10, 10, 67);
     padding: 20px;
+    background-color: rgb(255, 255, 255);
 }
 
 .button {
@@ -32,33 +35,71 @@
     margin: 10px;
     color: aliceblue;
     background-color: rgb(21, 21, 74);
+    border: 1px solid rgb(36, 28, 84);
+    border-radius: 5px; 
+    padding: 5px;
+    margin-bottom: 10px;
 }
 
 .laber {
-    margin: 1px;
+    margin: 0px;
 }
 
 .laber_1 {
-    margin-left: 1cap;
+    margin-left: 5px;
 }
 
-.input {
-    margin-left: 10px;
-    margin: 5px;
+.input{
+    margin-left: 0px;
+    margin-top: 5px;
+    border: 1px solid rgb(36, 28, 84);
+    border-radius: 5px; 
+    padding:5px;
 }
 
 .input_1 {
-    margin-left: 25px;
+    margin-left: 10px;
+    margin-top: 10px;
+    border: 1px solid rgb(36, 28, 84);
+    border-radius: 5px; 
+    padding:5px;
 }
 
 .input_2 {
     margin-left: 29px;
+    border: 1px solid rgb(36, 28, 84);
+    border-radius: 5px; 
+    padding:5px;
 }
 
 .input_3 {
-    margin-left: 144px;
+    margin-left: 140px;
+    border: 1px solid rgb(36, 28, 84);
+    border-radius: 5px; 
+    padding:5px;
 }
+
+.input_4 {
+    margin-left: 33px;
+    border: 1px solid rgb(36, 28, 84);
+    border-radius: 5px; 
+    padding:5px;
+}
+
 
 .hr {
     margin: 5px 0; /* Điều chỉnh khoảng cách trên và dưới đường ngang */
+}
+
+.layout_1{
+    display: flex;
+}
+
+.layout_2{
+    display: flex;
+}
+
+.avt{
+    text-align: center;
+    font-size: 7rem;
 }

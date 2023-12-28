@@ -2,7 +2,7 @@ import "./App.scss";
 import React, { Fragment } from "react";
 import "bootstrap/dist/js/bootstrap.min.js";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { publicRoutes } from "./routes";
+import { publicRoutes } from "./routes"; 
 import { CustomerDefaultLayout } from "./components/Layouts";
 
 function App() {
