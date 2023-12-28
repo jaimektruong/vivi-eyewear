@@ -37,7 +37,6 @@ function Account() {
       <div className="container">
         <div className="box_1">
           <fieldset>
-            <img className="image" src="no avt.jpg" />
             <hr />
             <i className="fa-solid fa-user"></i>
             <label>Thông tin tài khoản</label>
