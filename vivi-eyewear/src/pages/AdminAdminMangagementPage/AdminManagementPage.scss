@@ -1,6 +1,6 @@
 <<<<<<< HEAD
 html, body{
-=======
+
 /* CSS cho các hàng trong bảng */
 .admin-table-admin {
   width: 80%;
@@ -49,7 +49,7 @@ html, body{
 }
 
 .admin-table-admin .admin-table-body p {
->>>>>>> 39fbb8b44145e1065ba0bc894f617fbed3817096
+
   margin: 0;
   padding: 0;
   font-family: inter;
@@ -60,17 +60,15 @@ html, body{
   align-items: flex-start;
   position: relative;
   background-color: rgba(225, 234, 250, 1);
-<<<<<<< HEAD
   width: 100vw;
   height: 100vh;
 }
 
 .header {
-=======
+
   padding-left: 20px;
 }
 .admin-management-page .header {
->>>>>>> 39fbb8b44145e1065ba0bc894f617fbed3817096
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -83,13 +81,13 @@ html, body{
   font-weight: bold;
    color: rgba(22, 45, 90, 1);
 }
+}
 
-<<<<<<< HEAD
 .add-admin-button {
   margin-left: 180px; /* Khoảng cách giữa h2 và button */
-=======
+}
 .admin-management-page .add-admin-button {
->>>>>>> 39fbb8b44145e1065ba0bc894f617fbed3817096
+
   padding: 8px 16px;
   background-color: #204387;
   color: white;
@@ -99,10 +97,9 @@ html, body{
   cursor: pointer;
   font-size: 50px;
 
-<<<<<<< HEAD
+
 }
 .filter-frame {
-=======
 .admin-management-page .main-content {
   flex-grow: 1; /* Phần nội dung chính mở rộng để lấp đầy phần còn trống */
 
@@ -111,7 +108,7 @@ html, body{
 }
 //////==================================================
 .admin-management-page .filter-frame {
->>>>>>> 39fbb8b44145e1065ba0bc894f617fbed3817096
+
   display: grid;
   grid-template-rows: auto auto;
   row-gap: 5px;
@@ -215,4 +212,5 @@ img {
   &:hover {
     color: #0e2959; /* Màu chữ khi di chuột qua liên kết */
   }
+}
 }

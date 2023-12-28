@@ -130,7 +130,6 @@ const AdminManagementPage = () => {
             <button onClick={handleDelete}>Xóa</button>
           </div>
         </div>
-<<<<<<< HEAD
         <table className="admin-table">
 =======
 
