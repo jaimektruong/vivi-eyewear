@@ -1,4 +1,5 @@
 import "./AdminProductManagementPage.scss";
+
 function AdminProductManagementPage() {
   return (
     <div className="content-details d-flex flex-column">
@@ -19,9 +20,22 @@ function AdminProductManagementPage() {
         <div>Đã xoá ()</div>
       </div>
       <div className=" d-flex flex-column button-action-container">
+        {/* line 1 */}
         <div className="d-flex justify-content-between button-action-line">
           {/* thanh search */}
-          <input type="text" placeholder="Tìm kiếm tên sản phẩm" />
+          <div className="input-group search-bar-styles">
+            <input
+              type="text"
+              className="form-control custom-input-style "
+              placeholder="Tìm kiếm tên sản phẩm"
+            />
+            <button
+              type="button "
+              className="btn border-0 d-flex align-items-center"
+            >
+              <i class="bi bi-search fs-4" style={{ color: "#162D5A" }}></i>
+            </button>
+          </div>
 
           {/* dropdown khoảng giá */}
           <div>
@@ -55,8 +69,9 @@ function AdminProductManagementPage() {
             </button>
           </div>
         </div>
+        {/*line 2  */}
         <div className="d-flex justify-content-between button-action-line">
-          <div>Đã chọn: {}</div>
+          <div className="label-selected">Đã chọn: {}</div>
           <div>
             <button className="button-secondary button-action-styles">
               Kích hoạt
@@ -75,8 +90,11 @@ function AdminProductManagementPage() {
         </div>
       </div>
       <div className="d-flex d-flex justify-content-between">
-        <div>checkbox</div>
-        <div>Tất cả</div>
+        <div className="d-flex gap-8">
+          <i class="bi bi-square"></i>
+          <p>Tất cả</p>
+        </div>
+
         <div>Số lượng</div>
         <div>Giá bán</div>
         <div>Thời gian cập nhật</div>
