@@ -1,6 +1,6 @@
-import "./Cart.scss";
+import "./CartButton.scss";
 
-function Cart(props) {
+function CartButton(props) {
   return (
     <>
       <button className="cart__container text-white ">
@@ -13,4 +13,4 @@ function Cart(props) {
   );
 }
 
-export default Cart;
+export default CartButton;

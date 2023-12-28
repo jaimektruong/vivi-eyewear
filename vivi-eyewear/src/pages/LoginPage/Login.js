@@ -1,10 +1,67 @@
+import { useEffect, useState } from "react";
 import "./Login.scss";
 import { useNavigate } from "react-router-dom";
+import * as UserService from "../../services/UserService";
+import { UseMutationHook } from "../../hooks/UseMutationHook";
+import { jwtDecode } from "jwt-decode";
+import { useDispatch } from "react-redux";
+import { updateUser } from "../../redux/slices/userSlice";
+
 const LoginPage = () => {
   const navigate = useNavigate();
+  const mutation = UseMutationHook((data) => UserService.loginUser(data));
+
+  const { data, isLoading, isSuccess } = mutation;
   const handleRegister = () => {
-    navigate("/vivi-eyewear/sign-up");
+    navigate("/sign-up");
   };
+
+  const [isShowPassword, setIsShowPassword] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const dispatch = useDispatch();
+  useEffect(() => {
+    if (isSuccess) {
+      navigate("/");
+      console.log(data);
+      localStorage.setItem("access_token", JSON.stringify(data?.access_token));
+      if (data?.access_token) {
+        const decoded = jwtDecode(data?.access_token);
+        console.log(decoded);
+        if (decoded?.id) {
+          handleGetDetailUser(decoded?.id, data?.access_token);
+        }
+      }
+    }
+  }, [isSuccess]);
+
+  const handleGetDetailUser = async (id, token) => {
+    const res = await UserService.getDetailUser(id, token);
+    dispatch(updateUser({ ...res?.data, access_token: token }));
+    console.log("res", res);
+  };
+
+  const handleOnChangeEmail = (value) => {
+    setEmail(value);
+  };
+
+  const handleOnChangePassword = (value) => {
+    setPassword(value);
+  };
+
+  const handleTogglePassword = () => {
+    setIsShowPassword(!isShowPassword);
+  };
+
+  const handleSignIn = () => {
+    mutation.mutate({
+      email,
+      password,
+    });
+
+    console.log("sign in", email, password);
+  };
+
   return (
     <>
       <div className="container py-5 d-block">
@@ -39,22 +96,45 @@ const LoginPage = () => {
               >
                 <div className="content-right col-10  d-flex flex-column gap-3 py-3">
                   <div className="brand d-md-none">Sign In</div>
-                  <label>Username or email:</label>
+                  <label>Email hoặc tên đăng nhập:</label>
                   <input
-                    type="username"
+                    type="email"
                     className="form-control"
-                    placeholder="Email address or phone numbers"
+                    placeholder="Địa chỉ email hoặc số điện thoại"
+                    value={email}
+                    onChange={(e) => handleOnChangeEmail(e.target.value)}
                   />
-                  <label>Password:</label>
+                  <label>Mật khẩu:</label>
                   <input
-                    type="password"
+                    type={isShowPassword ? "text" : "password"}
                     className="form-control"
-                    placeholder="Password"
+                    placeholder="Mật khẩu"
+                    value={password}
+                    onChange={(e) => handleOnChangePassword(e.target.value)}
                   />
-                  <button className="btn btn-outline-primary">Login</button>
+                  <input
+                    type="checkbox"
+                    checked={isShowPassword}
+                    onChange={handleTogglePassword}
+                  />
+
+                  {data?.status === "ERR" && <span>{data?.message}</span>}
+                  <button
+                    className="btn btn-outline-primary"
+                    onClick={handleSignIn}
+                  >
+                    Đăng nhập
+                  </button>
+                  {isLoading && (
+                    <div className="text-center">
+                      <div className="spinner-border" role="status">
+                        <span className="visually-hidden">Loading...</span>
+                      </div>
+                    </div>
+                  )}
                   <span className="text-center">
                     <a className="forgot-password" href="/">
-                      Forgot your password?
+                      Quên mật khẩu?
                     </a>
                   </span>
                   <hr />
@@ -63,7 +143,7 @@ const LoginPage = () => {
                       className="btn btn-outline-success"
                       onClick={handleRegister}
                     >
-                      Create New Account
+                      Tạo tài khoản mới
                     </button>
                   </div>
                 </div>
@@ -75,103 +155,5 @@ const LoginPage = () => {
     </>
   );
 };
-
-// import "./Login.scss";
-// import React, { forwardRef, useImperativeHandle, useState } from "react";
-// const Login = forwardRef((props, ref) => {
-//   const [isModalVisible, setModalVisible] = useState(false);
-
-//   // Hàm để hiển thị modal
-//   const show = () => {
-//     setModalVisible(true);
-//   };
-
-//   // Hàm để ẩn modal
-//   const hide = () => {
-//     setModalVisible(false);
-//   };
-
-//   // Thực hiện sử dụng hàm show và hide từ bên ngoài
-//   useImperativeHandle(ref, () => ({
-//     show,
-//     hide,
-//   }));
-//   return (
-//     <>
-//       {/* Modal */}
-//       <div
-//         className={`modal fade ${isModalVisible ? "show" : ""}`}
-//         id="LoginModal"
-//         tabIndex="-1"
-//         aria-labelledby="LoginModalLabel"
-//         aria-hidden={!isModalVisible}
-//       >
-//         <div className="modal-dialog modal-dialog-centered">
-//           <div className="modal-content">
-//             <div className="modal-body">
-//               <div className="d-flex justify-content-end">
-//                 <button
-//                   type="button"
-//                   className="btn-close"
-//                   data-bs-dismiss="modal"
-//                   aria-label="Close"
-//                 ></button>
-//               </div>
-//               <div className="container justify-content-center">
-//                 <div className="row px-3 px-sm-0" style={{ width: "100%" }}>
-//                   <div
-//                     className="content-left  col-12 d-none col-sm-5 d-sm-block"
-//                     style={{ paddingRight: "2.5rem", marginTop: "0px" }}
-//                   >
-//                     <div className="brand">Sign In</div>
-//                     <div className="detail">Thanks for chosing us</div>
-//                     <div className="d-flex justify-content-center">
-//                       <img
-//                         src="https://kinhmatanna.com/wp-content/uploads/2022/06/Rectangle-656.jpg"
-//                         alt="pic"
-//                         className="rounded"
-//                       />
-//                     </div>
-//                   </div>
-//                   <div className="content-right col-sm-7 col-12 d-flex flex-column gap-3 py-3">
-//                     <div className="brand d-sm-none">Sign In</div>
-//                     <label>Username or email:</label>
-//                     <input
-//                       type="username"
-//                       className="form-control"
-//                       placeholder="Email address or phone numbers"
-//                     />
-//                     <label>Password:</label>
-//                     <input
-//                       type="password"
-//                       className="form-control"
-//                       placeholder="Password"
-//                     />
-//                     <button className="btn btn-outline-primary">Login</button>
-//                     <span className="text-center">
-//                       <a className="forgot-password" href="/">
-//                         Forgot your password?
-//                       </a>
-//                     </span>
-//                     <hr />
-//                     <div className="text-center">
-//                       <button
-//                         className="btn btn-outline-success"
-//                         data-bs-toggle="modal"
-//                         data-bs-target="#RegisterModal"
-//                       >
-//                         Create New Account
-//                       </button>
-//                     </div>
-//                   </div>
-//                 </div>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </>
-//   );
-// });
 
 export default LoginPage;
