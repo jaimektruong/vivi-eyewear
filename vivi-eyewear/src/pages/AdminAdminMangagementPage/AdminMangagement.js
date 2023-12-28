@@ -134,9 +134,9 @@ const AdminManagementPage = () => {
           </div>
         </div>
 
-        <table className="admin-table">
+        <table className="admin-table-admin">
           <thead>
-            <tr>
+            <tr className ="admin-table-title">
               <th>
                 <input type="checkbox" />
               </th>
@@ -149,7 +149,7 @@ const AdminManagementPage = () => {
               <th>Hành động</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className ="admin-table-body">
             {admins.map((admin) => (
               <tr key={admin.id}>
                 <td>

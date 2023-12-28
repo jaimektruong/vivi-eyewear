@@ -1,4 +1,54 @@
+.content-details {
+  background-color: var(--color-background-admin);
+  width: 100%;
+  color: var(--color-primary);
+  gap: 24px;
+  padding: 32px;
+  font-size: 22px;
+}
 .function-management {
   font-size: 30px;
   font-weight: bold;
+}
+.button-local {
+  height: 48px;
+}
+.button-add-product {
+  font-size: 30px;
+  width: 320px;
+}
+.product-status-box {
+  gap: 165px;
+}
+.button-action-container {
+  padding: 24px;
+  gap: 24px;
+}
+.button-action-line {
+  gap: 24px;
+}
+.button-action-styles {
+  height: 48px;
+  width: 260px;
+}
+.mini-button {
+  width: 192px;
+}
+.search-bar-styles {
+  width: 320px;
+  height: 48px;
+}
+.dropdown-styles {
+  width: 240px;
+  height: 48px;
+  background-color: white;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  border-radius: 6px;
+  font-size: 22px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.search-bar-styles {
+  width: 320px;
 }

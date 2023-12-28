@@ -3,7 +3,7 @@ import logo from "../../../../assets/logo.png";
 
 function AdminSideBar() {
   return (
-    <div className="d-flex flex-column flex-shrink-0 p-3 text-white container-box">
+    <div className="d-flex flex-column flex-shrink-0 text-white container-box">
       <div className="logo-box">
         <img src={logo} alt="Logo"></img>
       </div>
@@ -19,48 +19,48 @@ function AdminSideBar() {
         </div>
       </div>
 
-      <ul className="nav nav-pills flex-column mb-auto">
-        <li className="nav-item">
+      <ul className="nav nav-pills flex-column mb-auto ">
+        <li className="nav-item nav-item-margin">
           <a href="#" className="nav-link" aria-current="page">
             Dashboard
           </a>
         </li>
-        <li>
+        <li className="nav-item nav-item-margin">
           <a href="#" className="nav-link ">
             Đơn hàng
           </a>
         </li>
-        <li>
+        <li className="nav-item nav-item-margin">
           <a href="#" className="nav-link ">
             Sản phẩm
           </a>
         </li>
-        <li>
+        <li className="nav-item nav-item-margin">
           <a href="#" className="nav-link ">
             Tồn kho
           </a>
         </li>
-        <li>
+        <li className="nav-item nav-item-margin">
           <a href="#" className="nav-link ">
             Khách hàng
           </a>
         </li>
-        <li>
+        <li className="nav-item nav-item-margin">
           <a href="#" className="nav-link ">
             Quản trị viên
           </a>
         </li>
-        <li>
+        <li className="nav-item nav-item-margin">
           <a href="#" className="nav-link ">
             Bài viết
           </a>
         </li>
-        <li>
+        <li className="nav-item nav-item-margin">
           <a href="#" className="nav-link ">
             Khuyến mãi
           </a>
         </li>
-        <li>
+        <li className="nav-item nav-item-margin">
           <a href="#" className="nav-link">
             Kết quả kinh doanh
           </a>

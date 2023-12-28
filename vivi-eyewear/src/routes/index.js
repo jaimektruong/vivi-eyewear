@@ -12,7 +12,7 @@ import LoginPage from "../pages/LoginPage/Login";
 import WarrantyPage from "../pages/WarrantyPage/WarrantyPage";
 // import AdminSideBar from "../components/AdminSideBar/AdminSideBar";
 import AccountPage from "../pages/AccountPage/AccountPage";
-import AdminBlog from "../pages/AdminBlogsManagement/AdminBlogs"
+import AdminBlog from "../pages/AdminBlogsManagement/AdminBlogs";
 import AdminProductManagementPage from "../pages/AdminProductManagementPage/AdminProductManagementPage";
 import { AdminDefaultLayout } from "../components/Layouts";
 import { CustomerDefaultLayout } from "../components/Layouts";
@@ -108,22 +108,7 @@ export const publicRoutes = [
     path: "/admin/adminmanagement",
     page: AdminManagementPage,
     layout: AdminDefaultLayout,
-  },
-  {
-    path: "/admin/customermanagement",
-    page: CustomerManagementPage,
-    layout: AdminDefaultLayout,
-  },
-  {
-    path: "/admin/ordermanagement",
-    page: OrderManagementPage,
-    layout: AdminDefaultLayout,
-  },
-  {
-    path: "/admin/promotionmanagement",
-    page: PromotionManagementPage,
-    layout: AdminDefaultLayout,
-  },
+  }
 
 ];
 
