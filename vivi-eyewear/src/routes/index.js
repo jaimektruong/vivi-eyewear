@@ -10,10 +10,16 @@ import BlogsPage from "../pages/BlogsPage/BlogsPage";
 import PageNotFound from "../pages/PageNotFound/PageNotFound";
 import LoginPage from "../pages/LoginPage/Login";
 import WarrantyPage from "../pages/WarrantyPage/WarrantyPage";
+<<<<<<< HEAD
 import AdminProductManagementPage from "../pages/AdminProductManagementPage/AdminProductManagementPage";
 import { AdminDefaultLayout } from "../components/Layouts";
 import { CustomerDefaultLayout } from "../components/Layouts";
 export const publicRoutes = [
+=======
+import AdminManagementPage from "../pages/AdminAdminMangagementPage/AdminMangagement";
+
+export const routes = [
+>>>>>>> 72e548fe95cf524545f084927999642d1903e85b
   {
     path: "/",
     page: HomePage,
@@ -71,9 +77,14 @@ export const publicRoutes = [
     layout: CustomerDefaultLayout,
   },
   {
-    path: "/vivi-eyewear/Checkout",
+
+    path: "/Checkout",
     page: Checkout,
+<<<<<<< HEAD
     layout: CustomerDefaultLayout,
+=======
+    isShowHeader: true,
+>>>>>>> 72e548fe95cf524545f084927999642d1903e85b
   },
   {
     path: "/*",
@@ -85,6 +96,12 @@ export const publicRoutes = [
     page: AdminProductManagementPage,
     layout: AdminDefaultLayout,
   },
+  {
+    path: "/admin/adminmanagement",
+    page: AdminManagementPage,
+    isShowHeader: true,
+  }
+
 ];
 
 export const privateRoutes = [{}];
