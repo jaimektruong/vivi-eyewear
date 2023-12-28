@@ -1,0 +1,64 @@
+
+.container {
+    display: flex;
+    color: rgb(10, 10, 67);
+    height: 500px;
+    width: 900px;
+    margin-left: 22%;
+    margin-top: 15px;
+
+}
+
+.image {
+    height: 50px;
+    width: 50px;
+    align-items: center;
+}
+
+.box_1 {
+    margin: 5px;
+    border: 1px solid  rgb(10, 10, 67);
+    padding: 20px;
+}
+
+.box_2 {
+    margin-left: 15px;
+    border: 1px solid  rgb(10, 10, 67);
+    padding: 20px;
+}
+
+.button {
+    float: right;
+    margin: 10px;
+    color: aliceblue;
+    background-color: rgb(21, 21, 74);
+}
+
+.laber {
+    margin: 1px;
+}
+
+.laber_1 {
+    margin-left: 1cap;
+}
+
+.input {
+    margin-left: 10px;
+    margin: 5px;
+}
+
+.input_1 {
+    margin-left: 25px;
+}
+
+.input_2 {
+    margin-left: 29px;
+}
+
+.input_3 {
+    margin-left: 144px;
+}
+
+.hr {
+    margin: 5px 0; /* Điều chỉnh khoảng cách trên và dưới đường ngang */
+}
