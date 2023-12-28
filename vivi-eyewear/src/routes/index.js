@@ -80,7 +80,7 @@ export const publicRoutes = [
     layout: CustomerDefaultLayout,
   },
   {
-    path: "/Checkout",
+    path: "/check-out",
     page: Checkout,
     layout: CustomerDefaultLayout,
   },

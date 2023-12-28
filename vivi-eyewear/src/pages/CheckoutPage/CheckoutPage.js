@@ -1,137 +1,195 @@
-import "./CheckoutPage.scss"
-// import { useNavigate } from "react-router-dom";
-// import {ContainerCard} from ""
+import React, { useState } from 'react';
+import './CheckoutPage.scss'; // Import your CSS file
+import { Link, useHistory } from 'react-router-dom';
+import { Modal, Button } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCcVisa, faCcMastercard } from '@fortawesome/free-brands-svg-icons';
+import { faMobileAlt } from '@fortawesome/free-solid-svg-icons';
 
-const Checkout = () => {
-    // const navigate = useNagvigate();
-    // handleCheckout = () =>{
-    //     navigate("/vivi-eyewear/cart");
-    // };
-    // const handleOrderClick = () => {
-    //     // Xử lý sự kiện khi click nút Đặt hàng
-    //   };
-    return(
-        <>
-            <div className="container py-5 d-block">
-                <div className="brand d-none d-lg-flex">
-                    <div className="d-flex justify-content-center pb-3">Thông tin vận chuyển</div>
-                    <input
-                        type="number"
-                        className="form-control"
-                        placeholder="Số điện thoại"
-                    />
-                    <input
-                        type="username"
-                        className="form-control"
-                        placeholder="Họ tên"
-                    />
-                     <div className="d-flex justify-content-center pb-3">Chi tiết địa chỉ </div>
-                     <input
-                        type="detailaddress"
-                        className="form-control"
-                        placeholder="Địa chỉ cụ thể"
-                    />
-                    <input
-                        type="Road"
-                        className="form-control"
-                        placeholder="Đường"
-                    />
-                    <input
-                        type="district"
-                        className="form-control"
-                        placeholder="Thị xã/Huyện"
-                    />
-                    <input
-                        type="City"
-                        className="form-control"
-                        placeholder="Tỉnh/Thành phố"
-                    /> 
+const Navigation_TT = () => {
+    return (
+        <nav>
+            <ul>
+                <li>
+                    <Link to="/tai-khoan">Tài khoản</Link>
+                </li>
+                <li>
+                    <Link to="/gio-hang">Giỏ hàng</Link>
+                </li>
+                <li>
+                    <Link to="/thanh-toan">Thanh toán</Link>
+                </li>
+            </ul>
+        </nav>
+    );
+};
+const CheckoutPage = () => {
+    const [discountCode, setDiscountCode] = useState('');
+    const [appliedDiscount, setAppliedDiscount] = useState(false);
+    const [phoneNumber, setPhoneNumber] = useState('');
+    const [fullName, setFullName] = useState('');
+    const [addressDetails, setAddressDetails] = useState('');
+    const [street, setStreet] = useState('');
+    const [district, setDistrict] = useState('');
+    const [city, setCity] = useState('');
+    const [selectedPayment, setSelectedPayment] = useState(''); // Định nghĩa setSelectedPayment ở đây
+
+    const applyDiscount = () => {
+        // Kiểm tra mã giảm giá ở đây (có thể thay bằng logic kiểm tra của bạn)
+        if (discountCode === 'YOUR_DISCOUNT_CODE') {
+            setAppliedDiscount(true);
+            alert('Mã giảm giá đã được áp dụng!');
+            // Thực hiện các hành động khi mã giảm giá hợp lệ
+        } else {
+            alert('Mã giảm giá không hợp lệ!');
+            // Xử lý khi mã không hợp lệ, ví dụ: hiển thị thông báo
+        }
+    };
+    const [showModal, setShowModal] = useState(false);
+    
+    const handleOrder = () => {
+        if (phoneNumber && fullName && addressDetails && street && district && city && selectedPayment) {
+          if (selectedPayment === 'bank-transfer') {
+            // Redirect to third-party payment page
+            window.location.href = '/bank-payment'; // Change this to the actual URL
+          } else if (selectedPayment === 'cash-on-delivery') {
+            setShowModal(true);
+            // Handle other actions for cash on delivery
+          }
+        } else {
+          setShowModal(true);
+          // Handle case when information is incomplete
+        }
+      };
+
+    return (
+        <div className="checkout-inner">
+             <Navigation_TT />
+            <div className="checkout-content">
+                <div className="checkout-container">
+                    {/* Shipping Information */}
+                    <div className="shipping-info">
+                        <h2>Thông tin vận chuyển</h2>
+                        <input
+                            type="text"
+                            placeholder="Số điện thoại"
+                            value={phoneNumber}
+                            onChange={(e) => setPhoneNumber(e.target.value)}
+                        />
+                        <input
+                            type="text"
+                            placeholder="Họ tên"
+                            value={fullName}
+                            onChange={(e) => setFullName(e.target.value)}
+                        />
+                        <h3>Chi tiết địa chỉ</h3>
+                        <input
+                            type="text"
+                            placeholder="Địa chỉ cụ thể"
+                            value={addressDetails}
+                            onChange={(e) => setAddressDetails(e.target.value)}
+                        />
+                        <input
+                            type="text"
+                            placeholder="Đường"
+                            value={street}
+                            onChange={(e) => setStreet(e.target.value)}
+                        />
+                        <input
+                            type="text"
+                            placeholder="Thị xã/Huyện"
+                            value={district}
+                            onChange={(e) => setDistrict(e.target.value)}
+                        />
+                        <input
+                            type="text"
+                            placeholder="Tỉnh/Thành phố"
+                            value={city}
+                            onChange={(e) => setCity(e.target.value)}
+                        />
+                    </div>
+
+                       {/* Order Summary */}
+            <div className="order-summary">
+                <ul>
+                <li>
+                    <span>GN000001</span>
+                    <span>450,000 VND</span>
+                </li>
+                <li>
+                    <span>Tạm tính:</span>
+                    <span>450,000 VND</span>
+                </li>
+                <hr></hr>
+                <li>
+                    <span>Phí vận chuyển:</span>
+                    <span>30,000 VND</span>
+                </li>
+                <hr></hr>
+                <li className="total">
+                    <span>Tổng cộng:</span>
+                    <span>480,000 VND</span>
+                </li>
+                </ul>
+                <div className="payment-methods">
+                <input
+                    type="radio"
+                    id="bank-transfer"
+                    name="payment"
+                    value="bank-transfer"
+                    onChange={() => setSelectedPayment('bank-transfer')}
+                />
+                <label htmlFor="bank-transfer">Thanh toán trực tuyến</label>
+                <FontAwesomeIcon icon={faCcVisa} />
+                <FontAwesomeIcon icon={faCcMastercard} />
+                <FontAwesomeIcon icon={faMobileAlt} />
+                <br />
+                <input
+                    type="radio"
+                    id="cash-on-delivery"
+                    name="payment"
+                    value="cash-on-delivery"
+                    onChange={() => setSelectedPayment('cash-on-delivery')}
+                />
+                <label htmlFor="cash-on-delivery">Thanh toán khi nhận hàng</label>
+                <div className="discount-section">
+                            <input
+                                type="text"
+                                placeholder="Nhập mã giảm giá"
+                                value={discountCode}
+                                onChange={(e) => setDiscountCode(e.target.value)}
+                            />
+                            <button onClick={applyDiscount}>Áp dụng</button>
                 </div>
-                <div className="brand d-none d-lg-flex">
-                <div className="tm-tnh">
-                    <div className="tm-tnh-inner">
-                        <div className="gamepad-cart-small-parent">
-                        {/* <GamepadCartSmall
-                            dimensions="/g922500x500-1@2x.png"
-                            gamepadCartSmallPosition="relative"
-                            gamepadCartSmallFlexShrink="0"
-                        /> */}
-                        <div className="gn000001-parent">
-                            <div className="vnd">GN000001</div>
-                            <div className="vnd">450,000 VND</div>
-                        </div>
-                        </div>
-                    </div>
-                    <div className="frame-group">
-                        <div className="frame-container">
-                        <div className="frame-container">
-                            <div className="frame-container">
-                            <div className="tm-tnh-parent">
-                                <div className="vnd">Tạm tính:</div>
-                                <div className="vnd">450,000 VND</div>
-                            </div>
-                            {/* <UnderLineIcon
-                                imageDimensions="/underline@2x.png"
-                                underLineIconWidth="422px"
-                                underLineIconOpacity="0.4"
-                                underLineIconPosition="relative"
-                            /> */}
-                            </div>
-                            <div className="ph-vn-chuyn-parent">
-                            <div className="vnd">Phí vận chuyển:</div>
-                            <div className="vnd">30,000 VND</div>
-                            </div>
-                        </div>
-                        {/* <UnderLineIcon
-                            imageDimensions="/underline@2x.png"
-                            underLineIconWidth="422px"
-                            underLineIconOpacity="0.4"
-                            underLineIconPosition="relative"
-                        /> */}
-                        </div>
-                        <div className="tng-cng-parent">
-                        <div className="vnd">Tổng cộng:</div>
-                        <div className="vnd">480,000 VND</div>
-                        </div>
-                    </div>
-                    <div className="frame-parent2">
-                        <div className="radio-button-parent">
-                        <img
-                            className="radio-button-icon"
-                            alt=""
-                            src="/radio-buttonoff@2x.png"
-                        />
-                        <div className="vnd">Chuyển khoản ngân hàng</div>
-                        </div>
-                        {/* <div className="bkash-parent">
-                        <Bkash bkashPosition="relative" bkashFlexShrink="0" />
-                        <Visa visaPosition="relative" visaFlexShrink="0" />
-                        <Mastercard mastercardPosition="relative" mastercardFlexShrink="0" />
-                        <Nagad nagadPosition="relative" nagadFlexShrink="0" />
-                        </div> */}
-                    </div>
-                    <div className="radio-button-group">
-                        <img
-                        className="radio-button-icon"
-                        alt=""
-                        src="/radio-buttonon@2x.png"
-                        />
-                        <div className="vnd">Thanh toán khi nhận hàng</div>
-                    </div>
-                    {/* <CouponCode /> */}
-                    </div>
                     
                 </div>
-                <button
-                    // onClickHandler={handleOrderClick}
-                    value="button-value"
-                    title="Đặt hàng"
-                    buttonPosition="absolute"
-                    buttonTop="752px"
-                    buttonLeft="506px"
-                    />
             </div>
-        </>
-    )
-}
-export default Checkout;
+               
+            </div>
+                            {/* Button to handle order */}
+                    <button onClick={handleOrder}>Đặt hàng</button>
+
+                {/* Modal */}
+                <Modal show={showModal} onHide={() => setShowModal(false)}>
+                    <Modal.Header closeButton>
+                        <Modal.Title>Thông báo</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        {phoneNumber && fullName && addressDetails && street && district && city ? (
+                        <p>Đặt hàng thành công! Tiếp tục mua sắm cùng ViVi!</p>
+                        ) : (
+                        <p>Vui lòng điền đầy đủ thông tin để đặt hàng!</p>
+                        )}
+                    </Modal.Body>
+                    <Modal.Footer>
+                        <Button variant="secondary" onClick={() => setShowModal(false)}>
+                        Đóng
+                        </Button>
+                    </Modal.Footer>
+                    </Modal>
+
+        </div>
+        </div>
+    );
+};
+export default CheckoutPage;
