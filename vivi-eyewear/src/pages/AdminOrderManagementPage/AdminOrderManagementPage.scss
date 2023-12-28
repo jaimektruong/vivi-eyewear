@@ -1,0 +1,77 @@
+
+.order-management-page {
+    display: flex;
+    /* Các thuộc tính khác nếu cần */
+  
+    .main-content {
+      flex-grow: 1;
+      /* Các thuộc tính khác nếu cần */
+  
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        /* Các thuộc tính khác nếu cần */
+      }
+  
+      .filter-frame {
+        display: grid;
+        grid-template-rows: auto auto;
+        row-gap: 5px;
+        gap: 20px;
+        padding: 20px;
+        background-color: #ffffff;
+        border: 1px solid #ccc;
+        margin-bottom: 20px;
+        width: 1000px;
+  
+        .filter-row {
+          display: flex;
+          gap: 50px;
+          align-items: center;
+  
+          input[type="text"],
+          input {
+            padding: 8px 16px;
+            border: 1px solid #204387;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+            color: #0e2959;
+            transition: background-color 0.3s;
+          }
+  
+          #reset {
+            padding: 8px 16px;
+            border: 1px solid #204387;
+            border-radius: 4px;
+            background-color: #204387;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+  
+            &:hover {
+              background-color: #0e2959;
+            }
+          }
+  
+          button:not(.reset-button) {
+            padding: 8px 16px;
+            border: 1px solid #204387;
+            border-radius: 4px;
+            background-color: white;
+            color: #204387;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+  
+            &:hover {
+              background-color: #f2f2f2;
+            }
+          }
+        }
+      }
+    }
+  }

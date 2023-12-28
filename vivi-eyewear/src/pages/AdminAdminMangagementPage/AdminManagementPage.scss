@@ -1,0 +1,146 @@
+/* CSS cho các hàng trong bảng */
+.admin-table {
+  width: 80%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+/* CSS cho các hàng trong bảng */
+tbody tr {
+  border-radius: 20px; /* Đặt border-radius cho mỗi hàng */
+  overflow: hidden; /* Đảm bảo nội dung không vượt qua border-radius */
+  background-color: #ffffff; /* Màu nền của hàng */
+  border: 1px  #ccc; /* Thiết lập border */
+}
+
+  td.action-column div a {
+    display: block;
+    margin-bottom: 10px; /* Khoảng cách giữa các dòng */
+  }
+  
+
+th,
+td {
+  border: none;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  font-weight: bold;
+}
+
+td {
+  background-color: #ffffff;
+}
+
+td:last-child {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+img {
+  width: 50px; /* Điều chỉnh kích thước hình ảnh avatar tại đây */
+  border-radius: 50%; /* Bo tròn hình ảnh avatar */
+}
+
+p {
+  margin: 0;
+}
+
+
+
+.admin-management-page {
+  display: flex; /* Sử dụng flexbox */
+  align-items: flex-start;
+  position: relative;
+  background-color: rgba(225, 234, 250, 1);
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px; /* Khoảng cách giữa header và nội dung */
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.add-admin-button {
+  padding: 8px 16px;
+  background-color: #204387;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.main-content {
+  flex-grow: 1; /* Phần nội dung chính mở rộng để lấp đầy phần còn trống */
+
+  margin: 10px auto; /* Canh giữa theo chiều ngang và chiều dọc */
+  max-width: 1100px;
+}
+//////==================================================
+.filter-frame {
+  display: grid;
+  grid-template-rows: auto auto; /* Hai hàng: hàng 1 và hàng 2 */
+  row-gap: 5px; /* Khoảng cách giữa hai hàng */
+  gap: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  width: 1000px;
+  .filter-row {
+    display: flex;
+    gap: 50px; /* Khoảng cách giữa các thành phần trong mỗi hàng */
+    align-items: center;
+
+    input[type="text"],
+    select {
+      padding: 8px 16px;
+      border: 1px solid #204387;
+      border-radius: 4px;
+      font-size: 14px;
+      cursor: pointer;
+      color:#0e2959;
+      transition: background-color 0.3s;
+    }
+        /* CSS */
+    #reset {
+      padding: 8px 16px;
+      border: 1px solid #204387;
+      border-radius: 4px;
+      background-color: #204387;
+      color: white;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #0e2959;
+      }
+    }
+    /* CSS cho các button còn lại */
+    button:not(.reset-button) {
+      padding: 8px 16px;
+      border: 1px solid #204387;
+      border-radius: 4px;
+      background-color: white;
+      color: #204387;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #f2f2f2;
+      }
+    }
+  }
+}
