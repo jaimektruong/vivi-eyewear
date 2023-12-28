@@ -1,0 +1,51 @@
+.header__container {
+  height: 88px;
+  background-color: var(--color-primary);
+}
+
+.navbar {
+  height: 100%;
+  gap: 40px;
+}
+
+.navbar-nav {
+  gap: 40px;
+}
+
+.form-control {
+  width: 300px;
+  height: 40px;
+}
+
+.navbar-brand {
+  margin: auto 0;
+}
+
+.form-inline {
+  position: relative;
+}
+
+.bi-search {
+  position: absolute;
+  right: 8px;
+}
+
+/* Thêm CSS cho hiển thị dropdown menu khi hover vào "Sản phẩm" */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Đảm bảo dropdown menu ẩn khi không hover vào "Sản phẩm" */
+.nav-item.dropdown .dropdown-menu {
+  display: none;
+}
+
+/* Thêm luật CSS cho màu chữ của mục active */
+.navbar-nav .nav-item.active .nav-link {
+  color: #007bff; /* Màu xanh nước biển */
+}
+
+.account__button {
+  background-color: transparent;
+  border: none;
+}

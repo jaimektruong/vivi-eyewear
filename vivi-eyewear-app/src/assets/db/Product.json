@@ -1,0 +1,401 @@
+[
+  {
+    "name": "GN000001",
+    "image": "https://i.imgur.com/GQDCXlK.png",
+    "price": 500000,
+    "type": "gong-kinh",
+    "material": "Nhựa",
+    "shape": "Browline",
+    "size": "53 - 19 - 145",
+    "color": "Nâu",
+    "featuredFlag": 1,
+    "description": "Gọng kính này từ bộ sưu tập MYKITA MYLON được chế tạo bằng công nghệ in 3D được gọi là thiêu kết laser chọn lọc. MYLON là vật liệu công nghệ cao đặc biệt nhẹ và bền, được làm thủ công ở Berlin - Đức."
+  },
+  {
+    "name": "GN000002",
+    "image": "https://i.imgur.com/YYjWphl.png",
+    "price": 700000,
+    "type": "gong-kinh",
+    "material": "Nhựa",
+    "shape": "Aviator",
+    "size": "53 - 19 - 140",
+    "color": "Đen",
+    "featuredFlag": 1,
+    "description": "Gọng kính này từ bộ sưu tập MYKITA MYLON, được làm bằng MYLON - một vật liệu đặc biệt nhẹ và có độ bền cao. Được làm thủ công ở Berlin - Đức."
+  },
+  {
+    "name": "GN000003",
+    "image": "https://imgur.com/GQDCXlK.png",
+    "price": 650000,
+    "type": "gong-kinh",
+    "material": "Nhựa",
+    "shape": "Chữ nhật",
+    "size": "53 - 19 - 145",
+    "color": "Đen",
+    "featuredFlag": 1,
+    "description": "Được làm bằng MYLON - một vật liệu đặc biệt nhẹ và có độ bền cao Được làm thủ công ở Berlin. Gọng kính này từ bộ sưu tập MYKITA MYLON, được làm bằng MYLON - một vật liệu đặc biệt nhẹ và có độ bền cao, được làm thủ công ở Berlin - Đức."
+  },
+  {
+    "name": "GN000004",
+    "image": "https://imgur.com/DuIy3ms.png",
+    "price": 750000,
+    "type": "gong-kinh",
+    "material": "nhựa",
+    "shape": "Oval",
+    "size": "53 - 19 - 145",
+    "color": "Đen",
+    "featuredFlag": 1,
+    "description": "Được làm bằng MYLON - một vật liệu đặc biệt nhẹ và có độ bền cao Được làm thủ công ở Berlin. Gọng kính này từ bộ sưu tập MYKITA MYLON, được làm bằng MYLON - một vật liệu đặc biệt nhẹ và có độ bền cao, được làm thủ công ở Berlin - Đức."
+  },
+  {
+    "name": "GN000005",
+    "image": "https://imgur.com/ZMXkI1u.png",
+    "price": 750000,
+    "type": "gong-kinh",
+    "material": "Nhựa",
+    "shape": "Oval",
+    "size": "49 - 20 - 134",
+    "color": "Đỏ",
+    "featuredFlag": 1,
+    "description": "Được làm bằng MYLON - một vật liệu đặc biệt nhẹ và có độ bền cao Được làm thủ công ở Berlin. Gọng kính này từ bộ sưu tập MYKITA MYLON. Mặt trước khung có thiết kế thanh mảnh, bản lề xoắn ốc được cấp bằng sáng chế. Càng kính bằng thép không gỉ siêu nhẹ."
+  },
+  {
+    "name": "GN000006",
+    "image": "https://imgur.com/YlL1rga.png",
+    "price": 500000,
+    "type": "gong-kinh",
+    "material": "Nhựa",
+    "shape": "Oval",
+    "size": "49 - 20 - 134",
+    "color": "Hồng",
+    "featuredFlag": 1,
+    "description": "Được làm bằng MYLON - một vật liệu đặc biệt nhẹ và có độ bền cao Được làm thủ công ở Berlin. Gọng kính này từ bộ sưu tập MYKITA MYLON. Mặt trước khung có thiết kế thanh mảnh, bản lề xoắn ốc được cấp bằng sáng chế. Càng kính bằng thép không gỉ siêu nhẹ."
+  },
+  {
+    "name": "GN000007",
+    "image": "https://imgur.com/dtnaqos.png",
+    "price": 400000,
+    "type": "gong-kinh",
+    "material": "Nhựa",
+    "shape": "Aviator",
+    "size": "49 - 20 - 145",
+    "color": "Xanh",
+    "featuredFlag": 1,
+    "description": "Được làm bằng MYLON - không gỉ nhẹ và axetat thanh mảnh, thuộc bộ sưu tập MYKITA LITE. Được làm thủ công ở Berlin."
+  },
+  {
+    "name": "GN000008",
+    "image": "https://imgur.com/1kifl5r.png",
+    "price": 600000,
+    "type": "gong-kinh",
+    "material": "Nhựa",
+    "shape": "Browline",
+    "size": "49 - 19 - 140",
+    "color": "Trắng",
+    "featuredFlag": 1,
+    "description": "Gọng kính này từ bộ sưu tập MYKITA MYLON, được làm bằng MYLON - một vật liệu đặc biệt nhẹ và có độ bền cao. Được làm thủ công ở Berlin - Đức."
+  },
+  {
+    "name": "GN000009",
+    "image": "https://imgur.com/qPiunHX.png",
+    "price": 400000,
+    "type": "gong-kinh",
+    "material": "Nhựa",
+    "shape": "Tròn",
+    "size": "49 - 20 - 139",
+    "color": "Đen",
+    "description": "Được làm bằng MYLON - một vật liệu đặc biệt nhẹ và có độ bền cao Được làm thủ công ở Berlin. Gọng kính này từ bộ sưu tập MYKITA MYLON. Mặt trước khung có thiết kế thanh mảnh, bản lề xoắn ốc được cấp bằng sáng chế. Càng kính bằng thép không gỉ siêu nhẹ."
+  },
+
+  {
+    "name": "GN000010",
+    "image": "https://imgur.com/JN6BVjF.png",
+    "price": 900000,
+    "type": "gong-kinh",
+    "material": "Nhựa",
+    "shape": "Tròn",
+    "size": "49 - 20 - 145",
+    "color": "Nâu",
+    "description": "Được làm bằng MYLON - không gỉ nhẹ và axetat thanh mảnh, thuộc bộ sưu tập MYKITA LITE. Được làm thủ công ở Berlin."
+  },
+  {
+    "name": "GR000001",
+    "image": "https://imgur.com/z8Q4JgW.png",
+    "price": 750000,
+    "type": "kinh-ram",
+    "material": "Thép không gỉ",
+    "shape": "Vuông",
+    "size": "49 - 21 - 135",
+    "color": "Đen",
+    "description": "Được làm bằng thép không gỉ nhẹ và axetat thanh mảnh, là gọng kính mát hình vuông được làm thủ công ở Berlin."
+  },
+  {
+    "name": "GR000002",
+    "image": "https://imgur.com/tuyVnFm.png",
+    "price": 800000,
+    "type": "kinh-ram",
+    "material": "Thép không gỉ",
+    "shape": "Tròn",
+    "size": "50 - 22 - 140",
+    "color": "Trắng",
+    "createAt": {
+      "$date": "2023-12-23T08:40:43.096Z"
+    },
+    "updateAt": {
+      "$date": "2023-12-23T08:40:43.096Z"
+    },
+    "description": "Được làm bằng thép không gỉ nhẹ và axetat thanh mảnh,  với tròng kính Polarized Pro Hi, được làm thủ công ở Berlin."
+  },
+  {
+    "name": "GR000003",
+    "image": "https://imgur.com/v06h8o0.png",
+    "price": 900000,
+    "type": "kinh-ram",
+    "material": "Thép không gỉ nhẹ",
+    "shape": "Vuông",
+    "size": "55 - 18 - 137",
+    "color": "Đen",
+    "description": "Được làm bằng thép không gỉ nhẹ và axetat thanh mảnh, với thiết kế viền hình học,  được làm thủ công ở Berlin."
+  },
+  {
+    "name": "GR000004",
+    "image": "https://imgur.com/RBWWHPC.png",
+    "price": 850000,
+    "type": "kinh-ram",
+    "material": "Thép không gỉ nhẹ",
+    "shape": "Tròn",
+    "size": "47 - 20 - 129",
+    "color": "Đen",
+    "createAt": {
+      "$date": "2023-12-23T08:40:43.096Z"
+    },
+    "updateAt": {
+      "$date": "2023-12-23T08:40:43.096Z"
+    },
+    "description": "Được làm bằng thép không gỉ nhẹ và axetat thanh mảnh, được làm thủ công ở Berlin."
+  },
+  {
+    "name": "GR000005",
+    "image": "https://imgur.com/pgIrHhq.png",
+    "price": 950000,
+    "type": "kinh-ram",
+    "material": "Thép không gỉ nhẹ",
+    "shape": "Vuông",
+    "size": "52 - 20 - 139",
+    "color": "Đen",
+    "createAt": {
+      "$date": "2023-12-23T08:40:43.096Z"
+    },
+    "updateAt": {
+      "$date": "2023-12-23T08:40:43.096Z"
+    },
+    "description": "Được làm bằng thép không gỉ nhẹ và axetat thanh mảnh, được làm thủ công ở Berlin."
+  },
+  {
+    "name": "GR000006",
+    "image": "https://imgur.com/PXmp8c3.png",
+    "price": 850000,
+    "type": "kinh-ram",
+    "material": "Nhựa",
+    "shape": "Vuông",
+    "size": "50 - 22 - 142",
+    "color": "Đen",
+    "createAt": {
+      "$date": "2023-12-23T08:40:43.096Z"
+    },
+    "updateAt": {
+      "$date": "2023-12-23T08:40:43.096Z"
+    },
+    "description": "Được làm bằng MYLON – một vật liệu đặc biệt nhẹ và bền, được làm thủ công ở Berlin."
+  },
+  {
+    "name": "GR000007",
+    "image": "https://imgur.com/0BTAue1.png",
+    "price": 775000,
+    "type": "kinh-ram",
+    "material": "Nhựa",
+    "shape": "Vuông",
+    "size": "50 - 24 - 146",
+    "color": "Đen",
+    "description": "Được làm bằng MYLON với gọng axetat, được làm thủ công ở Berlin."
+  },
+  {
+    "name": "GR000008",
+    "image": "https://imgur.com/Fjt7yMO.png",
+    "price": 950000,
+    "type": "kinh-ram",
+    "material": "Thép không gỉ nhẹ",
+    "shape": "Tròn",
+    "size": "47 - 22 - 129",
+    "color": "Bạc",
+    "description": "Được làm bằng thép không gỉ nhẹ và axetat thanh mảnh, được làm thủ công ở Berlin."
+  },
+  {
+    "name": "GR000009",
+    "image": "https://imgur.com/GoeK1DD.png",
+    "price": 980000,
+    "type": "kinh-ram",
+    "material": "Thép không gỉ nhẹ",
+    "shape": "Vuông",
+    "size": "51 - 20 - 140",
+    "color": "Đen",
+    "description": "Được làm bằng thép không gỉ nhẹ và axetat thanh mảnh, được làm thủ công ở Berlin."
+  },
+  {
+    "name": "GR000010",
+    "image": "https://imgur.com/8ft2t2v.png",
+    "price": 950000,
+    "type": "kinh-ram",
+    "material": "Thép không gỉ nhẹ",
+    "shape": "Oval",
+    "size": "50 - 22 - 132",
+    "color": "Bạc",
+    "description": "Được làm bằng thép không gỉ nhẹ và axetat thanh mảnh, được làm thủ công ở Berlin."
+  },
+  {
+    "name": "GR000011",
+    "image": "https://imgur.com/kNFCMBK.png",
+    "price": 850000,
+    "type": "kinh-ram",
+    "material": "Thép không gỉ",
+    "shape": "Tròn",
+    "size": "54 - 19 - 139",
+    "color": "Đen",
+    "description": "Được làm bằng thép không gỉ nhẹ và MYLON, được làm thủ công ở Berlin."
+  },
+  {
+    "name": "GR000012",
+    "image": "https://imgur.com/01Ph7e1.png",
+    "price": 980000,
+    "type": "kinh-ram",
+    "material": "Thép không gỉ nhẹ",
+    "shape": "Oval",
+    "size": "50 - 18 - 125",
+    "color": "Vàng",
+    "createAt": {
+      "$date": "2023-12-23T08:40:43.096Z"
+    },
+    "updateAt": {
+      "$date": "2023-12-23T08:40:43.096Z"
+    },
+    "description": "Được làm bằng thép không gỉ nhẹ màu Vàng bóng với tròng kính Purple Jelly Solid, được làm thủ công ở Berlin."
+  },
+  {
+    "name": "GR000013",
+    "image": "https://imgur.com/8275yW6.png",
+    "price": 870000,
+    "type": "kinh-ram",
+    "material": "Nhựa",
+    "shape": "Oval",
+    "size": "48 - 24 - 137",
+    "color": "Đen - vàng",
+    "createAt": {
+      "$date": "2023-12-23T08:40:43.096Z"
+    },
+    "updateAt": {
+      "$date": "2023-12-23T08:40:43.096Z"
+    },
+    "description": "Được làm bằng MYLON – một chất liệu đặc biệt nhẹ và bền, được làm thủ công ở Berlin."
+  },
+  {
+    "name": "GR000014",
+    "image": "https://imgur.com/uot2YLp.png",
+    "price": 790000,
+    "type": "kinh-ram",
+    "material": "Thép không gỉ nhẹ",
+    "shape": "Oval",
+    "size": "50 - 20 - 132",
+    "color": "Đen",
+    "createAt": {
+      "$date": "2023-12-23T08:40:43.096Z"
+    },
+    "updateAt": {
+      "$date": "2023-12-23T08:40:43.096Z"
+    },
+    "description": "Được làm bằng thép không gỉ nhẹ, được làm thủ công ở Berlin."
+  },
+  {
+    "name": "GR000015",
+    "image": "https://imgur.com/6SUYTgE.png",
+    "price": 800000,
+    "type": "kinh-ram",
+    "material": "Nhựa",
+    "shape": "Oval",
+    "size": "53 - 20 - 141",
+    "color": "Xanh dương",
+    "description": "Được làm thủ công ở Berlin."
+  },
+  {
+    "name": "TK000001",
+    "image": "Tk000001.png",
+    "price": 560000,
+    "type": "Tròng kính",
+    "material": "Plastic",
+    "shape": "Tròn",
+    "size": "72",
+    "color": "Trong suốt",
+    "createAt": {
+      "$date": "2023-12-23T08:40:43.096Z"
+    },
+    "updateAt": {
+      "$date": "2023-12-23T08:40:43.096Z"
+    },
+    "description": " Kính đơn tròng Cential – Canada BlueChoice 1.56 ASP SHMC Bluecut"
+  },
+  {
+    "name": "TK000002",
+    "image": "Tk000002.png",
+    "price": 460000,
+    "type": "Tròng kính",
+    "material": "Plastic",
+    "shape": "Tròn",
+    "size": "72",
+    "color": "Trong suốt",
+    "createAt": {
+      "$date": "2023-12-23T08:40:43.096Z"
+    },
+    "updateAt": {
+      "$date": "2023-12-23T08:40:43.096Z"
+    },
+    "description": " KÍNH ĐƠN TRÒNG CENTIAL – CANADA CENTOPIC SUPER AR 1.56 ASP SHMC"
+  },
+  {
+    "name": "TK000003",
+    "image": "Tk000003.png",
+    "price": 336000,
+    "type": "Tròng kính",
+    "material": "Plastic",
+    "shape": "Tròn",
+    "size": "72",
+    "color": "Trong suốt",
+    "createAt": {
+      "$date": "2023-12-23T08:40:43.096Z"
+    },
+    "updateAt": {
+      "$date": "2023-12-23T08:40:43.096Z"
+    },
+    "description": " KÍNH ĐƠN TRÒNG CHEMI – HÀN QUỐC U2 CRYSTAL 1.56 HC"
+  },
+  {
+    "name": "TK000004",
+    "image": "https://imgur.com/PLZtHrQ.png",
+    "price": 2520000,
+    "type": "trong-kinh",
+    "material": "Nhựa",
+    "shape": "Tròn",
+    "size": "72",
+    "color": "Trong suốt",
+    "description": "TRÒNG SIÊU MỎNG CHEMI – HÀN QUỐC U2 CRYSTAL 1.74 HMC"
+  },
+  {
+    "name": "TK000005",
+    "image": "https://imgur.com/kfNyuTp.png",
+    "price": 1050000,
+    "type": "trong-kinh",
+    "material": "Nhựa",
+    "shape": "Tròn",
+    "size": "72",
+    "color": "Trong suốt",
+    "description": " TRÒNG HOGA ĐỔI MÀU XÁM KHÓI CẮT 100% ÁNH SÁNG XANH CHIẾT SUẤT 1.61 MỎNG NHẸ ĐẾN 20%"
+  }
+]
