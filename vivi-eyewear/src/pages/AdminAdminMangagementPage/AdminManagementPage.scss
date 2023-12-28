@@ -1,105 +1,59 @@
-/* CSS cho các hàng trong bảng */
-.admin-table {
-  width: 80%;
-  border-collapse: collapse;
-  margin-top: 20px;
-}
-
-/* CSS cho các hàng trong bảng */
-tbody tr {
-  border-radius: 20px; /* Đặt border-radius cho mỗi hàng */
-  overflow: hidden; /* Đảm bảo nội dung không vượt qua border-radius */
-  background-color: #ffffff; /* Màu nền của hàng */
-  border: 1px  #ccc; /* Thiết lập border */
-}
-
-  td.action-column div a {
-    display: block;
-    margin-bottom: 10px; /* Khoảng cách giữa các dòng */
-  }
-  
-
-th,
-td {
-  border: none;
-  padding: 8px;
-  text-align: center;
-}
-
-th {
-  font-weight: bold;
-}
-
-td {
-  background-color: #ffffff;
-}
-
-td:last-child {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-img {
-  width: 50px; /* Điều chỉnh kích thước hình ảnh avatar tại đây */
-  border-radius: 50%; /* Bo tròn hình ảnh avatar */
-}
-
-p {
+html, body{
   margin: 0;
+  padding: 0;
+  font-family: inter;
 }
-
-
-
 .admin-management-page {
-  display: flex; /* Sử dụng flexbox */
+  display: flex;
+  flex-direction: column; /* Đặt hướng chính là dọc */
   align-items: flex-start;
   position: relative;
   background-color: rgba(225, 234, 250, 1);
+  width: 100vw;
+  height: 100vh;
 }
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px; /* Khoảng cách giữa header và nội dung */
+  margin-bottom: 20px;
 }
 
 .header h2 {
   margin: 0;
-  font-size: 24px;
+  font-size: 30px;
   font-weight: bold;
+   color: rgba(22, 45, 90, 1);
 }
 
 .add-admin-button {
+  margin-left: 180px; /* Khoảng cách giữa h2 và button */
   padding: 8px 16px;
   background-color: #204387;
   color: white;
   border: none;
   border-radius: 4px;
+  font-weight: bold;
   cursor: pointer;
-  font-size: 14px;
-}
+  font-size: 50px;
 
-.main-content {
-  flex-grow: 1; /* Phần nội dung chính mở rộng để lấp đầy phần còn trống */
-
-  margin: 10px auto; /* Canh giữa theo chiều ngang và chiều dọc */
-  max-width: 1100px;
 }
-//////==================================================
 .filter-frame {
   display: grid;
-  grid-template-rows: auto auto; /* Hai hàng: hàng 1 và hàng 2 */
-  row-gap: 5px; /* Khoảng cách giữa hai hàng */
+  grid-template-rows: auto auto;
+  row-gap: 5px;
   gap: 20px;
   padding: 20px;
   background-color: #ffffff;
   border: 1px solid #ccc;
   margin-bottom: 20px;
   width: 1000px;
+
   .filter-row {
     display: flex;
-    gap: 50px; /* Khoảng cách giữa các thành phần trong mỗi hàng */
+    flex-wrap: wrap; /* Đảm bảo các phần tử con có thể xuống dòng khi không đủ không gian */
+    gap: 50px;
     align-items: center;
 
     input[type="text"],
@@ -109,10 +63,10 @@ p {
       border-radius: 4px;
       font-size: 14px;
       cursor: pointer;
-      color:#0e2959;
+      color: #0e2959;
       transition: background-color 0.3s;
     }
-        /* CSS */
+
     #reset {
       padding: 8px 16px;
       border: 1px solid #204387;
@@ -127,7 +81,7 @@ p {
         background-color: #0e2959;
       }
     }
-    /* CSS cho các button còn lại */
+
     button:not(.reset-button) {
       padding: 8px 16px;
       border: 1px solid #204387;
@@ -142,5 +96,51 @@ p {
         background-color: #f2f2f2;
       }
     }
+  }
+}
+.admin-table {
+  width: 50%; /* Sử dụng chiều rộng 100% của container cha */
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,td {
+  border: none;
+  padding: 0x; /* Tăng khoảng cách giữa nội dung và viền của ô */
+  text-align: center;
+}
+
+th {
+  font-weight: bold;
+  background-color: #204387; /* Màu nền của ô header */
+  color: rgba(22, 45, 90, 1); /* Màu chữ của ô header */
+}
+
+td {
+  background-color: #ffffff;
+}
+
+td:last-child {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+img {
+  width: 30px; /* Điều chỉnh kích thước hình ảnh avatar */
+  border-radius: 50%;
+}
+
+.action-column a {
+  display: block;
+  margin-bottom: 8px; /* Khoảng cách giữa các dòng */
+  color: #204387; /* Màu chữ của các liên kết trong cột hành động */
+  text-decoration: none; /* Loại bỏ gạch chân dưới của liên kết */
+  font-weight: bold;
+  font-size: 14px;
+  transition: color 0.3s; /* Hiệu ứng màu chữ khi di chuột qua liên kết */
+
+  &:hover {
+    color: #0e2959; /* Màu chữ khi di chuột qua liên kết */
   }
 }

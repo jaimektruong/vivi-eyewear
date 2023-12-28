@@ -7,8 +7,8 @@ const AdminManagementPage = () => {
       id: 1,
       name: "John Doe",
       dateOfBirth: "1990-01-01",
-      role: "Admin",
-      gender: "Male",
+      role: "Quản lý",
+      gender: "Nữ",
       phone: "1234567890",
       avatar: "../assets/minhhoa.jpg", // Đường dẫn đến hình ảnh avatar
     },
@@ -16,8 +16,8 @@ const AdminManagementPage = () => {
       id: 2,
       name: "John Doe",
       dateOfBirth: "1990-01-01",
-      role: "Admin",
-      gender: "Male",
+      role: "Quản lý",
+      gender: "Nữ",
       phone: "1234567890",
       avatar: "URL_HINH_ANH_QUAN_TRI_VIEN", // Đường dẫn đến hình ảnh avatar
     },
@@ -25,8 +25,8 @@ const AdminManagementPage = () => {
       id: 3,
       name: "John Doe",
       dateOfBirth: "1990-01-01",
-      role: "Admin",
-      gender: "Male",
+      role: "Quản Lý",
+      gender: "Nữ",
       phone: "1234567890",
       avatar: "URL_HINH_ANH_QUAN_TRI_VIEN", // Đường dẫn đến hình ảnh avatar
     },
@@ -88,7 +88,7 @@ const AdminManagementPage = () => {
   };
   return (
     <div className="admin-management-page">
-      <div className="main-content">
+      {/* <div className="main-content"> */}
         <div className="header">
           <h2>QUẢN LÝ QUẢN TRỊ VIÊN</h2>
           <button className="add-admin-button">Thêm quản trị viên</button>
@@ -122,23 +122,19 @@ const AdminManagementPage = () => {
             <div>Đã chọn: {selectedCheckboxes}</div>
             {/* Button tải từ file */}
             <button onClick={handleLoadFromFile}>Tải từ file</button>
-
+             {/* Button sao chép */}
+             <button onClick={handleCopy}>Sao chép</button>
             {/* Button xuất Excel */}
             <button onClick={handleExportToExcel}>Xuất Excel</button>
-
-            {/* Button sao chép */}
-            <button onClick={handleCopy}>Sao chép</button>
-
             {/* Button xóa */}
             <button onClick={handleDelete}>Xóa</button>
           </div>
         </div>
-
         <table className="admin-table">
           <thead>
             <tr>
               <th>
-                <input type="checkbox" />
+                <input type="checkbox" /> Tất cả
               </th>
               <th>ID</th>
               <th>Họ tên</th>
@@ -176,7 +172,7 @@ const AdminManagementPage = () => {
             ))}
           </tbody>
         </table>
-      </div>
+      {/* </div> */}
     </div>
   );
 };
