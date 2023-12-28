@@ -10,78 +10,81 @@ import BlogsPage from "../pages/BlogsPage/BlogsPage";
 import PageNotFound from "../pages/PageNotFound/PageNotFound";
 import LoginPage from "../pages/LoginPage/Login";
 import WarrantyPage from "../pages/WarrantyPage/WarrantyPage";
-import AdminSideBar from "../components/AdminSideBar/AdminSideBar";
-
-export const routes = [
+import AdminProductManagementPage from "../pages/AdminProductManagementPage/AdminProductManagementPage";
+import { AdminDefaultLayout } from "../components/Layouts";
+import { CustomerDefaultLayout } from "../components/Layouts";
+export const publicRoutes = [
   {
     path: "/",
     page: HomePage,
-    isShowHeader: true,
+    layout: CustomerDefaultLayout,
   },
 
   {
     path: "/san-pham/:name",
     page: ProductDetailsPage,
-    isShowHeader: true,
+    layout: null,
   },
   {
     path: "/san-pham",
     page: ProductsPage,
-    isShowHeader: false,
+    layout: null,
   },
   {
     path: "/:type",
     page: ProductsPage,
-    isShowHeader: false,
+    layout: null,
   },
   {
     path: "/ve-chung-toi",
     page: AboutUsPage,
-    isShowHeader: true,
+    layout: CustomerDefaultLayout,
   },
   {
     path: "/blogs",
     page: BlogsPage,
-    isShowHeader: true,
+    layout: CustomerDefaultLayout,
   },
   {
     path: "/hinh-thuc-thanh-toan",
     page: PaymentPage,
-    isShowHeader: true,
+    layout: CustomerDefaultLayout,
   },
   {
     path: "/chinh-sach-giao-hang",
     page: DeliveryPage,
-    isShowHeader: true,
+    layout: CustomerDefaultLayout,
   },
   {
     path: "/chinh-sach-bao-hanh",
     page: WarrantyPage,
-    isShowHeader: true,
+    layout: CustomerDefaultLayout,
   },
   {
     path: "/sign-in",
     page: LoginPage,
-    isShowHeader: true,
+    layout: CustomerDefaultLayout,
   },
   {
     path: "/sign-up",
     page: Register,
-    isShowHeader: true,
+    layout: CustomerDefaultLayout,
   },
   {
     path: "/vivi-eyewear/Checkout",
     page: Checkout,
-    isShowHeader: true,
-  },
-  {
-    path: "/a",
-    page: AdminSideBar,
-    isShowHeader: false,
+    layout: CustomerDefaultLayout,
   },
   {
     path: "/*",
     page: PageNotFound,
-    isShowHeader: true,
+    layout: CustomerDefaultLayout,
+  },
+  {
+    path: "/admin-quanly-sanpham",
+    page: AdminProductManagementPage,
+    layout: AdminDefaultLayout,
   },
 ];
+
+export const privateRoutes = [{}];

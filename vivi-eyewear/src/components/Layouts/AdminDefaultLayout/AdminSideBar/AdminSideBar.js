@@ -1,7 +1,5 @@
-// AdminSideBar.js
-
 import "./AdminSideBar.scss";
-import logo from "../../assets/logo.png";
+import logo from "../../../../assets/logo.png";
 
 function AdminSideBar() {
   return (
