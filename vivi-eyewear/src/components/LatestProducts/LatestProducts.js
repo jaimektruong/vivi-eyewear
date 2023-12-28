@@ -37,9 +37,9 @@ const LatestProducts = (props) => {
           <img src={brush} alt="brush" />
         </div>
         <div className="latest-products__list d-flex flex-wrap justify-content-center gap-3">
-          {latestProducts.map(({ _id, name, image_thumb, price }) => (
-            <Link key={_id} className="nav-link" to={`/san-pham/${name}`}>
-              <CardProduct image={image_thumb} name={name} price={price} />
+          {latestProducts.map(({ name, image, price }, i) => (
+            <Link key={i} className="nav-link" to={`/san-pham/${name}`}>
+              <CardProduct image={image} name={name} price={price} />
             </Link>
           ))}
         </div>

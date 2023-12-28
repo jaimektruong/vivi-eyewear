@@ -2,6 +2,24 @@ import "./Register.scss";
 import React, { forwardRef, useImperativeHandle, useState } from "react";
 const Register = forwardRef((props, ref) => {
   const [isModalVisible, setModalVisible] = useState(false);
+  const [isShowPassword, setIsShowPassword] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+
+  const handleOnChangeEmail = (value) => {
+    setEmail(value);
+  };
+  const handleOnChangePassword = (value) => {
+    setPassword(value);
+  };
+  const handleOnChangeConfirmPassword = (value) => {
+    setConfirmPassword(value);
+  };
+
+  const handleSignUp = () => {
+    console.log("sign up", email, password, confirmPassword);
+  };
 
   // Hàm để hiển thị modal
   const show = () => {
@@ -63,6 +81,8 @@ const Register = forwardRef((props, ref) => {
                         type="email"
                         className="form-control"
                         placeholder="Email address"
+                        value={email}
+                        onChange={handleOnChangeEmail}
                       />
                     </div>
                     <div className="form-group">
@@ -84,20 +104,31 @@ const Register = forwardRef((props, ref) => {
                     <div className="form-group">
                       <label>Password: </label>
                       <input
-                        type="password"
+                        type={isShowPassword ? "text" : "password"}
                         className="form-control"
                         placeholder="Password"
+                        value={password}
+                        onChange={handleOnChangePassword}
                       />
                     </div>
                     <div className="form-group">
                       <label>Confirm password: </label>
                       <input
-                        type="password"
+                        type={isShowPassword ? "text" : "password"}
                         className="form-control"
                         placeholder="Confirm password"
+                        value={confirmPassword}
+                        onChange={handleOnChangeConfirmPassword}
                       />
                     </div>
-                    <button className="btn btn-outline-primary">
+                    <input
+                      type="checkbox"
+                      onClick={() => setIsShowPassword(!isShowPassword)}
+                    />
+                    <button
+                      className="btn btn-outline-primary"
+                      onClick={handleSignUp}
+                    >
                       Register
                     </button>
                     <hr />

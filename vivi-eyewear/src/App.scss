@@ -2,7 +2,6 @@
   --color-primary: #162d5a;
   --color-secondary: #346bd9;
   --header-height: 88px;
-  --color-background-admin: #e1eafa;
 }
 
 body,
@@ -17,18 +16,4 @@ html {
   width: 1120px;
   height: 100%;
   margin: 0 auto;
-}
-.button-primary {
-  color: white;
-  background-color: #162d5a;
-  font-weight: bold;
-  border-radius: 6px;
-  border: none;
-}
-.button-secondary {
-  color: #162d5a;
-  background-color: white;
-  font-weight: bold;
-  border-radius: 6px;
-  border: none;
 }

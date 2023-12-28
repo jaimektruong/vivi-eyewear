@@ -60,9 +60,9 @@ const ProductsPage = () => {
       });
     }
 
-    return filteredItems.map(({ name, image_thumb, price }) => (
+    return filteredItems.map(({ name, image, price }) => (
       <Link className="nav-link" to={`/san-pham/${name}`} key={name}>
-        <CardProduct image={image_thumb} name={name} price={price} />
+        <CardProduct image={image} name={name} price={price} />
       </Link>
     ));
   }

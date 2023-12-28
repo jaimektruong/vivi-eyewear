@@ -17,7 +17,7 @@ function StoresLocation() {
         </div>
         <div className="find justify-content-end">
           <button className="button-find btn--color-primary text-white">
-            <i class="bi bi-cursor"></i> Tìm kiếm cơ sở
+            <i className="bi bi-cursor"></i> Tìm kiếm cơ sở
           </button>
         </div>
       </div>
