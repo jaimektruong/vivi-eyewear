@@ -11,6 +11,8 @@ import PageNotFound from "../pages/PageNotFound/PageNotFound";
 import LoginPage from "../pages/LoginPage/Login";
 import WarrantyPage from "../pages/WarrantyPage/WarrantyPage";
 import AdminManagementPage from "../pages/AdminAdminMangagementPage/AdminMangagement";
+import CustomerManagementPage from "../pages/AdminCustomerManagementPage/AdminCustomerManagementPage";
+import OrderManagementPage from "../pages/AdminOrderManagementPage/AdminOrderManagementPage";
 
 export const routes = [
   {
@@ -83,6 +85,16 @@ export const routes = [
   {
     path: "/admin/adminmanagement",
     page: AdminManagementPage,
+    isShowHeader: true,
+  },
+  {
+    path: "/admin/customermanagement",
+    page: CustomerManagementPage,
+    isShowHeader: true,
+  },
+  {
+    path: "/admin/ordermanagement",
+    page: OrderManagementPage,
     isShowHeader: true,
   }
 
