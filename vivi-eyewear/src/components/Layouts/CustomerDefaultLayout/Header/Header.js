@@ -1,22 +1,38 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Logo from "../../../../assets/logo.png";
 import { Link } from "react-router-dom";
 import "./Header.scss";
-import Cart from "../../../Cart/Cart";
 import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import * as UserService from "../../../../services/UserService";
+import { resetUser } from "../../../../redux/slices/userSlice";
+import CartButton from "../../../CartButton/CartButton";
 
 const Header = ({ handleInputChange, query }) => {
   const navigate = useNavigate();
-
-  const [menu, setMenu] = useState("Home");
-
+  const user = useSelector((state) => state.user);
+  const dispatch = useDispatch();
+  const [loading, setLoading] = useState(false);
+  const [userName, setUserName] = useState("");
+  const [userAvatar, setUserAvatar] = useState("");
   const handleLogin = () => {
     navigate("/sign-in");
   };
-  const handleRegister = () => {
-    navigate("/sign-up");
+  console.log("user", user);
+
+  const handleLogout = async () => {
+    setLoading(true);
+    await UserService.logoutUser();
+    dispatch(resetUser());
+    setLoading(false);
   };
 
+  useEffect(() => {
+    setLoading(true);
+    setUserName(user?.name);
+    setUserAvatar(user?.avatar);
+    setLoading(false);
+  }, [user?.name, user?.avatar]);
   // Hoover sản phẩm
   const [isProductHovered, setIsProductHovered] = useState(false);
 
@@ -35,80 +51,52 @@ const Header = ({ handleInputChange, query }) => {
           <img src={Logo} alt="Logo" style={{ width: "80px" }} />
         </Link>
         <ul className="navbar-nav">
-          <li
-            className={`nav-item text-white ${menu === "home" ? "active" : ""}`}
-            onClick={() => setMenu("home")}
-          >
+          <li className="nav-item text-white">
             <Link className="nav-link text-white" to="/">
               Trang chủ
             </Link>
           </li>
-          <li
-            className={`nav-item text-white ${
-              menu === "about-us" ? "active" : ""
-            }`}
-            onClick={() => setMenu("about-us")}
-          >
+          <li className="nav-item text-white ">
             <Link className="nav-link text-white" to="/ve-chung-toi">
               Về chúng tôi
             </Link>
           </li>
-          <li
-            className={`nav-item text-white ${
-              menu === "blogs" ? "active" : ""
-            }`}
-            onClick={() => setMenu("blogs")}
-          >
+          <li className="nav-item text-white ">
             <Link className="nav-link text-white" to="/blogs">
               Bài viết
             </Link>
           </li>
           <li
-            onClick={() => setMenu("products")}
-            className={`nav-item dropdown ${isProductHovered ? "show" : ""} ${
-              menu === "products" ? "active" : ""
-            }`}
+            className="nav-item text-white "
             onMouseEnter={handleProductMouseEnter}
             onMouseLeave={handleProductMouseLeave}
           >
             <Link
               to="/san-pham"
-              onClick={() => setMenu("products")}
-              className={`nav-link text-white dropdown-toggle ${
-                menu === "products" ? "active" : ""
-              }`}
+              className="nav-item text-white nav-link "
               role="button"
               data-toggle="dropdown"
               aria-haspopup="true"
               aria-expanded={isProductHovered ? "true" : "false"}
             >
-              Sản phẩm
+              <span>
+                {" "}
+                Sản phẩm<i className="bi bi-caret-down-fill"></i>
+              </span>
             </Link>
             <div
               className={`dropdown-menu ${isProductHovered ? "show" : ""}`}
               aria-labelledby="navbarDropdown"
             >
-              <Link
-                className="dropdown-item"
-                to="/gong-kinh"
-                onClick={() => setMenu("gong-kinh")}
-              >
+              <Link className="dropdown-item" to="/gong-kinh">
                 Gọng kính
               </Link>
               <div className="dropdown-divider"></div>
-              <Link
-                className="dropdown-item"
-                to="/kinh-ram"
-                onClick={() => setMenu("kinh-ram")}
-              >
+              <Link className="dropdown-item" to="/kinh-ram">
                 Kính râm
               </Link>
               <div className="dropdown-divider"></div>
-              <Link
-                className="dropdown-item"
-                to="/trong-kinh"
-                onClick={() => setMenu("trong-kinh")}
-              >
+              <Link className="dropdown-item" to="/trong-kinh">
                 Tròng kính
               </Link>
             </div>
@@ -125,47 +113,51 @@ const Header = ({ handleInputChange, query }) => {
             value={query}
             onChange={handleInputChange}
           />
-          {/* Account */}
         </div>
+        {/* Account */}
 
-        <div
-          onClick={() => setMenu("products")}
-          className={`nav-item dropdown ${isProductHovered ? "show" : ""} ${
-            menu === "products" ? "active" : ""
-          }`}
-          onMouseEnter={handleProductMouseEnter}
-          onMouseLeave={handleProductMouseLeave}
-        >
-          <Link
-            to="/san-pham"
-            onClick={() => setMenu("products")}
-            className={`nav-link text-white dropdown-toggle ${
-              menu === "products" ? "active" : ""
-            }`}
-            role="button"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded={isProductHovered ? "true" : "false"}
-          >
-            <i className="bi bi-person-circle text-white fs-4"></i>
-          </Link>
-          <div
-            className={`dropdown-menu ${isProductHovered ? "show" : ""}`}
-            aria-labelledby="navbarDropdown"
-          >
-            <button className="dropdown-item" onClick={handleLogin}>
-              Login
-            </button>
+        <div>
+          {user?.access_token ? (
+            <div className="nav-item dropdown">
+              {userAvatar ? (
+                <img
+                  src={user.avatar}
+                  alt="avatar"
+                  style={{ height: "40px", width: "40px", borderRadius: "50%" }}
+                />
+              ) : (
+                <i className="bi bi-person-circle text-white fs-4"></i>
+              )}
 
-            <div className="dropdown-divider"></div>
-            <button className="dropdown-item" onClick={handleRegister}>
-              Register
+              <span className="text-white"> {user.name}</span>
+
+              <div
+                className={`dropdown-menu ${isProductHovered ? "show" : ""}`}
+                aria-labelledby="navbarDropdown"
+              >
+                <button
+                  className="dropdown-item"
+                  onClick={() => {
+                    navigate("/thong-tin-nguoi-dung");
+                  }}
+                >
+                  Thông tin người dùng
+                </button>
+                <div className="dropdown-divider"></div>
+                <button className="dropdown-item" onClick={handleLogout}>
+                  Đăng xuất
+                </button>
+              </div>
+            </div>
+          ) : (
+            <button className="account__button" onClick={handleLogin}>
+              <i className="bi bi-person-circle text-white fs-4"></i>
             </button>
-          </div>
+          )}
         </div>
 
         <div className="d-md-flex d-none justify-content-around">
-          <Cart value="0" />
+          <CartButton value="0" />
         </div>
       </nav>
     </header>

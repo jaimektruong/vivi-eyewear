@@ -20,6 +20,7 @@ import AdminManagementPage from "../pages/AdminAdminMangagementPage/AdminMangage
 import CustomerManagementPage from "../pages/AdminCustomerManagementPage/AdminCustomerManagementPage";
 import OrderManagementPage from "../pages/AdminOrderManagementPage/AdminOrderManagementPage";
 import PromotionManagementPage from "../pages/AdminPromotionManagementPage/AdminPromotionManagement";
+import AdminDashBoard from "../pages/AdminDashBoard/AdminDashBoard";
 
 export const publicRoutes = [
   {
@@ -93,22 +94,28 @@ export const publicRoutes = [
     page: AccountPage,
     layout: CustomerDefaultLayout,
   },
+];
+
+export const privateRoutes = [
   {
-    path: "/adminBlog",
+    path: "/admin",
+    page: AdminDashBoard,
+    layout: AdminDefaultLayout,
+  },
+  {
+    path: "/admin/quan-ly-blogs",
     page: AdminBlog,
     layout: AdminDefaultLayout,
   },
 
   {
-    path: "/admin-quanly-sanpham",
+    path: "/admin/quan-ly-san-pham",
     page: AdminProductManagementPage,
     layout: AdminDefaultLayout,
   },
   {
-    path: "/admin/adminmanagement",
+    path: "/admin/quan-ly-admin",
     page: AdminManagementPage,
     layout: AdminDefaultLayout,
   },
 ];
-
-export const privateRoutes = [{}];
