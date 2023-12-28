@@ -10,10 +10,16 @@ import BlogsPage from "../pages/BlogsPage/BlogsPage";
 import PageNotFound from "../pages/PageNotFound/PageNotFound";
 import LoginPage from "../pages/LoginPage/Login";
 import WarrantyPage from "../pages/WarrantyPage/WarrantyPage";
+import AdminSideBar from "../components/AdminSideBar/AdminSideBar";
+import AccountPage from "../pages/AccountPage/AccountPage";
+import AdminBlog from "../pages/AdminBlogsManagement/AdminBlogs";
 import AdminProductManagementPage from "../pages/AdminProductManagementPage/AdminProductManagementPage";
 import { AdminDefaultLayout } from "../components/Layouts";
 import { CustomerDefaultLayout } from "../components/Layouts";
 import AdminManagementPage from "../pages/AdminAdminMangagementPage/AdminMangagement";
+import CustomerManagementPage from "../pages/AdminCustomerManagementPage/AdminCustomerManagementPage";
+import OrderManagementPage from "../pages/AdminOrderManagementPage/AdminOrderManagementPage";
+
 export const publicRoutes = [
   {
     path: "/",
@@ -81,6 +87,17 @@ export const publicRoutes = [
     page: PageNotFound,
     layout: CustomerDefaultLayout,
   },
+  {
+    path: "/account",
+    page: AccountPage,
+    isShowHeader: true,
+  },
+  {
+    path: "/adminBlog",
+    page: AdminBlog,
+    isShowHeader: true,
+  }, // <-- Add a comma here
+
   {
     path: "/admin-quanly-sanpham",
     page: AdminProductManagementPage,
