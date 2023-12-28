@@ -12,13 +12,14 @@ import LoginPage from "../pages/LoginPage/Login";
 import WarrantyPage from "../pages/WarrantyPage/WarrantyPage";
 
 import AccountPage from "../pages/AccountPage/AccountPage";
-import AdminBlog from "../pages/AdminBlogsManagement/AdminBlogs"
+import AdminBlog from "../pages/AdminBlogsManagement/AdminBlogs";
 import AdminProductManagementPage from "../pages/AdminProductManagementPage/AdminProductManagementPage";
 import { AdminDefaultLayout } from "../components/Layouts";
 import { CustomerDefaultLayout } from "../components/Layouts";
 import AdminManagementPage from "../pages/AdminAdminMangagementPage/AdminMangagement";
 import CustomerManagementPage from "../pages/AdminCustomerManagementPage/AdminCustomerManagementPage";
 import OrderManagementPage from "../pages/AdminOrderManagementPage/AdminOrderManagementPage";
+import PromotionManagementPage from "../pages/AdminPromotionManagementPage/AdminPromotionManagement";
 
 export const publicRoutes = [
   {
@@ -30,7 +31,7 @@ export const publicRoutes = [
   {
     path: "/san-pham/:name",
     page: ProductDetailsPage,
-    layout: null,
+    layout: CustomerDefaultLayout,
   },
   {
     path: "/san-pham",
@@ -90,13 +91,13 @@ export const publicRoutes = [
   {
     path: "/account",
     page: AccountPage,
-    isShowHeader: true,
+    layout: CustomerDefaultLayout,
   },
   {
     path: "/adminBlog",
     page: AdminBlog,
-    isShowHeader: true,
-  }, // <-- Add a comma here
+    layout: AdminDefaultLayout,
+  },
 
   {
     path: "/admin-quanly-sanpham",
@@ -107,8 +108,7 @@ export const publicRoutes = [
     path: "/admin/adminmanagement",
     page: AdminManagementPage,
     layout: AdminDefaultLayout,
-  }
-
+  },
 ];
 
 export const privateRoutes = [{}];

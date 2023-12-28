@@ -1,4 +1,55 @@
+<<<<<<< HEAD
 html, body{
+=======
+/* CSS cho các hàng trong bảng */
+.admin-table-admin {
+  width: 80%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+/* CSS cho các hàng trong bảng */
+.admin-table-admin tbody tr {
+  border-radius: 20px; /* Đặt border-radius cho mỗi hàng */
+  overflow: hidden; /* Đảm bảo nội dung không vượt qua border-radius */
+  background-color: #ffffff; /* Màu nền của hàng */
+  border: 1px  #ccc; /* Thiết lập border */
+}
+
+.admin-table-admin td.action-column div a {
+    display: block;
+    margin-bottom: 10px; /* Khoảng cách giữa các dòng */
+  }
+  
+
+  .admin-table-admin .admin-table-title th,
+  .admin-table-admin .admin-table-title td {
+  border: none;
+  padding: 8px;
+  text-align: center;
+}
+
+.admin-table-admin .admin-table-title th {
+  font-weight: bold;
+}
+
+.admin-table-admin .admin-table-body td {
+  background-color: #ffffff;
+}
+
+.admin-table-admin .admin-table-body td:last-child {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.admin-table-admin .admin-table-body img {
+  width: 50px; /* Điều chỉnh kích thước hình ảnh avatar tại đây */
+  border-radius: 50%; /* Bo tròn hình ảnh avatar */
+}
+
+.admin-table-admin .admin-table-body p {
+>>>>>>> 39fbb8b44145e1065ba0bc894f617fbed3817096
   margin: 0;
   padding: 0;
   font-family: inter;
@@ -9,26 +60,36 @@ html, body{
   align-items: flex-start;
   position: relative;
   background-color: rgba(225, 234, 250, 1);
+<<<<<<< HEAD
   width: 100vw;
   height: 100vh;
 }
 
 .header {
+=======
+  padding-left: 20px;
+}
+.admin-management-page .header {
+>>>>>>> 39fbb8b44145e1065ba0bc894f617fbed3817096
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
 }
 
-.header h2 {
+.admin-management-page .header h2 {
   margin: 0;
   font-size: 30px;
   font-weight: bold;
    color: rgba(22, 45, 90, 1);
 }
 
+<<<<<<< HEAD
 .add-admin-button {
   margin-left: 180px; /* Khoảng cách giữa h2 và button */
+=======
+.admin-management-page .add-admin-button {
+>>>>>>> 39fbb8b44145e1065ba0bc894f617fbed3817096
   padding: 8px 16px;
   background-color: #204387;
   color: white;
@@ -38,8 +99,19 @@ html, body{
   cursor: pointer;
   font-size: 50px;
 
+<<<<<<< HEAD
 }
 .filter-frame {
+=======
+.admin-management-page .main-content {
+  flex-grow: 1; /* Phần nội dung chính mở rộng để lấp đầy phần còn trống */
+
+  margin: 10px auto; /* Canh giữa theo chiều ngang và chiều dọc */
+  max-width: 1100px;
+}
+//////==================================================
+.admin-management-page .filter-frame {
+>>>>>>> 39fbb8b44145e1065ba0bc894f617fbed3817096
   display: grid;
   grid-template-rows: auto auto;
   row-gap: 5px;

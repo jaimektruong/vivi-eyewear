@@ -130,9 +130,14 @@ const AdminManagementPage = () => {
             <button onClick={handleDelete}>Xóa</button>
           </div>
         </div>
+<<<<<<< HEAD
         <table className="admin-table">
+=======
+
+        <table className="admin-table-admin">
+>>>>>>> 39fbb8b44145e1065ba0bc894f617fbed3817096
           <thead>
-            <tr>
+            <tr className ="admin-table-title">
               <th>
                 <input type="checkbox" /> Tất cả
               </th>
@@ -145,7 +150,7 @@ const AdminManagementPage = () => {
               <th>Hành động</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className ="admin-table-body">
             {admins.map((admin) => (
               <tr key={admin.id}>
                 <td>
