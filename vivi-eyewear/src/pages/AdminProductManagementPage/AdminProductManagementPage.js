@@ -94,7 +94,6 @@ function AdminProductManagementPage() {
           <i class="bi bi-square"></i>
           <p>Tất cả</p>
         </div>
-
         <div>Số lượng</div>
         <div>Giá bán</div>
         <div>Thời gian cập nhật</div>
@@ -104,7 +103,9 @@ function AdminProductManagementPage() {
       <div className="d-flex d-flex justify-content-between">
         {/* Vòng lặp ở đây */}
         <div className="d-flex d-flex justify-content-between">
-          <div>chekcbox</div>
+          <div>
+            <i class="bi bi-square"></i>
+          </div>
           <div className="d-flex flex-column">
             <div>Hình bỏ đây</div>
             <div>Tên sản phẩm ở đây</div>

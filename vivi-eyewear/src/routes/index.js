@@ -17,9 +17,6 @@ import AdminProductManagementPage from "../pages/AdminProductManagementPage/Admi
 import { AdminDefaultLayout } from "../components/Layouts";
 import { CustomerDefaultLayout } from "../components/Layouts";
 import AdminManagementPage from "../pages/AdminAdminMangagementPage/AdminMangagement";
-import CustomerManagementPage from "../pages/AdminCustomerManagementPage/AdminCustomerManagementPage";
-import OrderManagementPage from "../pages/AdminOrderManagementPage/AdminOrderManagementPage";
-import PromotionManagementPage from "../pages/AdminPromotionManagementPage/AdminPromotionManagement";
 
 export const publicRoutes = [
   {

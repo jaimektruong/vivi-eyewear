@@ -5,7 +5,7 @@ function CustomerDefaultLayout({ children }) {
   return (
     <div>
       <Header />
-      <div className="content">{children}</div>
+      <div>{children}</div>
       <Footer />
     </div>
   );
