@@ -2,20 +2,27 @@ import "./App.scss";
 import React, { Fragment } from "react";
 import "bootstrap/dist/js/bootstrap.min.js";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { routes } from "./routes";
-import DefaultComponent from "./components/Default/Default";
+import { publicRoutes } from "./routes";
+import { CustomerDefaultLayout } from "./components/Layouts";
 
 function App() {
   return (
-    <>
-      <Router>
+    <Router>
+      <div className="App">
         <Routes>
-          {routes.map((route) => {
+          {publicRoutes.map((route, index) => {
             const Page = route.page;
-            const Layout = route.isShowHeader ? DefaultComponent : Fragment;
+            let Layout = CustomerDefaultLayout;
+
+            if (route.layout) {
+              Layout = route.layout;
+            } else {
+              Layout = Fragment;
+            }
+
             return (
               <Route
-                key={route.path}
+                key={index}
                 path={route.path}
                 element={
                   <Layout>
@@ -26,8 +33,8 @@ function App() {
             );
           })}
         </Routes>
-      </Router>
-    </>
+      </div>
+    </Router>
   );
 }
 
