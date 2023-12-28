@@ -1,40 +1,76 @@
 import "./AdminProductManagementPage.scss";
 function AdminProductManagementPage() {
   return (
-    <div className="content">
+    <div className="content-details d-flex flex-column">
       <div className="d-flex d-flex justify-content-between">
         <div>
           <p className="function-management">QUẢN LÝ SẢN PHẨM</p>
         </div>
         <div>
-          <button className="button-primary">Thêm mới sản phẩm</button>
+          <button className="button-primary button-local button-add-product">
+            <p>Thêm mới sản phẩm</p>
+          </button>
         </div>
       </div>
-      <div className="d-flex d-flex justify-content-between">
+      <div className="d-flex d-flex justify-content-between product-status-box">
         <div>Tất cả ()</div>
         <div>Đang hoạt động ()</div>
         <div>Bị huỷ kích hoạt ()</div>
         <div>Đã xoá ()</div>
       </div>
-      <div>
-        <div className="d-flex d-flex justify-content-between">
-          <div>tên hoặc mã sp</div>
-          <div>giá nghìn đồng</div>
-          <div>hạng mục</div>
+      <div className=" d-flex flex-column button-action-container">
+        <div className="d-flex justify-content-between button-action-line">
+          {/* thanh search */}
+          <input type="text" placeholder="Tìm kiếm tên sản phẩm" />
+
+          {/* dropdown khoảng giá */}
           <div>
-            <button className="button-primary">Đặt lại</button>Đặt
+            <select className="dropdown-styles">
+              <option selected disabled>
+                Khoảng giá
+              </option>
+              <option>Tất cả giá</option>
+              <option>Dưới 500.000</option>
+              <option>Từ 500.000 - 700.000</option>
+              <option>Từ 700.000 - 1.000.000</option>
+              <option>Trên 1.000.000</option>
+            </select>
+          </div>
+          {/* dropdown hạng mục */}
+          <div>
+            <select className="dropdown-styles">
+              <option selected disabled>
+                Hạng mục
+              </option>
+              <option>Tất cả hạng mục</option>
+              <option>Gọng kính</option>
+              <option>Kính râm</option>
+              <option>Tròng kính</option>
+            </select>
+          </div>
+          {/* button  đặt lại */}
+          <div>
+            <button className="button-primary button-action-styles mini-button">
+              Đặt lại
+            </button>
           </div>
         </div>
-        <div className="d-flex d-flex justify-content-between">
+        <div className="d-flex justify-content-between button-action-line">
           <div>Đã chọn: {}</div>
           <div>
-            <button>Kích hoạt</button>
+            <button className="button-secondary button-action-styles">
+              Kích hoạt
+            </button>
           </div>
           <div>
-            <button>Huỷ kích hoạt</button>
+            <button className="button-secondary button-action-styles">
+              Huỷ kích hoạt
+            </button>
           </div>
           <div>
-            <button>Xoá</button>
+            <button className="button-secondary button-action-styles mini-button">
+              Xoá
+            </button>
           </div>
         </div>
       </div>

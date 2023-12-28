@@ -89,7 +89,7 @@ export const publicRoutes = [
   {
     path: "/admin/adminmanagement",
     page: AdminManagementPage,
-    isShowHeader: true,
+    layout: AdminDefaultLayout,
   },
 ];
 
