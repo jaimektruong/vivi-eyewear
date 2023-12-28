@@ -3,9 +3,11 @@ function AdminProductManagementPage() {
   return (
     <div className="content">
       <div className="d-flex d-flex justify-content-between">
-        <div className="fuction">QUẢN LÝ SẢN PHẨM</div>
         <div>
-          <button>Thêm mới sản phẩm</button>
+          <p className="function-management">QUẢN LÝ SẢN PHẨM</p>
+        </div>
+        <div>
+          <button className="button-primary">Thêm mới sản phẩm</button>
         </div>
       </div>
       <div className="d-flex d-flex justify-content-between">

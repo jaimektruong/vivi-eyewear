@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import "./AdminManagementPage.scss"; 
-import AdminList from "../../components/AdminList/AdminList"; 
-import AdminSideBar from "../../components/AdminSideBar/AdminSideBar";
+import "./AdminManagementPage.scss";
 const AdminManagementPage = () => {
   const [admins, setAdmins] = useState([
     // Dữ liệu mẫu của danh sách quản trị viên
@@ -38,7 +36,9 @@ const AdminManagementPage = () => {
 
   const handleCheckboxChange = (e) => {
     const isChecked = e.target.checked;
-    setSelectedCheckboxes((prevCount) => (isChecked ? prevCount + 1 : prevCount - 1));
+    setSelectedCheckboxes((prevCount) =>
+      isChecked ? prevCount + 1 : prevCount - 1
+    );
   };
   const handleEditClick = (adminId) => {
     // Xử lý sự kiện chỉnh sửa quản trị viên
@@ -88,18 +88,16 @@ const AdminManagementPage = () => {
   };
   return (
     <div className="admin-management-page">
-      <AdminSideBar /> {/* Thanh sidebar AdminSideBar */}
-      
       <div className="main-content">
-      <div className="header">
+        <div className="header">
           <h2>QUẢN LÝ QUẢN TRỊ VIÊN</h2>
           <button className="add-admin-button">Thêm quản trị viên</button>
         </div>
-          <h5>Danh sách quản trị viên</h5>
-          <div className="filter-frame">
+        <h5>Danh sách quản trị viên</h5>
+        <div className="filter-frame">
           <div className="filter-row">
             {/* Thanh search */}
-              <input
+            <input
               type="text"
               placeholder="Tìm kiếm quản trị viên..."
               value={searchValue}
@@ -115,7 +113,7 @@ const AdminManagementPage = () => {
               {/* Các options cho dropdown chức vụ */}
             </select>
             {/* Button đặt lại (reset) */}
-            <button id ="reset" onClick={handleReset}>
+            <button id="reset" onClick={handleReset}>
               Đặt lại
             </button>
           </div>
@@ -133,55 +131,53 @@ const AdminManagementPage = () => {
 
             {/* Button xóa */}
             <button onClick={handleDelete}>Xóa</button>
-
-            
           </div>
         </div>
 
-
-      <table className="admin-table">
-      <thead>
-        <tr>
-          <th><input type="checkbox" /></th>
-          <th>ID</th>
-          <th>Họ tên</th>
-          <th>Ngày sinh</th>
-          <th>Chức vụ</th>
-          <th>Giới tính</th>
-          <th>Số điện thoại</th>
-          <th>Hành động</th>
-        </tr>
-      </thead>
-      <tbody>
-        {admins.map((admin) => (
-          <tr key={admin.id}>
-            <td>
-              <input type="checkbox" onChange={handleCheckboxChange} />
-            </td>
-            <td>
-              <img src={admin.avatar} alt={`Avatar of ${admin.name}`} />
-              <p>ID: {admin.id}</p>
-            </td>
-            <td>{admin.name}</td>
-            <td>{admin.dateOfBirth}</td>
-            <td>{admin.role}</td>
-            <td>{admin.gender}</td>
-            <td>{admin.phone}</td>
-            <td className="action-column">
-                <div>
-                  <a href={`/edit/${admin.id}`}>Chỉnh sửa</a>
-                </div>
-                <div>
-                  <a href={`/delete/${admin.id}`}>Xóa</a>
-                </div>
-              </td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
+        <table className="admin-table">
+          <thead>
+            <tr>
+              <th>
+                <input type="checkbox" />
+              </th>
+              <th>ID</th>
+              <th>Họ tên</th>
+              <th>Ngày sinh</th>
+              <th>Chức vụ</th>
+              <th>Giới tính</th>
+              <th>Số điện thoại</th>
+              <th>Hành động</th>
+            </tr>
+          </thead>
+          <tbody>
+            {admins.map((admin) => (
+              <tr key={admin.id}>
+                <td>
+                  <input type="checkbox" onChange={handleCheckboxChange} />
+                </td>
+                <td>
+                  <img src={admin.avatar} alt={`Avatar of ${admin.name}`} />
+                  <p>ID: {admin.id}</p>
+                </td>
+                <td>{admin.name}</td>
+                <td>{admin.dateOfBirth}</td>
+                <td>{admin.role}</td>
+                <td>{admin.gender}</td>
+                <td>{admin.phone}</td>
+                <td className="action-column">
+                  <div>
+                    <a href={`/edit/${admin.id}`}>Chỉnh sửa</a>
+                  </div>
+                  <div>
+                    <a href={`/delete/${admin.id}`}>Xóa</a>
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
     </div>
-  
   );
 };
 
