@@ -40,10 +40,10 @@ td:last-child {
   gap: 8px;
 }
 
-img {
-  width: 50px; /* Điều chỉnh kích thước hình ảnh avatar tại đây */
-  border-radius: 50%; /* Bo tròn hình ảnh avatar */
-}
+// img {
+//   width: 50px; /* Điều chỉnh kích thước hình ảnh avatar tại đây */
+//   border-radius: 50%; /* Bo tròn hình ảnh avatar */
+// }
 
 p {
   margin: 0;
@@ -143,4 +143,20 @@ p {
       }
     }
   }
+}
+/* CSS */
+.search-container {
+  position: relative;
+}
+
+.search-input {
+  padding-right: 30px; /* Để tạo không gian để chứa icon bên trong input */
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
 }
