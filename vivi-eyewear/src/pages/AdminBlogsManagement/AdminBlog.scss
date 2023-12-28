@@ -1,0 +1,112 @@
+.img{
+    width: 50px;
+    height: 50px;
+}
+.key{
+    display: flex;
+}
+
+.key_0{
+    background-color: rgb(27, 27, 74);
+    border: 2px;
+    text-align: center;
+}
+.container_1{
+    display: flex;
+    
+}
+
+.container{
+    margin-left: 10px;
+}
+
+.container_2{
+    display: flex;
+}
+.container_3{
+    display: flex;
+}
+
+.content{
+    display: flex;
+    margin: 20px;
+}
+.content_0{
+    float: left;
+}
+.content_00{
+    margin-left: 50%;
+        background-color:#09057b;
+    color: aliceblue;
+    width: 195px;
+}
+
+.content_1{
+    float: right;
+    margin: 10px;
+    margin-top: 5px;
+    margin-right: 0px;
+    margin-left: 60px;
+    width: 160px;
+}
+body {
+    margin: 0;
+    font-family: Inter, sans-serif;
+    background-color: rgb(230, 239, 253);
+}
+  
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    color:aliceblue ;
+    text-align: center;
+}
+  
+.menu-item {
+    width: 198px;
+    height: 48px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+  
+.menu-item > div:first-child {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #162D5A;
+}
+  
+.menu-item > div:last-child {
+    width: 164.54px;
+    margin-left: 27.89px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    word-wrap: break-word;
+}
+  
+.menu-item.highlighted > div:first-child {
+    background: white;
+}
+  
+.menu-item.highlighted {
+    color: #09057b;
+    background-color: aliceblue;
+}
+
+.input{
+    margin: 10px;
+}
+
+.boder{
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #000000;
+    padding: 10px;
+}
+
+.input_2{
+    background-color:#0a0686;
+    color: rgb(255, 255, 255);
+    width: 150px;
+}

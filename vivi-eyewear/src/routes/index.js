@@ -11,6 +11,8 @@ import PageNotFound from "../pages/PageNotFound/PageNotFound";
 import LoginPage from "../pages/LoginPage/Login";
 import WarrantyPage from "../pages/WarrantyPage/WarrantyPage";
 import AdminSideBar from "../components/AdminSideBar/AdminSideBar";
+import AccountPage from "../pages/AccountPage/AccountPage";
+import AdminBlog from "../pages/AdminBlogsManagement/AdminBlogs"
 
 export const routes = [
   {
@@ -84,4 +86,14 @@ export const routes = [
     page: PageNotFound,
     isShowHeader: true,
   },
+  {
+    path: "/account",
+    page: AccountPage,
+    isShowHeader: true,
+  },
+  {
+    path: "/adminBlog",
+    page: AdminBlog,
+    isShowHeader: true,
+  }
 ];
