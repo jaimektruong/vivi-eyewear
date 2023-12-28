@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./AdminCustomerManagement.scss";
 import CustomerList from "../../components/CustomerList/CustomerList";
-import AdminSideBar from "../../components/AdminSideBar/AdminSideBar";
+
 
 const CustomerManagementPage = () => {
   const [customers, setCustomers] = useState([
@@ -91,7 +91,6 @@ const CustomerManagementPage = () => {
 
   return (
     <div className="admin-management-page">
-      <AdminSideBar />
       <div className="main-content">
         <div className="header">
           <h2>QUẢN LÝ KHÁCH HÀNG</h2>

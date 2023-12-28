@@ -14,8 +14,10 @@ import AdminProductManagementPage from "../pages/AdminProductManagementPage/Admi
 import { AdminDefaultLayout } from "../components/Layouts";
 import { CustomerDefaultLayout } from "../components/Layouts";
 import AdminManagementPage from "../pages/AdminAdminMangagementPage/AdminMangagement";
+import CustomerManagementPage from "../pages/AdminCustomerManagementPage/AdminCustomerManagementPage";
+import OrderManagementPage from "../pages/AdminOrderManagementPage/AdminOrderManagementPage";
 
-export const routes = [
+export const publicRoutes = [
   {
     path: "/",
     page: HomePage,
@@ -91,7 +93,18 @@ export const routes = [
     path: "/admin/adminmanagement",
     page: AdminManagementPage,
     layout: AdminDefaultLayout,
-  }
+  },
+
+  {
+    path: "/admin/customermanagement",
+    page: CustomerManagementPage,
+    layout: AdminDefaultLayout,
+  },
+  {
+    path: "/admin/ordermanagement",
+    page: OrderManagementPage,
+    layout: AdminDefaultLayout,
+  },
 
 ];
 

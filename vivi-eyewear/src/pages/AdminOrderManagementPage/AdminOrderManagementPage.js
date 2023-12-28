@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./AdminOrderManagementPage.scss"; // File CSS cho trang Order Management
 import OrderList from "../../components/OrderList/OrderList"; // Component OrderList
-import AdminSideBar from "../../components/AdminSideBar/AdminSideBar"; // Sidebar
 
 const OrderManagementPage = () => {
   const [orders, setOrders] = useState([
@@ -83,8 +82,7 @@ const OrderManagementPage = () => {
   
   return (
     <div className="order-management-page">
-      {/* Header hoặc tiêu đề của trang */}
-      <AdminSideBar />
+    
       <div className="main-content">
         <div className="header">
           <h2>QUẢN LÝ ĐƠN HÀNG</h2>

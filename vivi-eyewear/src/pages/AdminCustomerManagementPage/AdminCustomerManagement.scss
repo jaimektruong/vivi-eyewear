@@ -82,8 +82,8 @@
   
   .main-content {
     flex-grow: 1; /* Phần nội dung chính mở rộng để lấp đầy phần còn trống */
-  
-    margin: 10px auto; /* Canh giữa theo chiều ngang và chiều dọc */
+    padding-left: 20px;
+    margin: 20px auto; /* Canh giữa theo chiều ngang và chiều dọc */
     max-width: 1100px;
   }
   //////==================================================
