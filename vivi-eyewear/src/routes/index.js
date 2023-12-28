@@ -10,7 +10,7 @@ import BlogsPage from "../pages/BlogsPage/BlogsPage";
 import PageNotFound from "../pages/PageNotFound/PageNotFound";
 import LoginPage from "../pages/LoginPage/Login";
 import WarrantyPage from "../pages/WarrantyPage/WarrantyPage";
-import AdminSideBar from "../components/AdminSideBar/AdminSideBar";
+
 import AccountPage from "../pages/AccountPage/AccountPage";
 import AdminBlog from "../pages/AdminBlogsManagement/AdminBlogs";
 import AdminProductManagementPage from "../pages/AdminProductManagementPage/AdminProductManagementPage";
@@ -19,7 +19,7 @@ import { CustomerDefaultLayout } from "../components/Layouts";
 import AdminManagementPage from "../pages/AdminAdminMangagementPage/AdminMangagement";
 import CustomerManagementPage from "../pages/AdminCustomerManagementPage/AdminCustomerManagementPage";
 import OrderManagementPage from "../pages/AdminOrderManagementPage/AdminOrderManagementPage";
-import PromotionManagementPage from "../pages/AdminPromotionManagementPage/AdminPromotionManagement"
+import PromotionManagementPage from "../pages/AdminPromotionManagementPage/AdminPromotionManagement";
 
 export const publicRoutes = [
   {
@@ -108,8 +108,7 @@ export const publicRoutes = [
     path: "/admin/adminmanagement",
     page: AdminManagementPage,
     layout: AdminDefaultLayout,
-  }
-
+  },
 ];
 
 export const privateRoutes = [{}];
