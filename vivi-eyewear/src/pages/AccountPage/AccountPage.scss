@@ -70,6 +70,7 @@
     border-radius: 5px;
     border: 1px solid #0c0963;
     padding: 5px;
+
 }
 
 .input_3 {
@@ -109,3 +110,43 @@
     display: flex;
     margin-top: 10px;
 }
+
+@media only screen and (min-width: 600px) {
+
+    /* Điều chỉnh cho tablet và màn hình lớn hơn */
+    .container {
+      padding: 10px;
+    }
+  
+    // h1 {
+    //   font-size: 30px;
+    // }
+  
+    // h2 {
+    //   font-size: 25px;
+    // }
+  
+    // h3 {
+    //   font-size: 18px;
+    // }
+  }
+  
+  @media only screen and (min-width: 1024px) {
+  
+    /* Điều chỉnh cho màn hình desktop */
+    .container {
+      padding: 0px;
+    }
+  
+    // h1 {
+    //   font-size: 40px;
+    // }
+  
+    // h2 {
+    //   font-size: 35px;
+    // }
+  
+    // h3 {
+    //   font-size: 22px;
+    // }
+  }
