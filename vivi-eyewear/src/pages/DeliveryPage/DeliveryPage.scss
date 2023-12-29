@@ -1,9 +1,71 @@
-.content {
-  margin: 24px 0;
-  text-align: justify;
+html,
+body {
+  font-family: Inter;
 }
-.title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #204387;
+
+.Delivery_Page {
+  padding: 20px;
+
+  /* Padding phù hợp với thiết bị di động */
+  h1 {
+    color: rgba(22, 45, 90, 1);
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  h2 {
+    color: rgba(22, 45, 90, 1);
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  h3 {
+    color: rgba(22, 45, 90, 1);
+    font-size: 16px;
+    font-style: italic;
+  }
+
+  p {
+    line-height: 1.5;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+
+  /* Điều chỉnh cho tablet và màn hình lớn hơn */
+  .Delivery_Page {
+    padding: 30px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+
+  /* Điều chỉnh cho màn hình desktop */
+  .Delivery_Page {
+    padding: 40px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 35px;
+  }
+
+  h3 {
+    font-size: 22px;
+  }
 }

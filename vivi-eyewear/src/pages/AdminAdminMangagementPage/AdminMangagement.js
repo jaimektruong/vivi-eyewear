@@ -5,8 +5,8 @@ const AdminManagementPage = () => {
     // Dữ liệu mẫu của danh sách quản trị viên
     {
       id: 1,
-      name: "John Doe",
-      dateOfBirth: "1990-01-01",
+      name: "Bessie Cooper",
+      dateOfBirth: "2003-09-20",
       role: "Quản lý",
       gender: "Nữ",
       phone: "1234567890",
@@ -15,7 +15,7 @@ const AdminManagementPage = () => {
     {
       id: 2,
       name: "John Doe",
-      dateOfBirth: "1990-01-01",
+      dateOfBirth: "2003-09-20",
       role: "Quản lý",
       gender: "Nữ",
       phone: "1234567890",
@@ -24,7 +24,16 @@ const AdminManagementPage = () => {
     {
       id: 3,
       name: "John Doe",
-      dateOfBirth: "1990-01-01",
+      dateOfBirth: "2003-09-20",
+      role: "Quản Lý",
+      gender: "Nữ",
+      phone: "1234567890",
+      avatar: "URL_HINH_ANH_QUAN_TRI_VIEN", // Đường dẫn đến hình ảnh avatar
+    },
+    {
+      id: 4,
+      name: "John Doe",
+      dateOfBirth: "2003-09-20",
       role: "Quản Lý",
       gender: "Nữ",
       phone: "1234567890",
@@ -130,14 +139,9 @@ const AdminManagementPage = () => {
             <button onClick={handleDelete}>Xóa</button>
           </div>
         </div>
-<<<<<<< HEAD
         <table className="admin-table">
-=======
-
-        <table className="admin-table-admin">
->>>>>>> 39fbb8b44145e1065ba0bc894f617fbed3817096
           <thead>
-            <tr className ="admin-table-title">
+            <tr>
               <th>
                 <input type="checkbox" /> Tất cả
               </th>
@@ -150,7 +154,7 @@ const AdminManagementPage = () => {
               <th>Hành động</th>
             </tr>
           </thead>
-          <tbody className ="admin-table-body">
+          <tbody>
             {admins.map((admin) => (
               <tr key={admin.id}>
                 <td>

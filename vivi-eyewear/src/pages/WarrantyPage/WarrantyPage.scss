@@ -1,9 +1,36 @@
-.content {
-  margin: 24px 0;
-  text-align: justify;
+.Warranty_Page {
+  padding: 20px;
+
+  h1 {
+    color: rgba(22, 45, 90, 1);
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  p {
+    line-height: 1.5;
+  }
 }
-.title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #204387;
+
+@media only screen and (min-width: 600px) {
+  /* Cho tablet và màn hình lớn hơn */
+  .Warranty_Page {
+    padding: 30px;
+
+    h1 {
+      font-size: 30px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  /* Cho màn hình desktop */
+  .Warranty_Page {
+    padding: 40px;
+
+    h1 {
+      font-size: 40px;
+    }
+  }
 }

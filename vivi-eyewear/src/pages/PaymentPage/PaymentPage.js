@@ -1,16 +1,30 @@
 import "./PaymentPage.scss";
-function PaymentPage(){
-    return(
-        <div className="inner">
-      <div className="content">
-        <h2 className="title">Hình thức thanh toán</h2> <br/>
+function PaymentPage() {
+  return (
+    <div  className="Payment_Page" className="inner" >
+      <div className="Content_Payment">
+        <h2 className="title">I. Chính sách giao nhận tại ViVi Eyewear</h2>
         <ul>
-            <li> Giao hàng tận nơi và được kiểm tra hàng trước khi thanh toán. </li>
-            <li> Khách hàng có thanh toán chuyển khoản hoặc thanh toán sau khi nhận hàng. </li>
-            <li> Với những đơn cắt cận, quí khách vui lòng chuyển khoản cọc trước 50% – 100% tổng giá trị đơn hàng. </li>
+          <li>Phí ship</li>
+          <p>Đối với sản phẩm dưới 500.000 VNĐ: phí ship sẽ dao động từ 20.000 VNĐ đến 40.000 VNĐ tùy theo Đơn vị vận chuyển.ối với sản phẩm trên 500.000 VNĐ: phí ship sẽ dao động từ 15.000 VNĐ đến 30.000 VNĐ tùy theo Đơn vị vận chuyển.</p>
+          <li>Thời gian giao hàng</li>
+          <p>Khu vực nội thành Hà Nội và TP.HCM: Từ 1 – 2 ngày</p>
+          <p>Khu vực ngoại thành và các thành phố lớn: 3 – 4 ngày</p>
+          <p>Các khu vực khác: 4 – 5 ngày</p>
+        </ul>
+        <h2 className="title">II. Chính sách thanh toán</h2>
+        <p>Khách hàng có thể lựa chọn các hình thức thanh toán sau khi mua sắm trực tuyến tại Vivi Eyewear</p>
+        <ul>
+          <li>Thanh toán trực tiếp COD</li>
+          <p>COD (dịch vụ giao hàng nhận tiền):  Nhân viên vận chuyển (GHN, GHTK, Viettelpost,…) sẽ thu tiền mặt khi giao hàng cho khách.</p>
+          <li>Chuyển khoản trực tiếp vào số tài khoản ViVi Eyewear</li>
+          <p>Thông tin chuyển khoản</p>
+          <p>- Ngân hàng Thương mại cổ phần Vietcombank (VCB)</p>
+          <p>Tên tài khoản: ViVi Eyewear</p>
+          <p>Số tài khoản: 2425292013</p>
         </ul>
       </div>
     </div>
-    );
+  );
 }
 export default PaymentPage;

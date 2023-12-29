@@ -1,9 +1,23 @@
-.content {
-  margin: 24px 0;
-  text-align: justify;
+/* Common styles for both Payment_Page and Content_Payment */
+.Payment_Page,
+.Content_Payment {
+  padding: 20px;
+
+  li {
+    font-weight: bold;
+  }
 }
-.title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #204387;
+
+/* Additional styles for Payment_Page */
+.Payment_Page {
+  /* Add specific styles for Payment_Page if needed */
+}
+
+/* Responsive Styles (if needed) */
+@media only screen and (max-width: 600px) {
+  /* Styles for screens up to 600px wide (typical phone) */
+  .Payment_Page,
+  .Content_Payment {
+    padding: 10px; /* Adjust padding for smaller screens if needed */
+  }
 }

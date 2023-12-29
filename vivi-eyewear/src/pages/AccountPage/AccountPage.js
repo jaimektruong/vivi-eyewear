@@ -1,12 +1,8 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import './AccountPage.scss';
-// import '@fortawesome/fontawesome-free/css/all.css'; // Import Font Awesome styles
-=======
+
 import React, { useState } from "react";
 import "./AccountPage.scss";
-import "@fortawesome/fontawesome-free/css/all.css"; // Import Font Awesome styles
->>>>>>> 39fbb8b44145e1065ba0bc894f617fbed3817096
+// import "@fortawesome/fontawesome-free/css/all.css"; // Import Font Awesome styles
+
 
 function Account() {
   // State to store form data
