@@ -8,14 +8,16 @@ import { faMobileAlt } from '@fortawesome/free-solid-svg-icons';
 
 const Navigation_TT = () => {
     return (
-        <nav>
+        <nav className="checkout-nav">
             <ul>
                 <li>
                     <Link to="/tai-khoan">Tài khoản</Link>
                 </li>
+                <li>/</li>
                 <li>
                     <Link to="/gio-hang">Giỏ hàng</Link>
                 </li>
+                <li>/</li>
                 <li>
                     <Link to="/thanh-toan">Thanh toán</Link>
                 </li>
@@ -46,25 +48,25 @@ const CheckoutPage = () => {
         }
     };
     const [showModal, setShowModal] = useState(false);
-    
+
     const handleOrder = () => {
         if (phoneNumber && fullName && addressDetails && street && district && city && selectedPayment) {
-          if (selectedPayment === 'bank-transfer') {
-            // Redirect to third-party payment page
-            window.location.href = '/bank-payment'; // Change this to the actual URL
-          } else if (selectedPayment === 'cash-on-delivery') {
-            setShowModal(true);
-            // Handle other actions for cash on delivery
-          }
+            if (selectedPayment === 'bank-transfer') {
+                // Redirect to third-party payment page
+                window.location.href = '/bank-payment'; // Change this to the actual URL
+            } else if (selectedPayment === 'cash-on-delivery') {
+                setShowModal(true);
+                // Handle other actions for cash on delivery
+            }
         } else {
-          setShowModal(true);
-          // Handle case when information is incomplete
+            setShowModal(true);
+            // Handle case when information is incomplete
         }
-      };
+    };
 
     return (
         <div className="checkout-inner">
-             <Navigation_TT />
+            <Navigation_TT />
             <div className="checkout-content">
                 <div className="checkout-container">
                     {/* Shipping Information */}
@@ -109,65 +111,69 @@ const CheckoutPage = () => {
                         />
                     </div>
 
-                       {/* Order Summary */}
-            <div className="order-summary">
-                <ul>
-                <li>
-                    <span>GN000001</span>
-                    <span>450,000 VND</span>
-                </li>
-                <li>
-                    <span>Tạm tính:</span>
-                    <span>450,000 VND</span>
-                </li>
-                <hr></hr>
-                <li>
-                    <span>Phí vận chuyển:</span>
-                    <span>30,000 VND</span>
-                </li>
-                <hr></hr>
-                <li className="total">
-                    <span>Tổng cộng:</span>
-                    <span>480,000 VND</span>
-                </li>
-                </ul>
-                <div className="payment-methods">
-                <input
-                    type="radio"
-                    id="bank-transfer"
-                    name="payment"
-                    value="bank-transfer"
-                    onChange={() => setSelectedPayment('bank-transfer')}
-                />
-                <label htmlFor="bank-transfer">Thanh toán trực tuyến</label>
-                <FontAwesomeIcon icon={faCcVisa} />
-                <FontAwesomeIcon icon={faCcMastercard} />
-                <FontAwesomeIcon icon={faMobileAlt} />
-                <br />
-                <input
-                    type="radio"
-                    id="cash-on-delivery"
-                    name="payment"
-                    value="cash-on-delivery"
-                    onChange={() => setSelectedPayment('cash-on-delivery')}
-                />
-                <label htmlFor="cash-on-delivery">Thanh toán khi nhận hàng</label>
-                <div className="discount-section">
-                            <input
-                                type="text"
-                                placeholder="Nhập mã giảm giá"
-                                value={discountCode}
-                                onChange={(e) => setDiscountCode(e.target.value)}
-                            />
-                            <button onClick={applyDiscount}>Áp dụng</button>
+                    {/* Order Summary */}
+                    <div className="order-summary">
+                        <ul>
+                            <li>
+                                <span>GN000001</span>
+                                <span>450,000 VND</span>
+                            </li>
+                            <li>
+                                <span>Tạm tính:</span>
+                                <span>450,000 VND</span>
+                            </li><hr></hr>
+                          
+                            <li>
+                                <span>Phí vận chuyển:</span>
+                                <span>30,000 VND</span>
+                            </li><hr></hr>
+                            
+                            <li className="total">
+                                <span>Tổng cộng:</span>
+                                <span>480,000 VND</span>
+                            </li>
+                        </ul>
+                        <div className="payment-methods">
+                            <div className="payment-methods-TT">
+                                <input
+                                    type="radio"
+                                    id="bank-transfer"
+                                    name="payment"
+                                    value="bank-transfer"
+                                    onChange={() => setSelectedPayment('bank-transfer')}
+                                />
+                                <label htmlFor="bank-transfer">Thanh toán trực tuyến</label>
+                                <div className="payment-methods-Icon" >
+                                    <FontAwesomeIcon icon={faCcVisa} />
+                                    <FontAwesomeIcon icon={faCcMastercard} />
+                                    <FontAwesomeIcon icon={faMobileAlt} />
+                                </div>
+
+                            </div>
+                            <div className="payment-methods-TT">
+                                <input
+                                    type="radio"
+                                    id="cash-on-delivery"
+                                    name="payment"
+                                    value="cash-on-delivery"
+                                    onChange={() => setSelectedPayment('cash-on-delivery')}
+                                />
+                                <label htmlFor="cash-on-delivery">Thanh toán khi nhận hàng</label>
+                            </div>
+                            <div className="discount-section">
+                                <input
+                                    type="text"
+                                    placeholder="Nhập mã giảm giá"
+                                    value={discountCode}
+                                    onChange={(e) => setDiscountCode(e.target.value)}
+                                />
+                                <button onClick={applyDiscount}>Áp dụng</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                    
-                </div>
-            </div>
-               
-            </div>
-                            {/* Button to handle order */}
-                    <button onClick={handleOrder}>Đặt hàng</button>
+                {/* Button to handle order */}
+                <button onClick={handleOrder}>Đặt hàng</button>
 
                 {/* Modal */}
                 <Modal show={showModal} onHide={() => setShowModal(false)}>
@@ -176,19 +182,19 @@ const CheckoutPage = () => {
                     </Modal.Header>
                     <Modal.Body>
                         {phoneNumber && fullName && addressDetails && street && district && city ? (
-                        <p>Đặt hàng thành công! Tiếp tục mua sắm cùng ViVi!</p>
+                            <p>Đặt hàng thành công! Tiếp tục mua sắm cùng ViVi!</p>
                         ) : (
-                        <p>Vui lòng điền đầy đủ thông tin để đặt hàng!</p>
+                            <p>Vui lòng điền đầy đủ thông tin để đặt hàng!</p>
                         )}
                     </Modal.Body>
                     <Modal.Footer>
                         <Button variant="secondary" onClick={() => setShowModal(false)}>
-                        Đóng
+                            Đóng
                         </Button>
                     </Modal.Footer>
-                    </Modal>
+                </Modal>
 
-        </div>
+            </div>
         </div>
     );
 };

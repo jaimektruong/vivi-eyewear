@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import "./AccountPage.scss";
 import "@fortawesome/fontawesome-free/css/all.css"; // Import Font Awesome styles
 
+function daoTT() {
+  var mk = document.getElementById("mk");
+  mk.type = (mk.type === "password")? "text":"password";
+} 
 function Account() {
   // State to store form data
   const [formData, setFormData] = useState({
@@ -39,18 +43,24 @@ function Account() {
                 <i class="bi bi-person-circle"></i>
             </div>
             <hr className="hr" />
-            <i className="fa-solid fa-user"></i>
-            <label>  Thông tin tài khoản</label> <br />
-            <label>
-              <i className="fa-solid fa-location-dot"></i>  Thông tin địa chỉ
-            </label>
-            <br />
-            <label>
-              <i className="fa-solid fa-clock-rotate-left"></i>  Lịch sử mua hàng
-            </label>
-            <br />
-            <br />
-            <br />
+            <div  className="inf">
+              <i className="fa-solid fa-user"></i>
+              <div  className="in4">
+                <label>Thông tin tài khoản</label> <br />
+              </div>
+            </div>
+            <div className="inf">
+              <i className="fa-solid fa-location-dot"></i>
+              <div  className="in3">
+                <label> Thông tin địa chỉ</label><br />
+              </div>
+            </div>
+            <div className="inf">
+              <i className="fa-solid fa-clock-rotate-left"></i>
+                <div className="in2">
+                  <label>Lịch sử mua hàng </label><br />
+                </div>
+            </div>
           </fieldset>
         </div>
         <div className="box_2">
@@ -76,7 +86,7 @@ function Account() {
                 <input
                   className="input"
                   type="text"
-                  placeholder="Enter Name..."
+                  placeholder="Enter name..."
                   name="firstName"
                   value={formData.firstName}
                   onChange={handleInputChange}
@@ -91,7 +101,7 @@ function Account() {
                 <input
                   className="input"
                   type="text"
-                  placeholder="Enter Email..."
+                  placeholder="Enter email..."
                   name="email"
                   value={formData.email}
                   onChange={handleInputChange}
@@ -102,7 +112,7 @@ function Account() {
                 <input
                   className="input"
                   type="text"
-                  placeholder="Enter SDT..."
+                  placeholder="Enter phone number..."
                   name="phoneNumber"
                   value={formData.phoneNumber}
                   onChange={handleInputChange}
@@ -117,7 +127,7 @@ function Account() {
             <input
               className="input"
               type="text"
-              placeholder="Enter password..."
+              placeholder="Placeholder..."
               name="currentPassword"
               value={formData.currentPassword}
               onChange={handleInputChange}
@@ -130,7 +140,7 @@ function Account() {
             <input
               className="input_1"
               type="text"
-              placeholder="Enter password..."
+              placeholder="Placeholder..."
               name="newPassword"
               value={formData.newPassword}
               onChange={handleInputChange}
@@ -143,7 +153,7 @@ function Account() {
             <input
               className="input_3"
               type="text"
-              placeholder="Enter password..."
+              placeholder="Placeholder..."
               name="confirmPassword"
               value={formData.confirmPassword}
               onChange={handleInputChange}
