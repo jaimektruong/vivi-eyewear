@@ -62,7 +62,7 @@ const Header = ({ handleInputChange, query }) => {
             </Link>
           </li>
           <li className="nav-item text-white ">
-            <Link className="nav-link text-white" to="/blogs">
+            <Link className="nav-link text-white" to="/bai-viet">
               Bài viết
             </Link>
           </li>
