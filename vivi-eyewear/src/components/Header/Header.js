@@ -113,6 +113,7 @@ const Header = ({ handleInputChange, query }) => {
             aria-label="Search"
             value={query}
             onChange={handleInputChange}
+            style={{ width: "300px", height: "40px" }}
           />
         </div>
         {/* Account */}
@@ -151,7 +152,7 @@ const Header = ({ handleInputChange, query }) => {
               </div>
             </div>
           ) : (
-            <button className="account__button" onClick={handleLogin}>
+            <button className="account__button btn btn-primary" onClick={handleLogin}>
               <i className="bi bi-person-circle text-white fs-4"></i>
             </button>
           )}
