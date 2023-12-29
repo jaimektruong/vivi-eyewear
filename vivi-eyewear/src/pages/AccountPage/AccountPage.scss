@@ -2,9 +2,10 @@
     display: flex;
     color: rgb(10, 10, 67);
     margin-top: 5px;
-    width: 1000px;
-    height: 500px;
-    margin-bottom: 5px;
+    width: 9000px;
+    height: 520px;
+    margin: 30px;
+    margin-left: 400px;
 }
 
 .imga{
@@ -25,9 +26,9 @@
 }
 
 .box_2 {
-    margin-left: 15px;
+    margin-left: 25px;
     border: 1px solid  rgb(10, 10, 67);
-    padding: 20px;
+    padding: 10px;
     background-color: rgb(255, 255, 255);
 }
 
@@ -35,11 +36,15 @@
     float: right;
     margin: 10px;
     color: aliceblue;
-    background-color: rgb(21, 21, 74);
+    background-color: rgb(2, 2, 135);
     border-radius: 5px;
-    border: 1px solid #0c0963;
-    padding: 5px;
+    border: 1px solid #09058a;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     font-size: small;
+    margin-right: 55px;
 }
 
 .laber {
