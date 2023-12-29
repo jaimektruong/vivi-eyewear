@@ -118,4 +118,9 @@ export const privateRoutes = [
     page: AdminManagementPage,
     layout: AdminDefaultLayout,
   },
+  {
+    path: "/admin/quan-ly-promotion",
+    page: PromotionManagementPage,
+    layout: AdminDefaultLayout,
+  },
 ];
