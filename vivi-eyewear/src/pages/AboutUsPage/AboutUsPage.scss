@@ -1,9 +1,31 @@
-.AboutUs_content {
+.content-box-about-us-page {
+  text-align: justify;
+  margin: 16px 0;
+  gap: 16px;
+  color: var(--color-primary);
+}
+.title-about-us-page {
+  font-size: 1.2rem;
+}
+.content-box-about-us-page {
   text-align: justify;
   padding: 20px;
 }
-.AboutUs_title {
+.title-about-us-page {
   font-size: 1.5rem;
+
   font-weight: bold;
-  color: #204387;
+}
+.about-us-page-margin {
+  margin: 8px 0;
+}
+.introduction-content {
+  width: 7;
+}
+.loyal-customer-content {
+  flex: 3;
+  font-size: 16px;
+}
+.loyal-customer-img {
+  width: 10rem;
 }

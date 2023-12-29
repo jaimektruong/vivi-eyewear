@@ -4,16 +4,24 @@
   height: 270px;
   position: relative;
 }
+.array-product {
+  margin-bottom: 16px;
+  margin: auto;
+}
 
 .featured-card {
   width: 196px;
   height: 260px;
   border-radius: 15px;
   box-shadow: 2px 4px 4px 2px rgba(0, 0, 0, 0.25);
+  padding: 0;
+  background-color: white;
 }
 
 .featured-card img {
   width: 196px;
+  border-top-left-radius: 16px; // Bo tròn góc trái trên
+  border-top-right-radius: 16px; // Bo tròn góc phải trên
 }
 
 .btn-color {
@@ -26,4 +34,18 @@
 }
 .card-product-list {
   margin: 0 8px;
+}
+.card-img-border {
+  border: 6px;
+}
+.nav-link-color-style {
+  color: var(--color-primary) !important;
+}
+.card-body {
+  padding: 8px;
+  gap: 16px;
+}
+.card-text {
+  text-align: right;
+  width: 100%;
 }
