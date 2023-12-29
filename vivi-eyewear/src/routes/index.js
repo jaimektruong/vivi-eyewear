@@ -135,4 +135,14 @@ export const privateRoutes = [
     page: PromotionManagementPage,
     layout: AdminDefaultLayout,
   },
+  {
+    path: "/admin/khach-hang-promotion",
+    page: CustomerManagementPage,
+    layout: AdminDefaultLayout,
+  },
+  {
+    path: "/admin/don-hang-promotion",
+    page: OrderManagementPage,
+    layout: AdminDefaultLayout,
+  },
 ];
