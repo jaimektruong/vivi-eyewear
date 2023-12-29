@@ -2,11 +2,9 @@ import React, { useState } from "react";
 import "./AdminCustomerManagement.scss";
 import CustomerList from "../../components/CustomerList/CustomerList";
 
-
-const CustomerManagementPage = () => {
+const AdminCustomerManagementPage = () => {
   const [customers, setCustomers] = useState([
     {
- 
       name: "John Doe",
       dateOfBirth: "1990-01-01",
       group: "Admin",
@@ -15,7 +13,6 @@ const CustomerManagementPage = () => {
       avatar: "../assets/minhhoa.jpg",
     },
     {
-
       name: "John Doe",
       dateOfBirth: "1990-01-01",
       group: "Admin",
@@ -24,7 +21,6 @@ const CustomerManagementPage = () => {
       avatar: "URL_HINH_ANH_QUAN_TRI_VIEN",
     },
     {
-   
       name: "John Doe",
       dateOfBirth: "1990-01-01",
       group: "Admin",
@@ -49,7 +45,9 @@ const CustomerManagementPage = () => {
   };
 
   const handleDeleteClick = (customerId) => {
-    const updatedCustomers = customers.filter((customer) => customer.id !== customerId);
+    const updatedCustomers = customers.filter(
+      (customer) => customer.id !== customerId
+    );
     setCustomers(updatedCustomers);
   };
 
@@ -94,6 +92,9 @@ const CustomerManagementPage = () => {
       <div className="main-content">
         <div className="header">
           <h2>QUẢN LÝ KHÁCH HÀNG</h2>
+          <button>
+            <i className="bi bi-person-plus"></i> Thêm khách hàng
+          </button>
         </div>
         {/* Filter section */}
         <div className="filter-frame">
@@ -164,4 +165,4 @@ const CustomerManagementPage = () => {
   );
 };
 
-export default CustomerManagementPage;
+export default AdminCustomerManagementPage;
