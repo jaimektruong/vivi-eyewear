@@ -3,7 +3,7 @@ import "./AdminBlog.scss";
 function AdminBlog() {
     return (
       <div>
-        <div className="container">
+        <div className="container" style={{marginLeft:"10px"}}>
           <form action="#">
             <div className="container_1">
               <h2 className="content_0">QUẢN LÝ BLOG</h2>
