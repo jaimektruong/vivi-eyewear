@@ -10,7 +10,7 @@ import BlogsPage from "../pages/BlogsPage/BlogsPage";
 import PageNotFound from "../pages/PageNotFound/PageNotFound";
 import LoginPage from "../pages/LoginPage/Login";
 import WarrantyPage from "../pages/WarrantyPage/WarrantyPage";
-
+import ProfilePage from "../pages/ProfilePage/ProfilePage";
 import AccountPage from "../pages/AccountPage/AccountPage";
 import AdminBlog from "../pages/AdminBlogsManagement/AdminBlogs";
 import AdminProductManagementPage from "../pages/AdminProductManagementPage/AdminProductManagementPage";
@@ -21,6 +21,7 @@ import CustomerManagementPage from "../pages/AdminCustomerManagementPage/AdminCu
 import OrderManagementPage from "../pages/AdminOrderManagementPage/AdminOrderManagementPage";
 import PromotionManagementPage from "../pages/AdminPromotionManagementPage/AdminPromotionManagement";
 import AdminDashBoard from "../pages/AdminDashBoard/AdminDashBoard";
+import AdminCustomerManagementPage from "../pages/AdminCustomerManagementPage/AdminCustomerManagementPage";
 
 export const publicRoutes = [
   {
@@ -43,6 +44,11 @@ export const publicRoutes = [
     path: "/:type",
     page: ProductsPage,
     layout: null,
+  },
+  {
+    path: "/*",
+    page: PageNotFound,
+    layout: CustomerDefaultLayout,
   },
   {
     path: "/ve-chung-toi",
@@ -84,14 +90,15 @@ export const publicRoutes = [
     page: Checkout,
     layout: CustomerDefaultLayout,
   },
-  {
-    path: "/*",
-    page: PageNotFound,
-    layout: CustomerDefaultLayout,
-  },
+
   {
     path: "/account",
     page: AccountPage,
+    layout: CustomerDefaultLayout,
+  },
+  {
+    path: "/thong-tin-nguoi-dung",
+    page: ProfilePage,
     layout: CustomerDefaultLayout,
   },
 ];
@@ -105,6 +112,11 @@ export const privateRoutes = [
   {
     path: "/admin/quan-ly-blogs",
     page: AdminBlog,
+    layout: AdminDefaultLayout,
+  },
+  {
+    path: "/admin/quan-ly-khach-hang",
+    page: AdminCustomerManagementPage,
     layout: AdminDefaultLayout,
   },
 

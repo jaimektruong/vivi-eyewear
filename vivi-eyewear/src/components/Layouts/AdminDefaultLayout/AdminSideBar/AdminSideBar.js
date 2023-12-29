@@ -1,5 +1,6 @@
 import "./AdminSideBar.scss";
 import logo from "../../../../assets/logo.png";
+import { Link } from "react-router-dom";
 
 function AdminSideBar() {
   return (
@@ -21,49 +22,45 @@ function AdminSideBar() {
 
       <ul className="nav nav-pills flex-column mb-auto ">
         <li className="nav-item nav-item-margin">
-          <a href="#" className="nav-link" aria-current="page">
+          <Link to="/admin" className="nav-link" aria-current="page">
             Dashboard
-          </a>
+          </Link>
         </li>
         <li className="nav-item nav-item-margin">
-          <a href="#" className="nav-link ">
+          <Link to="#" className="nav-link ">
             Đơn hàng
-          </a>
+          </Link>
         </li>
         <li className="nav-item nav-item-margin">
-          <a href="#" className="nav-link ">
+          <Link to="/admin/quan-ly-san-pham" className="nav-link ">
             Sản phẩm
-          </a>
+          </Link>
         </li>
+
         <li className="nav-item nav-item-margin">
-          <a href="#" className="nav-link ">
-            Tồn kho
-          </a>
-        </li>
-        <li className="nav-item nav-item-margin">
-          <a href="#" className="nav-link ">
+          <Link to="/admin/quan-ly-khach-hang" className="nav-link ">
             Khách hàng
-          </a>
+          </Link>
         </li>
         <li className="nav-item nav-item-margin">
-          <a href="#" className="nav-link ">
+          <Link to="/admin/quan-ly-admin" className="nav-link ">
             Quản trị viên
-          </a>
+          </Link>
         </li>
         <li className="nav-item nav-item-margin">
-          <a href="#" className="nav-link ">
+          <Link to="/admin/quan-ly-blogs" className="nav-link ">
             Bài viết
-          </a>
+          </Link>
         </li>
         <li className="nav-item nav-item-margin">
-          <a href="#" className="nav-link ">
+          <Link to="/admin/quan-ly-khuyen-mai" className="nav-link ">
             Khuyến mãi
-          </a>
+          </Link>
         </li>
         <li className="nav-item nav-item-margin">
-          <a href="#" className="nav-link">
+          <Link to="/admin/ket-qua-kinh-doanh" className="nav-link">
             Kết quả kinh doanh
-          </a>
+          </Link>
         </li>
       </ul>
     </div>

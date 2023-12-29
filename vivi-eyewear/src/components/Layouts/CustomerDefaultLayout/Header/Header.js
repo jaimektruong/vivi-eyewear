@@ -135,6 +135,17 @@ const Header = ({ handleInputChange, query }) => {
                 className={`dropdown-menu ${isProductHovered ? "show" : ""}`}
                 aria-labelledby="navbarDropdown"
               >
+                {user?.isAdmin && (
+                  <button
+                    className="dropdown-item"
+                    onClick={() => {
+                      navigate("/admin");
+                    }}
+                  >
+                    Quản lý hệ thống
+                  </button>
+                )}
+
                 <button
                   className="dropdown-item"
                   onClick={() => {
