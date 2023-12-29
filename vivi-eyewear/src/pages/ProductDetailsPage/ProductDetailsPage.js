@@ -25,10 +25,11 @@ const ProductDetailsPage = () => {
     description,
     size,
     shape,
+    quantity,
   } = product;
 
   return (
-    <div className="inner">
+    <div className="inner gap-16">
       {/* bọc 3 flexbox chính */}
       <div className="background-product-details-page content-box-product-details-styles d-flex flex-column gap-16">
         {/*bọc 2 flexbox ở trên */}
@@ -76,10 +77,11 @@ const ProductDetailsPage = () => {
                 <div>
                   <p className="p-details-page-style">
                     Chịu trách nhiệm sản phẩm: CTY TNHH ViVi Eyewear <br />
-                    Cảnh báo: Bảo quản trong hộp kính Hướng dẫn sử dụng:
-                    <br />
-                    + Tháo kính bằng 2 tay + Không bỏ kính vào cốp xe hoặc những
-                    nơi có nhiệt độ cao làm biến dạng kính.
+                    Cách bảo quản: Bảo quản trong hộp kính <br />
+                    Hướng dẫn sử dụng: <br />
+                    + Tháo kính bằng 2 tay <br />
+                    + Không bỏ kính vào cốp xe hoặc những nơi có nhiệt độ cao
+                    làm biến dạng kính.
                     <br /> + Không bỏ kính vào túi sách nếu không có hộp kính,
                     vật dụng nhọn như chìa khóa sẽ làm xước kính. <br />+ Không
                     rửa kính lau kính bằng các chất có tính tẩy rửa mạnh làm
@@ -136,9 +138,21 @@ const ProductDetailsPage = () => {
                 <ButtonAdjustQuantity></ButtonAdjustQuantity>
               </div>
               <div>
+                <p className="h-100 m-0 d-flex align-items-center">
+                  {quantity} sản phẩm có sẵn
+                </p>
+              </div>
+            </div>
+            <div>
+              <div className="d-flex gap-16">
                 <button className="btn button-background button-size">
                   Thêm vào giỏ hàng
                 </button>
+                <div>
+                  <button className="btn button-background button-size">
+                    <b>MUA NGAY</b>
+                  </button>
+                </div>
               </div>
             </div>
             {/* đường kẻ ngang */}
@@ -189,8 +203,8 @@ const ProductDetailsPage = () => {
                 </div>
                 <div className="d-flex justify-content-between">
                   <i className="text-justify">
-                    Bảo hành 1 đổi 1 khi có lỗi của nhà sản xuất, lỗi do đo mắt
-                    sai (trong 10 ngày đầu), hỗ trợ giảm 50% nếu đổi gọng mới.
+                    Bảo hành 1 đổi 1 khi có lỗi của nhà sản xuất,hỗ trợ giảm 50%
+                    nếu đổi gọng mới.
                   </i>
                 </div>
               </div>

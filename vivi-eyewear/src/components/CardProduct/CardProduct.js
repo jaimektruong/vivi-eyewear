@@ -10,11 +10,9 @@ function CardProduct({ image, name, price }) {
   return (
     <section className="card">
       <img className="card-img" src={image} alt={name} width={"196px"} />
-      <div className="card-details d-flex flex-column">
-        <h3 className="card-title px-2">{name}</h3>
-        <p className="card-price justify-content-end pe-3 pb-3">
-          {formattedPrice}
-        </p>
+      <div className="card-details d-flex flex-column card-text-infor">
+        <h3 className="card-title">{name}</h3>
+        <p className="card-price">{formattedPrice}</p>
       </div>
     </section>
   );

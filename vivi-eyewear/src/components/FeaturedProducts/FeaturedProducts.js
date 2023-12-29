@@ -4,6 +4,8 @@ import "./FeaturedProducts.scss";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import products from "../../assets/db/Product.json";
 import { Link } from "react-router-dom";
+// ... (các import và khai báo khác)
+
 const FeaturedProducts = (props) => {
   // Assume products is an array of product objects
   // Filter featured products
@@ -39,7 +41,7 @@ const FeaturedProducts = (props) => {
 
         <div
           id="carouselExampleIndicators2"
-          className="carousel slide d-flex align-items-center justify-content-center"
+          className="carousel slide d-flex align-items-center justify-content-center array-product "
           data-bs-ride="carousel"
           data-bs-interval="4000" // Tự động chuyển trang sau mỗi 4 giây
         >
@@ -61,16 +63,24 @@ const FeaturedProducts = (props) => {
                 <div className="row flex-row gap-2 m-1">
                   {cardArray.map((cardF) => (
                     <div className="featured-card" key={cardF.id}>
-                      <Link className="nav-link" to={`/san-pham/${cardF.name}`}>
+                      <Link
+                        className="nav-link nav-link-color-style "
+                        to={`/san-pham/${cardF.name}`}
+                      >
                         <img
-                          className="img-fluid"
+                          className="img-fluid card-img-border"
                           alt="100%x280"
                           src={cardF.image_thumb}
-                          width={"196px"}
+                          width={"2px"}
                         />
                         <div className="card-body">
                           <h4 className="card-title">{cardF.name}</h4>
-                          <p className="card-text">{cardF.price}</p>
+                          <p className="card-text">
+                            {new Intl.NumberFormat("vi-VN", {
+                              style: "currency",
+                              currency: "VND",
+                            }).format(cardF.price)}
+                          </p>
                         </div>
                       </Link>
                     </div>

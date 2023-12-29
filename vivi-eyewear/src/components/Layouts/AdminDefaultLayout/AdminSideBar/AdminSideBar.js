@@ -21,47 +21,47 @@ function AdminSideBar() {
 
       <ul className="nav nav-pills flex-column mb-auto ">
         <li className="nav-item nav-item-margin">
-          <a href="#" className="nav-link" aria-current="page">
+          <a href="#" className="nav-link-admin-sidebar" aria-current="page">
             Dashboard
           </a>
         </li>
         <li className="nav-item nav-item-margin">
-          <a href="#" className="nav-link ">
+          <a href="#" className="nav-link-admin-sidebar ">
             Đơn hàng
           </a>
         </li>
         <li className="nav-item nav-item-margin">
-          <a href="#" className="nav-link ">
+          <a href="#" className="nav-link-admin-sidebar ">
             Sản phẩm
           </a>
         </li>
         <li className="nav-item nav-item-margin">
-          <a href="#" className="nav-link ">
+          <a href="#" className="nav-link-admin-sidebar ">
             Tồn kho
           </a>
         </li>
         <li className="nav-item nav-item-margin">
-          <a href="#" className="nav-link ">
+          <a href="#" className="nav-link-admin-sidebar ">
             Khách hàng
           </a>
         </li>
         <li className="nav-item nav-item-margin">
-          <a href="#" className="nav-link ">
+          <a href="#" className="nav-link-admin-sidebar ">
             Quản trị viên
           </a>
         </li>
         <li className="nav-item nav-item-margin">
-          <a href="#" className="nav-link ">
+          <a href="#" className="nav-link-admin-sidebar ">
             Bài viết
           </a>
         </li>
         <li className="nav-item nav-item-margin">
-          <a href="#" className="nav-link ">
+          <a href="#" className="nav-link-admin-sidebar ">
             Khuyến mãi
           </a>
         </li>
         <li className="nav-item nav-item-margin">
-          <a href="#" className="nav-link">
+          <a href="#" className="nav-link-admin-sidebar">
             Kết quả kinh doanh
           </a>
         </li>
