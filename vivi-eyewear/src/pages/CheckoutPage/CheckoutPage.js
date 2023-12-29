@@ -3,8 +3,10 @@ import './CheckoutPage.scss'; // Import your CSS file
 import { Link, useHistory } from 'react-router-dom';
 import { Modal, Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCcVisa, faCcMastercard } from '@fortawesome/free-brands-svg-icons';
-import { faMobileAlt } from '@fortawesome/free-solid-svg-icons';
+import storeImage1 from "../../assets/Visa_Inc._logo.svg.png";
+import storeImage2 from "../../assets/MasterCard_Logo.svg.png";
+import storeImage3 from "../../assets/MoMo_Logo.png";
+import storeImage4 from "../../assets/Logo-ZaloPay-Square.png";
 
 const Navigation_TT = () => {
     return (
@@ -144,9 +146,10 @@ const CheckoutPage = () => {
                                 />
                                 <label htmlFor="bank-transfer">Thanh toán trực tuyến</label>
                                 <div className="payment-methods-Icon" >
-                                    <FontAwesomeIcon icon={faCcVisa} />
-                                    <FontAwesomeIcon icon={faCcMastercard} />
-                                    <FontAwesomeIcon icon={faMobileAlt} />
+                                <img src={storeImage1} alt="LogoVisa" />
+                                <img src={storeImage2} alt="LogoVisa" />
+                                <img src={storeImage3} alt="LogoVisa" />
+                                <img src={storeImage4} alt="LogoVisa" />
                                 </div>
 
                             </div>
