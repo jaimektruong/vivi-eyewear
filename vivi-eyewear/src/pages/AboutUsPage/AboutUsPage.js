@@ -1,12 +1,13 @@
 import "./AboutUsPage.scss";
 import BaoAnGiaKhiem from "../../assets/BaoAnGiaKiem.jpg";
 import Ribishachi from "../../assets/ribi.jpg";
+import StoreImage from "../../assets/store1.png";
 
 function AboutUsPage() {
   return (
     <div className="inner">
-      <div className="content-box-about-us-page about-us-page-margin d-flex gap-52">
-        <div className="introduction-content">
+      <div className="content-box-about-us-page about-us-page-margin d-flex row">
+        <div className="introduction-content col-6">
           <h2 className="title-about-us-page about-us-page-margin">
             Giới thiệu
           </h2>
@@ -65,7 +66,7 @@ function AboutUsPage() {
             </span>
           </p>
         </div>
-        <div className="loyal-customer-content d-flex flex-column">
+        <div className="loyal-customer-content d-flex flex-column col-6">
           <div>
             <h2 className="title-about-us-page about-us-page-margin">
               Khách hàng thân thiết
@@ -73,7 +74,11 @@ function AboutUsPage() {
           </div>
           <div>
             <div className="about-us-page-margin">
-              <img src={BaoAnGiaKhiem} alt="Bảo An - Gia Khiêm" />
+              <img
+                className="loyal-customer-img"
+                src={BaoAnGiaKhiem}
+                alt="Bảo An - Gia Khiêm"
+              />
             </div>
             <div className="about-us-page-margin">
               <i>
@@ -85,7 +90,11 @@ function AboutUsPage() {
           </div>
           <div>
             <div className="about-us-page-margin">
-              <img src={Ribishachi} alt="Hoa hậu Thuỳ Tiên" />
+              <img
+                className="loyal-customer-img"
+                src={Ribishachi}
+                alt="Hoa hậu Thuỳ Tiên"
+              />
             </div>
             <div className="about-us-page-margin">
               <i>
