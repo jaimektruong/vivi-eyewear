@@ -1,158 +1,86 @@
-.check-out{
-  .main-image {
-    img {
-        width: 70%;
-        object-fit: cover;
-        transition: transform 1.2s;
-        border-radius: 12px;
-    }
-
+.checkout-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Để nội dung trung tâm theo chiều dọc */
 }
 
-img:hover {
-    box-shadow: 0 4px 8px 0 rgba(6, 233, 195, 0.2), 0 6px 20px 0 rgba(6, 233, 195, 0.2);
-    box-sizing: border-box;
+.checkout-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80vw;
 }
 
-.content-right {
-    border-radius: 10px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgb(0 0 0 /10%), 0 8px 16px rgb(0 0 0 /10%);
-    box-sizing: border-box;
-    color: #274d8a;
-    .forgot-password {
-        text-decoration: none;
-        color: #03A9F4;
-        &:hover {
-            text-decoration: underline;
-        }
-    }
-    .form-control::placeholder {
-        color: #212529;
-    }
-    .brand {
-        text-transform: uppercase;
-        font-size: 20px;
-        color: #1877f2;
-        text-align: center;
-        font-weight: 600;
-    }
+.checkout-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Hiển thị phần tử ở hai cạnh */
+  align-items: center;
+  padding:50px;
 }
-.vnd {
-    position: relative;
+
+.shipping-info {
+  display: flex;
+  flex-direction: column;
+  width: 50%; 
+  gap: 10px; /* Khoảng cách giữa các input */
+}
+
+.shipping-info input {
+  width: 100%; /* Độ rộng 100% của input */
+  padding: 8px; /* Padding cho input */
+  /* Các thuộc tính CSS khác */
+}
+
+.order-summary {
+  width: 45%;;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  color: #274d8a;
+  padding: 20px;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
   }
-  .gn000001-parent {
-    flex-shrink: 0;
+
+  li {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    gap: var(--gap-191xl);
+    justify-content: space-between;
+    margin-bottom: 5px;
   }
-  .gamepad-cart-small-parent {
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    gap: var(--gap-5xl);
+
+  .total {
+    font-weight: bold;
   }
-  .tm-tnh-inner {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: flex-start;
-  }
-  .tm-tnh-parent {
-    width: 525px;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: var(--gap-281xl);
-  }
-  .ph-vn-chuyn-parent {
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: var(--gap-242xl);
-  }
-  .frame-container {
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: var(--gap-base);
-  }
-  .tng-cng-parent {
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: var(--gap-266xl);
-  }
-  .frame-group {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: var(--gap-base);
-  }
-  .radio-button-icon {
-    position: relative;
-    width: 24px;
-    height: 24px;
-    object-fit: cover;
-  }
-  .radio-button-parent {
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: var(--gap-base);
-  }
-  .bkash-parent {
-    width: 195px;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: var(--gap-7xs);
-  }
-  .frame-parent2 {
-    width: 473px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    gap: var(--gap-36xl);
-  }
-  .radio-button-group {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: var(--gap-base);
-  }
-  .tm-tnh {
-    width: 473px;
-    height: 502px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: var(--gap-13xl);
-    text-align: left;
-    font-size: var(--title-16px-medium-size);
-    color: var(--text2);
-    font-family: var(--pre-subs);
-  }
-  
+}
+
+.payment-methods {
+  width: 50%;;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Căn phần tử con sang phải */
+  gap: 10px; /* Khoảng cách giữa các phần tử con */
+}
+
+.payment-methods input[type="radio"] {
+  margin-right: 10px;
+}
+.checkout-inner .nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.checkout-inner .nav ul {
+  display: flex;
+}
+
+.checkout-inner .nav ul li:not(:last-child)::after {
+  content: '/';
+  margin: 0 8px;
 }

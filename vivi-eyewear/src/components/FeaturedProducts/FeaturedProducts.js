@@ -30,15 +30,11 @@ const FeaturedProducts = (props) => {
 
   return (
     <>
-      <section
-        className="featured-product--container d-flex flex-column justify-content-center inner
-"
-      >
-        <div
-          className="featured-product--tile align-self-start
-"
-        >
-          <h2 className=""> Sản phẩm nổi bật</h2>
+      <section className="featured-product--container d-flex flex-column justify-content-center inner">
+        <div className="featured-product--tile align-self-start">
+          <h2 className="featured-product--tile-size-style">
+            Sản phẩm nổi bật
+          </h2>
         </div>
 
         <div

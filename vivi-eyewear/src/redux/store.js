@@ -1,42 +1,43 @@
-// import { combineReducers, configureStore } from '@reduxjs/toolkit'
-// import productReducer from './slides/productSlide.js'
-// import userReducer from './slides/userSlide.js'
-// import orderReducer from './slides/orderSlide.js'
-// import {
-//   persistStore,
-//   persistReducer,
-//   FLUSH,
-//   REHYDRATE,
-//   PAUSE,
-//   PERSIST,
-//   PURGE,
-//   REGISTER,
-// } from 'redux-persist'
-// import storage from 'redux-persist/lib/storage'
+import { combineReducers, configureStore } from '@reduxjs/toolkit'
+import productReducer from './slices/productSlice.js'
+import userReducer from './slices/userSlice.js'
+import orderReducer from './slices/orderSlice.js'
+import {
+  persistStore,
+  persistReducer,
+  FLUSH,
+  REHYDRATE,
+  PAUSE,
+  PERSIST,
+  PURGE,
+  REGISTER,
+} from 'redux-persist'
+import storage from 'redux-persist/lib/storage'
 
-// const persistConfig = {
-//   key: 'root',
-//   version: 1,
-//   storage,
-//   blacklist: ['product','user']
-// }
+const persistConfig = {
+  key: 'root',
+  version: 1,
+  storage,
+  blacklist: ['product','user']
+}
 
-// const rootReducer = combineReducers({
-//   product: productReducer,
-//   user: userReducer,
-//   order: orderReducer
-// })
+const rootReducer = combineReducers({
+  product: productReducer,
+  user: userReducer,
+  order: orderReducer
+})
 
-// const persistedReducer = persistReducer(persistConfig, rootReducer)
+const persistedReducer = persistReducer(persistConfig, rootReducer)
 
-// export const store = configureStore({
-//   reducer: persistedReducer,
-//   middleware: (getDefaultMiddleware) =>
-//     getDefaultMiddleware({
-//       serializableCheck: {
-//         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
-//       },
-//     }),
-// })
 
-// export let persistor = persistStore(store)
+export const store = configureStore({
+  reducer: persistedReducer,
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: {
+        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+      },
+    }),
+})
+
+export let persistor = persistStore(store)

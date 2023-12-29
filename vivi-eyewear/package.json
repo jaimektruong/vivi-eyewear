@@ -1,11 +1,11 @@
 {
-  "homepage": "http://jaimektruong.github.io/vivi-eyewear",
-  "name": "project_web",
+  "homepage": "http://jaimektruong.github.io/",
+  "name": "vivi_eyewear",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@fortawesome/fontawesome-free": "^6.5.1",
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "@reduxjs/toolkit": "^2.0.1",
     "@tanstack/react-query": "^5.14.6",
     "@tanstack/react-query-devtools": "^5.14.6",
@@ -18,12 +18,13 @@
     "bootstrap-icons": "^1.11.1",
     "dotenv": "^16.3.1",
     "gh-pages": "^6.1.0",
+    "jwt-decode": "^4.0.0",
     "node": "^21.2.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.9.1",
     "react-dom": "^18.2.0",
     "react-redux": "^9.0.4",
-    "react-router-dom": "^6.18.0",
+    "react-router-dom": "^6.21.1",
     "react-scripts": "5.0.1",
     "react-slideshow-image": "^4.3.0",
     "redux-persist": "^6.0.0",
@@ -55,5 +56,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.10.0"
+  },
+  "proxy": "http://localhost:3001"
 }
