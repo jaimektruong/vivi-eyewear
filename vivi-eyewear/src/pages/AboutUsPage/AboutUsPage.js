@@ -1,9 +1,9 @@
 import "./AboutUsPage.scss";
 function AboutUsPage() {
   return (
-    <div className="inner">
-      <div className="content">
-        <h2 className="title">Giới thiệu</h2>
+    <div className="AboutUs_inner">
+      <div className="AboutUs_content">
+        <h2 className="AboutUs_title">Giới thiệu</h2>
         <p>Tên thương hiệu: ViVi Eyewear (Virtual Vision Eyewear)</p>
         <p>
           ViVi Eyewear là sự kết hợp của hai từ "Vivid" và "Vision". "Vivid" có

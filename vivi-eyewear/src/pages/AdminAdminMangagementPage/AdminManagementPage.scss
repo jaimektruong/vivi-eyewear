@@ -62,12 +62,13 @@ html, body{
   background-color: rgba(225, 234, 250, 1);
   width: 100vw;
   height: 100vh;
+  .header {
+
+    padding-left: 20px;
+  }
 }
 
-.header {
 
-  padding-left: 20px;
-}
 .admin-management-page .header {
   display: flex;
   justify-content: space-between;
@@ -99,7 +100,7 @@ html, body{
 
 
 }
-.filter-frame {
+.admin-management-page .filter-frame {
 .admin-management-page .main-content {
   flex-grow: 1; /* Phần nội dung chính mở rộng để lấp đầy phần còn trống */
 
@@ -167,50 +168,50 @@ html, body{
     }
   }
 }
-.admin-table {
+.admin-management-page .admin-table {
   width: 50%; /* Sử dụng chiều rộng 100% của container cha */
   border-collapse: collapse;
   margin-top: 20px;
-}
-
-th,td {
-  border: none;
-  padding: 0x; /* Tăng khoảng cách giữa nội dung và viền của ô */
-  text-align: center;
-}
-
-th {
-  font-weight: bold;
-  background-color: #204387; /* Màu nền của ô header */
-  color: rgba(22, 45, 90, 1); /* Màu chữ của ô header */
-}
-
-td {
-  background-color: #ffffff;
-}
-
-td:last-child {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-img {
-  width: 30px; /* Điều chỉnh kích thước hình ảnh avatar */
-  border-radius: 50%;
-}
-
-.action-column a {
-  display: block;
-  margin-bottom: 8px; /* Khoảng cách giữa các dòng */
-  color: #204387; /* Màu chữ của các liên kết trong cột hành động */
-  text-decoration: none; /* Loại bỏ gạch chân dưới của liên kết */
-  font-weight: bold;
-  font-size: 14px;
-  transition: color 0.3s; /* Hiệu ứng màu chữ khi di chuột qua liên kết */
-
-  &:hover {
-    color: #0e2959; /* Màu chữ khi di chuột qua liên kết */
+  th,td {
+    border: none;
+    padding: 0x; /* Tăng khoảng cách giữa nội dung và viền của ô */
+    text-align: center;
+  }
+  
+  th {
+    font-weight: bold;
+    background-color: #204387; /* Màu nền của ô header */
+    color: rgba(22, 45, 90, 1); /* Màu chữ của ô header */
+  }
+  
+  td {
+    background-color: #ffffff;
+  }
+  
+  td:last-child {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  img {
+    width: 30px; /* Điều chỉnh kích thước hình ảnh avatar */
+    border-radius: 50%;
+  }
+  
+  .action-column a {
+    display: block;
+    margin-bottom: 8px; /* Khoảng cách giữa các dòng */
+    color: #204387; /* Màu chữ của các liên kết trong cột hành động */
+    text-decoration: none; /* Loại bỏ gạch chân dưới của liên kết */
+    font-weight: bold;
+    font-size: 14px;
+    transition: color 0.3s; /* Hiệu ứng màu chữ khi di chuột qua liên kết */
+  
+    &:hover {
+      color: #0e2959; /* Màu chữ khi di chuột qua liên kết */
+    }
+  }
   }
 }
-}
+
