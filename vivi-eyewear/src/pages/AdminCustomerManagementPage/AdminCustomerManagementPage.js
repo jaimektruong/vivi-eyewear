@@ -90,7 +90,7 @@ const CustomerManagementPage = () => {
   };
 
   return (
-    <div className="admin-management-page">
+    <div className="customer-management-page">
       <div className="main-content">
         <div className="header">
           <h2>QUẢN LÝ KHÁCH HÀNG</h2>
@@ -122,8 +122,8 @@ const CustomerManagementPage = () => {
           </div>
         </div>
         {/* Table section */}
-        <table className="admin-table">
-          <thead>
+        <table className="admin-table-customer">
+          <thead id ="">
             <tr>
               <th>
                 <input type="checkbox" />
