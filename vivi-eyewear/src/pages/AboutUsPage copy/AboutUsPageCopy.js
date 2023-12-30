@@ -1,12 +1,12 @@
-import "./AboutUsPage.scss";
+import "./AboutUsPageCopy.scss";
 import BaoAnGiaKhiem from "../../assets/BaoAnGiaKiem.jpg";
 import Ribishachi from "../../assets/ribi.jpg";
 
-function AboutUsPage() {
+function AboutUsPageCopy() {
   return (
-    <div className="inner">
-      <div className="content-box-about-us-page about-us-page-margin d-flex row">
-        <div className="introduction-content col-6">
+    <div className="container-fluid d-flex justify-content-center ">
+      <div className="container row">
+        <div className="introduction-content col-xl-6 col-md-6 col-12">
           <h2 className="title-about-us-page about-us-page-margin">
             Giới thiệu
           </h2>
@@ -14,15 +14,16 @@ function AboutUsPage() {
             Tên thương hiệu: ViVi Eyewear (Virtual Vision Eyewear)
           </p>
           <p className="about-us-page-margin">
-            ViVi Eyewear là sự kết hợp của hai từ "Vivid" và "Vision". "Vivid"
-            có nghĩa là sống động, rõ ràng, còn "Vision" có nghĩa là tầm nhìn. Ý
-            nghĩa rằng sản phẩm của Vivi Eyewear có thể giúp khách hàng nhìn thế
-            giới một cách sống động và rõ ràng hơn, thông qua công nghệ thực tế
-            ảo. Ngoài ra, ViVi Eyewear cũng có thể được hiểu là sự kết hợp của
-            hai từ "Virtual" và "Vision". "Virtual" có nghĩa là ảo, còn "Vision"
-            có nghĩa là tầm nhìn. ViVi Eyewear là một thương hiệu mắt kính tiên
-            phong trong việc ứng dụng công nghệ thực tế ảo để mang đến cho khách
-            hàng trải nghiệm mua sắm và sử dụng sản phẩm mới lạ và độc đáo.
+            hahaahViVi Eyewear là sự kết hợp của hai từ "Vivid" và "Vision".
+            "Vivid" có nghĩa là sống động, rõ ràng, còn "Vision" có nghĩa là tầm
+            nhìn. Ý nghĩa rằng sản phẩm của Vivi Eyewear có thể giúp khách hàng
+            nhìn thế giới một cách sống động và rõ ràng hơn, thông qua công nghệ
+            thực tế ảo. Ngoài ra, ViVi Eyewear cũng có thể được hiểu là sự kết
+            hợp của hai từ "Virtual" và "Vision". "Virtual" có nghĩa là ảo, còn
+            "Vision" có nghĩa là tầm nhìn. ViVi Eyewear là một thương hiệu mắt
+            kính tiên phong trong việc ứng dụng công nghệ thực tế ảo để mang đến
+            cho khách hàng trải nghiệm mua sắm và sử dụng sản phẩm mới lạ và độc
+            đáo.
           </p>
           <h2 className="title-about-us-page about-us-page-margin">Tầm nhìn</h2>
           <p className="about-us-page-margin">
@@ -65,7 +66,7 @@ function AboutUsPage() {
             </span>
           </p>
         </div>
-        <div className="loyal-customer-content d-flex flex-column col-6">
+        <div className="loyal-customer-content col-xl-6 col-md-6 col-12">
           <div>
             <h2 className="title-about-us-page about-us-page-margin">
               Khách hàng thân thiết
@@ -108,4 +109,4 @@ function AboutUsPage() {
   );
 }
 
-export default AboutUsPage;
+export default AboutUsPageCopy;
