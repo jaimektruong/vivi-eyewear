@@ -2,8 +2,8 @@ import "./WarrantyPage.scss";
 import storeImage from "../../assets/store1.png";
 function WarrantyPage() {
   return (
-    <div className="inner" className="Warranty_Page">
-      <div className="content"className="Content_Warranty">
+    <div  className="Warranty_Page">
+      <div className="Content_Warranty">
         <h1>Chính sách bảo hành</h1>
         <p>1. Bảo hành 1 đổi 1 trong 180 ngày sau khi mua hàng nếu lớp váng dầu của tròng kính gặp vấn đề về kỹ thuật như xô váng, mất váng mà không phải do nhiệt hay tác động vật lý như trầy xước, nứt, vỡ(Virtual Vision Eyewear)</p>
         <p>2. ViVi Eyewear bảo hành cho cả lỗi người dùng nếu không may làm gẫy hoặc mất kính. Trợ giá 50% giá niêm yết khi khách hàng sử dụng lại sản phẩm cũ. Trong trường hợp sản phẩm cũ hết hàng có thể thay thế sang sản phẩm có giá trị bằng hoặc thấp hơn. Áp dụng 1 lần duy nhất trên tổng hóa đơn trong 60 ngày kể từ khi mua hàng</p>

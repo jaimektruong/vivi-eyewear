@@ -1,49 +1,57 @@
+
 .Warranty_Page {
-  padding: 20px;
+  padding: 1.25rem; 
   margin-right: auto;
   margin-left: auto;
   width: 70%;
 
   h1 {
     color: rgba(22, 45, 90, 1);
-    font-size: 24px;
+    font-size: 1.5rem; 
     font-weight: bold;
     text-align: center;
   }
 
   p {
     line-height: 1.5;
+    font-size: 1rem;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+    width: 100%; /* Sử dụng % cho kích thước hình ảnh */
+    max-width: 25rem; 
+    height: auto;
   }
 }
 
-@media only screen and (min-width: 600px) {
-  /* Cho tablet và màn hình lớn hơn */
+@media only screen and (min-width: 37.5rem) {
+  
   .Warranty_Page {
-    padding: 30px;
+    padding: 1.875rem; /* Chuyển 30px thành 1.875rem (30 / 16) */
 
     h1 {
-      font-size: 30px;
+      font-size: 1.875rem; /* Chuyển 30px thành 1.875rem (30 / 16) */
     }
-  }
-}
 
-@media only screen and (min-width: 1024px) {
-  /* Cho màn hình desktop */
-  .Warranty_Page {
-    padding: 40px;
-
-    h1 {
-      font-size: 40px;
-    }
-  }
-}
-@media only screen and (max-width: 720px) {
-  .Warranty_Page{
-    padding: 20px;
-    margin-right: auto;
-    margin-left: auto;
-    width: 70%;
     img {
-      width: 300px; /* Đặt chiều rộng là 300px */
-      height: 200px; /* Đặt chiều cao là 200px */
-    }}}
+      max-width: 37.5rem; /* Chuyển 600px thành 37.5rem (600 / 16) */
+    }
+  }
+}
+
+@media only screen and (min-width: 64rem) {
+  /* Chuyển 1024px thành 64rem (1024 / 16) cho màn hình desktop */
+  .Warranty_Page {
+    padding: 2.5rem; /* Chuyển 40px thành 2.5rem (40 / 16) */
+
+    h1 {
+      font-size: 2.5rem; /* Chuyển 40px thành 2.5rem (40 / 16) */
+    }
+
+    img {
+      max-width: 50rem; /* Chuyển 800px thành 50rem (800 / 16) */
+    }
+  }
+}

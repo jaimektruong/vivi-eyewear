@@ -34,12 +34,21 @@
 //   margin-left: 20%;
 // }
 
+<<<<<<< HEAD
+.box_2 {
+    margin-left: 25px;
+    border: 1px solid  rgb(10, 10, 67);
+    padding: 15px;
+    background-color: rgb(255, 255, 255);
+}
+=======
 // .box_2 {
 //   margin-left: 25px;
 //   border: 1px solid rgb(10, 10, 67);
 //   padding: 10px;
 //   background-color: rgb(255, 255, 255);
 // }
+>>>>>>> ff240f1a672a975c875739863aca6726fc220def
 
 // .button {
 //   float: right;
@@ -97,9 +106,19 @@
 //   margin: 0px 0; /* Điều chỉnh khoảng cách trên và dưới đường ngang */
 // }
 
+<<<<<<< HEAD
+.hr {
+  margin: -0px 0; /* Điều chỉnh khoảng cách trên và dưới đường ngang */
+}
+
+.b{
+  margin: 0px;
+}
+=======
 // .lay_1 {
 //   display: flex;
 // }
+>>>>>>> ff240f1a672a975c875739863aca6726fc220def
 
 // .lay_2 {
 //   display: flex;
@@ -134,6 +153,50 @@
 //   //   font-size: 30px;
 //   // }
 
+<<<<<<< HEAD
+    /* Điều chỉnh cho tablet và màn hình lớn hơn */
+    .container {
+      padding: 10px;
+    }
+  
+    // h1 {
+    //   font-size: 30px;
+    // }
+  
+    // h2 {
+    //   font-size: 25px;
+    // }
+  
+    // h3 {
+    //   font-size: 18px;
+    // }
+  }
+  
+  @media only screen and (min-width: 1024px) {
+  
+    /* Điều chỉnh cho màn hình desktop */
+    .container {
+      padding: 0px;
+    }
+  
+    // h1 {
+    //   font-size: 40px;
+    // }
+  
+    // h2 {
+    //   font-size: 35px;
+    // }
+  
+    // h3 {
+    //   font-size: 22px;
+    // }
+  }
+
+  .p{
+    margin-top: -10px;
+    margin-bottom: -10px;
+  }
+=======
 //   // h2 {
 //   //   font-size: 25px;
 //   // }
@@ -161,3 +224,4 @@
 //   //   font-size: 22px;
 //   // }
 // }
+>>>>>>> ff240f1a672a975c875739863aca6726fc220def
