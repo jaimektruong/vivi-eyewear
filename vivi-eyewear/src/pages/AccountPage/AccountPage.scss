@@ -28,7 +28,7 @@
 .box_2 {
     margin-left: 25px;
     border: 1px solid  rgb(10, 10, 67);
-    padding: 10px;
+    padding: 15px;
     background-color: rgb(255, 255, 255);
 }
 
@@ -86,7 +86,11 @@
 }
 
 .hr {
-    margin: 0px 0; /* Điều chỉnh khoảng cách trên và dưới đường ngang */
+  margin: -0px 0; /* Điều chỉnh khoảng cách trên và dưới đường ngang */
+}
+
+.b{
+  margin: 0px;
 }
 
 .lay_1{
@@ -154,4 +158,9 @@
     // h3 {
     //   font-size: 22px;
     // }
+  }
+
+  .p{
+    margin-top: -10px;
+    margin-bottom: -10px;
   }
