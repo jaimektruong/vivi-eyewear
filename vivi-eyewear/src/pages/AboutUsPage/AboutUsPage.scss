@@ -1,26 +1,18 @@
-.content-box-about-us-page {
-  text-align: justify;
-  margin: 16px 0;
-  gap: 16px;
-  color: var(--color-primary);
-}
-.title-about-us-page {
-  font-size: 1.4rem;
+.about-us-page-title {
+  font-size: 1.375rem;
   font-weight: bold;
   color: var(--color-primary);
 }
-.about-us-page-margin {
-  margin: 8px 0;
-}
+
 .introduction-content {
 }
 .loyal-customer-content {
-  font-size: 16px;
 }
 .loyal-customer-img {
-  border-radius: 12px;
+  border-radius: 5%;
+  width: 90%;
 }
-.store-image {
-  border-radius: 12px;
-  width: 30rem;
+.about-us-page-text-styles {
+  margin: 0.5rem 0;
+  text-align: justify;
 }
