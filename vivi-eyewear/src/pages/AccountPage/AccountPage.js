@@ -36,7 +36,7 @@ function Account() {
 
   return (
     <form onSubmit={handleFormSubmit}>
-      <div className="container">
+      <div className="container account">
         <div className="box_1">
           <fieldset>
             <div className="imga">
