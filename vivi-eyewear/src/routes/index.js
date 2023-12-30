@@ -136,12 +136,12 @@ export const privateRoutes = [
     layout: AdminDefaultLayout,
   },
   {
-    path: "/admin/khach-hang-promotion",
+    path: "/admin/quan-ly-khach-hang",
     page: CustomerManagementPage,
     layout: AdminDefaultLayout,
   },
   {
-    path: "/admin/don-hang-promotion",
+    path: "/admin/quan-ly-don-hang",
     page: OrderManagementPage,
     layout: AdminDefaultLayout,
   },
