@@ -3,6 +3,7 @@
   --color-secondary: #346bd9;
   --header-height: 88px;
   --color-background-admin: #fdfdfd;
+  --color-background-customer: #e1eafa;
 }
 
 body,
@@ -11,7 +12,9 @@ html {
   padding: 0;
   box-sizing: border-box;
 }
-
+.text-color-default {
+  color: var(--color-primary);
+}
 .button-primary {
   color: white;
   background-color: #162d5a;
