@@ -22,6 +22,7 @@ import OrderManagementPage from "../pages/AdminOrderManagementPage/AdminOrderMan
 import PromotionManagementPage from "../pages/AdminPromotionManagementPage/AdminPromotionManagement";
 import AdminDashBoard from "../pages/AdminDashBoard/AdminDashBoard";
 import AdminCustomerManagementPage from "../pages/AdminCustomerManagementPage/AdminCustomerManagementPage";
+import AboutUsPageCopy from "../pages/AboutUsPage copy/AboutUsPageCopy";
 
 export const publicRoutes = [
   {
@@ -53,6 +54,11 @@ export const publicRoutes = [
   {
     path: "/ve-chung-toi",
     page: AboutUsPage,
+    layout: CustomerDefaultLayout,
+  },
+  {
+    path: "/ve-chung-toi-copy",
+    page: AboutUsPageCopy,
     layout: CustomerDefaultLayout,
   },
   {
@@ -133,6 +139,16 @@ export const privateRoutes = [
   {
     path: "/admin/quan-ly-promotion",
     page: PromotionManagementPage,
+    layout: AdminDefaultLayout,
+  },
+  {
+    path: "/admin/quan-ly-khach-hang",
+    page: CustomerManagementPage,
+    layout: AdminDefaultLayout,
+  },
+  {
+    path: "/admin/quan-ly-don-hang",
+    page: OrderManagementPage,
     layout: AdminDefaultLayout,
   },
 ];
