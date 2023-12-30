@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './CheckoutPage.scss'; // Import your CSS file
 import { Link, useHistory } from 'react-router-dom';
 import { Modal, Button } from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import storeImage1 from "../../assets/Visa_Inc._logo.svg.png";
 import storeImage2 from "../../assets/MasterCard_Logo.svg.png";
 import storeImage3 from "../../assets/MoMo_Logo.png";
@@ -67,12 +67,14 @@ const CheckoutPage = () => {
     };
 
     return (
-        <div className="checkout-inner">
+        <div className="container-fluid d-flex justify-content-center ">
+            <div className="container row">
+            <div className="checkout-inner ">
             <Navigation_TT />
-            <div className="checkout-content">
-                <div className="checkout-container">
+            <div className="checkout-content ">
+                <div className="checkout-container row  ">
                     {/* Shipping Information */}
-                    <div className="shipping-info">
+                    <div className="shipping-info col-md-6 col-xl-6">
                         <h2>Thông tin vận chuyển</h2>
                         <input
                             type="text"
@@ -114,7 +116,7 @@ const CheckoutPage = () => {
                     </div>
 
                     {/* Order Summary */}
-                    <div className="order-summary">
+                    <div className="order-summary col-md-6 col-xl-6">
                         <ul>
                             <li>
                                 <span>GN000001</span>
@@ -176,6 +178,7 @@ const CheckoutPage = () => {
                     </div>
                 </div>
                 {/* Button to handle order */}
+                
                 <button onClick={handleOrder}>Đặt hàng</button>
 
                 {/* Modal */}
@@ -199,6 +202,9 @@ const CheckoutPage = () => {
 
             </div>
         </div>
+        </div>
+        </div>
+        
     );
 };
 export default CheckoutPage;
