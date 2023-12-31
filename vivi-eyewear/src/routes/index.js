@@ -31,19 +31,19 @@ export const publicRoutes = [
   },
 
   {
-    path: "/san-pham/:name",
+    path: "/san-pham/:id",
     page: ProductDetailsPage,
     layout: CustomerDefaultLayout,
   },
   {
     path: "/san-pham",
     page: ProductsPage,
-    layout: null,
+    layout: CustomerDefaultLayout,
   },
   {
     path: "/:type",
     page: ProductsPage,
-    layout: null,
+    layout: CustomerDefaultLayout,
   },
   {
     path: "/*",

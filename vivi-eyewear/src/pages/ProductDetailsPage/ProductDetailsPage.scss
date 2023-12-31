@@ -103,3 +103,16 @@ hr {
 .delivery-icon {
   font-size: 2rem;
 }
+
+.product-detail {
+  color: var(--color-primary);
+}
+
+.product-detail__breadcum {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.product-detail__breadcum span {
+  cursor: pointer;
+}

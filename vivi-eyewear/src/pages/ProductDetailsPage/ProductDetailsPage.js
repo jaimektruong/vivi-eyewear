@@ -1,36 +1,95 @@
-import React from "react";
-import { useParams } from "react-router-dom";
-import products from "../../assets/db/Product.json";
+import React, { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import "./ProductDetailsPage.scss";
+import * as ProductService from "../../services/ProductService";
 import illustration from "../../assets/minhhoa.jpg";
 import FeaturedProducts from "../../components/FeaturedProducts/FeaturedProducts";
 import ButtonAdjustQuantity from "../../components/ButtonAdjustQuantity/ButtonAdjustQuantity";
 import ButtonWishlist from "../../components/ButtonWishlist/ButtonWishlist";
 const ProductDetailsPage = () => {
-  const { productName } = useParams();
-  const product = products.find(() => products.name === productName);
-  console.log(product);
+  const { id } = useParams();
+  console.log("id", id);
+  const [stateProductDetail, setStateProductDetail] = useState({
+    name: "",
+    color: "",
+    material: "",
+    shape: "",
+    image_thumb: "",
+    image_detail: "",
+    type: "",
+    price: "",
+    featuredFlag: "",
+    countInStock: "",
+    discount: "",
+    description: "",
+  });
+  useEffect(() => {
+    if (id) {
+      fetchGetDetailsProduct(id);
+    }
+  }, [id]);
+  const fetchGetDetailsProduct = async (id) => {
+    const res = await ProductService.getDetailsProduct(id);
+    if (res?.data) {
+      setStateProductDetail({
+        name: res?.data?.name,
+        color: res?.data?.color,
+        material: res?.data?.material,
+        shape: res?.data?.shape,
+        image_thumb: res?.data?.image_thumb,
+        image_detail: res?.data?.image_detail,
+        type: res?.data?.type,
+        price: res?.data?.price,
+        featuredFlag: res?.data?.featuredFlag,
+        countInStock: res?.data?.countInStock,
+        discount: res?.data?.discount,
+        description: res?.data?.description,
+      });
+    }
+    console.log(stateProductDetail?.data);
+  };
 
-  if (!product) {
-    // Xử lý trường hợp không tìm thấy sản phẩm
-    return <p>Sản phẩm không tồn tại</p>;
-  }
-
-  const {
-    image_detail,
-    price,
-    material,
-    color,
-    name,
-    description,
-    size,
-    shape,
-    quantity,
-  } = product;
-
+  const navigate = useNavigate();
+  const getCategoryText = (type) => {
+    switch (type) {
+      case "gong-kinh":
+        return "Gọng kính";
+      case "kinh-ram":
+        return "Kính râm";
+      case "trong-kinh":
+        return "Tròng kính";
+      default:
+        return "";
+    }
+  };
   return (
     <div className="container-fluid d-flex justify-content-center text-color-default ">
       <div className="container  ">
+        <p className="product-detail__breadcum">
+          <span
+            onClick={() => {
+              navigate("/");
+            }}
+          >
+            Trang chủ
+          </span>{" "}
+          /{" "}
+          <span
+            onClick={() => {
+              navigate("/san-pham");
+            }}
+          >
+            Sản phẩm
+          </span>{" "}
+          / {""}
+          <span
+            onClick={() => {
+              navigate(`/${stateProductDetail?.type}`);
+            }}
+          >
+            {getCategoryText(stateProductDetail?.type)}
+          </span>{" "}
+        </p>
         {/* bọc các flexbox chính */}
         <div className="row mx-0 content-box-product-details-styles ">
           {/*bọc 2 flexbox ảnh và các nút */}
@@ -39,8 +98,8 @@ const ProductDetailsPage = () => {
             <div className="gap-16 col-xl-6 col-md-6 col-12">
               <div>
                 <img
-                  src={image_detail}
-                  alt={name}
+                  src={stateProductDetail?.image_detail}
+                  alt={stateProductDetail?.name}
                   className="shadow rounded-4 detail-image-resize"
                 />
               </div>
@@ -49,23 +108,27 @@ const ProductDetailsPage = () => {
             <div className="gap-16 col-xl-6 col-md-6 col-12">
               <div className="col-xl-12 col-md-12 col-12">
                 <b className="price-size p-details-page-style label-product-name ">
-                  {name}
+                  {stateProductDetail?.name}
                 </b>
               </div>
               <div className="price-styles col-xl-12 col-md-12 col-12">
-                <p className="price-styles-p ">{price}</p>
+                <p className="price-styles-p ">{stateProductDetail?.price}</p>
               </div>
               <div className="row col-xl-12 col-md-12 col-12 info-product-details-box ">
                 <div className="col-xl-12 col-md-12 col-12 ">
-                  <p className=" mb-0 ">Mã sản phẩm: {name} </p>
-                </div>
-                <div className="col-xl-12 col-md-12 col-12">
-                  <p className="p-details-page-style ">
-                    Chất liệu: {material}{" "}
+                  <p className=" mb-0 ">
+                    Mã sản phẩm: {stateProductDetail?.name}{" "}
                   </p>
                 </div>
                 <div className="col-xl-12 col-md-12 col-12">
-                  <p className="p-details-page-style ">Màu sắc: {color}</p>
+                  <p className="p-details-page-style ">
+                    Chất liệu: {stateProductDetail?.material}{" "}
+                  </p>
+                </div>
+                <div className="col-xl-12 col-md-12 col-12">
+                  <p className="p-details-page-style ">
+                    Màu sắc: {stateProductDetail?.color}
+                  </p>
                 </div>
               </div>
               {/* flexbox vận chuyển */}
@@ -99,7 +162,7 @@ const ProductDetailsPage = () => {
                   </div>
                   <div className="row col-xl-10 col-md-10 col-10 ">
                     <p className="h-100 d-flex align-items-center px-0 mx-0">
-                      {quantity} Sản phẩm có sẵn
+                      {stateProductDetail?.countInStock} Sản phẩm có sẵn
                     </p>
                   </div>
                 </div>
@@ -132,7 +195,9 @@ const ProductDetailsPage = () => {
                   </p>
                 </div>
                 <div className="col-xl-12 col-md-12 col-12">
-                  <p className="p-details-page-style">{description}</p>
+                  <p className="p-details-page-style">
+                    {stateProductDetail?.description}
+                  </p>
                 </div>
               </div>
               <div className="gap-8">
@@ -140,9 +205,6 @@ const ProductDetailsPage = () => {
                   <p className="sub-title-styles-product-details-page p-details-page-style">
                     Kích thước
                   </p>
-                </div>
-                <div className="col-xl-12 col-md-12 col-12">
-                  <p className="p-details-page-style">{size}</p>
                 </div>
               </div>
               <div className="gap-8">
@@ -152,7 +214,9 @@ const ProductDetailsPage = () => {
                   </p>
                 </div>
                 <div className="col-xl-12 col-md-12 col-12">
-                  <p className="p-details-page-style">{shape}</p>
+                  <p className="p-details-page-style">
+                    {stateProductDetail?.shape}
+                  </p>
                 </div>
               </div>
               <div className="gap-8">

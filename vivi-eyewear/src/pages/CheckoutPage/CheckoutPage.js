@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import './CheckoutPage.scss'; // Import your CSS file
-import { Link, useHistory } from 'react-router-dom';
-import { Modal, Button } from 'react-bootstrap';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-=======
 import React, { useState } from "react";
 import "./CheckoutPage.scss"; // Import your CSS file
 import { Link, useHistory } from "react-router-dom";
 import { Modal, Button } from "react-bootstrap";
 
->>>>>>> c236af1e3c70805b37fb01f3bf5084e8b1101c8e
 import storeImage1 from "../../assets/Visa_Inc._logo.svg.png";
 import storeImage2 from "../../assets/MasterCard_Logo.svg.png";
 import storeImage3 from "../../assets/MoMo_Logo.png";
@@ -82,95 +74,6 @@ const CheckoutPage = () => {
     }
   };
 
-<<<<<<< HEAD
-    return (
-        <div className="container-fluid d-flex justify-content-center ">
-            <div className="container row">
-            <div className="checkout-inner ">
-            <Navigation_TT />
-            <div className="checkout-content ">
-                <div className="checkout-container row  ">
-                    {/* Shipping Information */}
-                    <div className="shipping-info col-md-6 col-xl-6">
-                        <h2>Thông tin vận chuyển</h2>
-                        <input
-                            type="text"
-                            placeholder="Số điện thoại"
-                            value={phoneNumber}
-                            onChange={(e) => setPhoneNumber(e.target.value)}
-                        />
-                        <input
-                            type="text"
-                            placeholder="Họ tên"
-                            value={fullName}
-                            onChange={(e) => setFullName(e.target.value)}
-                        />
-                        <h3>Chi tiết địa chỉ</h3>
-                        <input
-                            type="text"
-                            placeholder="Địa chỉ cụ thể"
-                            value={addressDetails}
-                            onChange={(e) => setAddressDetails(e.target.value)}
-                        />
-                        <input
-                            type="text"
-                            placeholder="Đường"
-                            value={street}
-                            onChange={(e) => setStreet(e.target.value)}
-                        />
-                        <input
-                            type="text"
-                            placeholder="Thị xã/Huyện"
-                            value={district}
-                            onChange={(e) => setDistrict(e.target.value)}
-                        />
-                        <input
-                            type="text"
-                            placeholder="Tỉnh/Thành phố"
-                            value={city}
-                            onChange={(e) => setCity(e.target.value)}
-                        />
-                    </div>
-
-                    {/* Order Summary */}
-                    <div className="order-summary col-md-6 col-xl-6">
-                        <ul>
-                            <li>
-                                <span>GN000001</span>
-                                <span>450,000 VND</span>
-                            </li>
-                            <li>
-                                <span>Tạm tính:</span>
-                                <span>450,000 VND</span>
-                            </li><hr></hr>
-                          
-                            <li>
-                                <span>Phí vận chuyển:</span>
-                                <span>30,000 VND</span>
-                            </li><hr></hr>
-                            
-                            <li className="total">
-                                <span>Tổng cộng:</span>
-                                <span>480,000 VND</span>
-                            </li>
-                        </ul>
-                        <div className="payment-methods">
-                            <div className="payment-methods-TT">
-                                <input
-                                    type="radio"
-                                    id="bank-transfer"
-                                    name="payment"
-                                    value="bank-transfer"
-                                    onChange={() => setSelectedPayment('bank-transfer')}
-                                />
-                                <label htmlFor="bank-transfer">Thanh toán trực tuyến</label>
-                                <div className="payment-methods-Icon" >
-                                <img src={storeImage1} alt="LogoVisa" />
-                                <img src={storeImage2} alt="LogoVisa" />
-                                <img src={storeImage3} alt="LogoVisa" />
-                                <img src={storeImage4} alt="LogoVisa" />
-                                </div>
-=======
   return (
     <div className="checkout-inner">
       <Navigation_TT />
@@ -230,7 +133,6 @@ const CheckoutPage = () => {
                 <span>450,000 VND</span>
               </li>
               <hr></hr>
->>>>>>> c236af1e3c70805b37fb01f3bf5084e8b1101c8e
 
               <li>
                 <span>Phí vận chuyển:</span>
@@ -259,31 +161,6 @@ const CheckoutPage = () => {
                   <img src={storeImage3} alt="LogoVisa" />
                   <img src={storeImage4} alt="LogoVisa" />
                 </div>
-<<<<<<< HEAD
-                {/* Button to handle order */}
-                
-                <button onClick={handleOrder}>Đặt hàng</button>
-
-                {/* Modal */}
-                <Modal show={showModal} onHide={() => setShowModal(false)}>
-                    <Modal.Header closeButton>
-                        <Modal.Title>Thông báo</Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body>
-                        {phoneNumber && fullName && addressDetails && street && district && city ? (
-                            <p>Đặt hàng thành công! Tiếp tục mua sắm cùng ViVi!</p>
-                        ) : (
-                            <p>Vui lòng điền đầy đủ thông tin để đặt hàng!</p>
-                        )}
-                    </Modal.Body>
-                    <Modal.Footer>
-                        <Button variant="secondary" onClick={() => setShowModal(false)}>
-                            Đóng
-                        </Button>
-                    </Modal.Footer>
-                </Modal>
-
-=======
               </div>
               <div className="payment-methods-TT">
                 <input
@@ -306,16 +183,9 @@ const CheckoutPage = () => {
                 />
                 <button onClick={applyDiscount}>Áp dụng</button>
               </div>
->>>>>>> c236af1e3c70805b37fb01f3bf5084e8b1101c8e
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-        </div>
-        </div>
-        
-    );
-=======
         {/* Button to handle order */}
         <button onClick={handleOrder}>Đặt hàng</button>
 
@@ -345,6 +215,5 @@ const CheckoutPage = () => {
       </div>
     </div>
   );
->>>>>>> c236af1e3c70805b37fb01f3bf5084e8b1101c8e
 };
 export default CheckoutPage;
