@@ -132,7 +132,7 @@ const AdminProductManagementPage = () =>  {
   const renderAction = () => {
     return (
       <div>
-        <button onClick={handleDetailsProduct}>Chỉnh sửa</button>
+        <button className="btn btn-warning" onClick={handleDetailsProduct}>Chỉnh sửa</button>
         <p>Huỷ kích hoạt</p>
         <p>Xoá</p>
       </div>
@@ -299,7 +299,7 @@ const AdminProductManagementPage = () =>  {
       dataIndex: "featuredFlag",
     },
     {
-      title: "ACtion",
+      title: "Action",
       dataIndex: "action",
       render: renderAction,
     },
@@ -307,7 +307,7 @@ const AdminProductManagementPage = () =>  {
 
   return (
     <div className="container-fluid d-flex flex-column sidebar__container--height">
-      <button onClick={() => setIsModalOpen(true)}>Thêm sản phẩm</button>
+      <button className="btn btn-outline-success" onClick={() => setIsModalOpen(true)}>Thêm sản phẩm</button>
       <AdminTable
         columns={columns}
         isLoading={isLoadingProducts}
@@ -474,7 +474,7 @@ const AdminProductManagementPage = () =>  {
         onClose={() => {
           setIsOpenDrawer(false);
         }}
-        width="88%"
+        width="50%"
       >
         {" "}
         <Form>
