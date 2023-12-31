@@ -1,23 +1,87 @@
-/* Common styles for both Payment_Page and Content_Payment */
-.Payment_Page,
-.Content_Payment {
-  padding: 20px;
+/* CSS for the content of the payment page */
+.Payment_Page {
+  padding: 1.25rem;
+  margin-right: auto;
+  margin-left: auto;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Căn giữa theo chiều ngang */
+  text-align: left; /* Căn trái cho văn bản */
 
-  li {
+  .title {
+    color: rgba(22, 45, 90, 1);
+    font-size: 1.375rem; /* Default value for titles */
     font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      font-weight: bold;
+      margin-top: 1rem;
+    }
+
+    p {
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+  }
+
+  img {
+    width: 100%;
+    max-width: 45rem; /* Sử dụng 100% chiều rộng */
+    height: auto;
   }
 }
 
-/* Additional styles for Payment_Page */
-.Payment_Page {
-  /* Add specific styles for Payment_Page if needed */
+/* Media queries */
+@media (min-width: 576px) {
+  .Payment_Page {
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: -15px;
+      margin-left: -15px;
+    }
+
+    .col-md-6 {
+      position: relative;
+      width: 100%;
+      min-height: 1px;
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+  }
 }
 
-/* Responsive Styles (if needed) */
-@media only screen and (max-width: 600px) {
-  /* Styles for screens up to 600px wide (typical phone) */
-  .Payment_Page,
-  .Content_Payment {
-    padding: 10px; /* Adjust padding for smaller screens if needed */
+@media (min-width: 768px) {
+  .Payment_Page {
+    .col-md-6 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .Payment_Page {
+    .col-lg-4 {
+      flex: 0 0 33.333333%;
+      max-width: 33.333333%;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .Payment_Page {
+    .col-xl-4 {
+      flex: 0 0 33.333333%;
+      max-width: 33.333333%;
+    }
   }
 }
