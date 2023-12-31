@@ -3,7 +3,7 @@ import "./ProductsPage.scss";
 import products from "../../assets/db/Product.json";
 import CardProduct from "../../components/CardProduct/CardProduct";
 import Sidebar from "../../components/SideBar/Sidebar";
-import Header from "../../components/Header/Header";
+import Header from "../../components/Layouts/CustomerDefaultLayout/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import { Link, useParams } from "react-router-dom";
 

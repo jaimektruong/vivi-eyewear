@@ -1,17 +1,16 @@
 .header__container {
-  height: 88px;
+  height: 5.5rem;
   background-color: var(--color-primary);
 }
 
 .navbar {
   height: 100%;
-  gap: 40px;
+  gap: 2.5rem;
 }
 
 .navbar-nav {
-  gap: 40px;
+  gap: 2.5rem;
 }
-
 
 .navbar-brand {
   margin: auto 0;
@@ -23,7 +22,7 @@
 
 .bi-search {
   position: absolute;
-  right: 8px;
+  right: 0.5rem;
 }
 
 /* Thêm CSS cho hiển thị dropdown menu khi hover vào "Sản phẩm" */
@@ -39,4 +38,26 @@
 /* Thêm luật CSS cho màu chữ của mục active */
 .navbar-nav .nav-item.active .nav-link {
   color: #007bff; /* Màu xanh nước biển */
+}
+.container-header-styles {
+  margin-right: 0 !important;
+  padding-right: 0;
+}
+.options-header-styles {
+  padding-left: 1rem;
+  padding-right: 0.5rem;
+}
+.navbar-gap-items {
+  gap: 1.8rem !important;
+}
+.dropdown-product-type-gap {
+  padding-left: 0.5rem;
+}
+.account-button-header {
+  background-color: var(--color-primary) !important;
+  border: 1px solid var(--color-primary) !important; /* Đặt độ rộng và màu viền mặc định */
+  transition: border-color 0.3s ease-in-out; /* Thêm hiệu ứng chuyển động cho viền */
+  // &:hover {
+  //   border-color: white; /* Đặt màu viền khi hover */
+  // }
 }

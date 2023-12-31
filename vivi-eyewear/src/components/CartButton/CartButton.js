@@ -3,8 +3,8 @@ import "./CartButton.scss";
 function CartButton(props) {
   return (
     <>
-      <button className="cart__container text-white ">
-        <i className="cart__icon bi bi-cart me-3 fs-4"></i>
+      <button className="cart__container text-white  ">
+        <i className="cart__icon bi bi-cart me-3 fs-4 "></i>
         <span className="cart__number">
           <span>{props.value}</span>
         </span>
