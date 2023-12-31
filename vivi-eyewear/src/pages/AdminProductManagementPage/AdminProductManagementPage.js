@@ -10,7 +10,9 @@ import AdminTable from "../../components/AdminTable/AdminTable";
 import DrawerComponent from "../../components/DrawerComponent/DrawerComponent";
 import Form from "react-bootstrap/Form";
 import { useSelector } from "react-redux";
-function AdminProductManagementPage() {
+
+
+const AdminProductManagementPage = () =>  {
   const user = useSelector((state) => state?.user);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [rowSelected, setRowSelected] = useState("");
@@ -130,7 +132,7 @@ function AdminProductManagementPage() {
   const renderAction = () => {
     return (
       <div>
-        <button onClick={handleDetailsProduct}>Chỉnh sửa</button>
+        <button className="btn btn-warning" onClick={handleDetailsProduct}>Chỉnh sửa</button>
         <p>Huỷ kích hoạt</p>
         <p>Xoá</p>
       </div>
@@ -297,7 +299,7 @@ function AdminProductManagementPage() {
       dataIndex: "featuredFlag",
     },
     {
-      title: "ACtion",
+      title: "Action",
       dataIndex: "action",
       render: renderAction,
     },
@@ -305,7 +307,7 @@ function AdminProductManagementPage() {
 
   return (
     <div className="container-fluid d-flex flex-column sidebar__container--height">
-      <button onClick={() => setIsModalOpen(true)}>Thêm sản phẩm</button>
+      <button className="btn btn-outline-success" onClick={() => setIsModalOpen(true)}>Thêm sản phẩm</button>
       <AdminTable
         columns={columns}
         isLoading={isLoadingProducts}
@@ -472,7 +474,7 @@ function AdminProductManagementPage() {
         onClose={() => {
           setIsOpenDrawer(false);
         }}
-        width="88%"
+        width="50%"
       >
         {" "}
         <Form>

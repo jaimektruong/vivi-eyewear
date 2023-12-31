@@ -5,7 +5,7 @@ import imgGlass2 from "../../assets/chon-kinh-slider-2.jpg";
 
 function Intro() {
   return (
-    <div className="intro__container d-flex gap-2 inner">
+    <div className="intro__container d-flex gap-2 inner d-flex justify-content-center py-3">
       <div className="intro__item">
         <img className="choose-glasses" src={imgIntro} alt="chon-kinh" />
         <button className="text-white">Chọn kính ngay</button>

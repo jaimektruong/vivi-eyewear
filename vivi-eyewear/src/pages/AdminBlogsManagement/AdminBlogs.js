@@ -16,16 +16,16 @@ function AdminBlog() {
               <p className="content">Xóa (0)</p>
             </div>
             <div>
-              <fieldset class="boder">
-                <input class="input" type="text" placeholder="Tên Blog..." />
-                <input  class="input" list="Blogs" placeholder="Danh mục..." />
+              <fieldset className="boder">
+                <input className="input" type="text" placeholder="Tên Blog..." />
+                <input  className="input" list="Blogs" placeholder="Danh mục..." />
                 <datalist id="Blogs">
                   <option value="Gọng kính"></option>
                   <option value="Tròng kính"></option>
                   <option value="...."></option>
                 </datalist>
   
-                <input  class="input" list="Nguoiviet" placeholder="Người viết..." />
+                <input  className="input" list="Nguoiviet" placeholder="Người viết..." />
                 <datalist id="Nguoiviet">
                   <option value="Ai Nhi"></option>
                   <option value="Van Anh"></option>
@@ -34,7 +34,7 @@ function AdminBlog() {
                   <option value="Kien Duy"></option>
                 </datalist>
   
-                <input class="input_2" type="button" value="Đặt lại" /> <br />
+                <input className="input_2" type="button" value="Đặt lại" /> <br />
   
                 {/* <h4>Đã chọn: 0</h4> */}
                 <input className="content_1" type="button" value="Xóa" />
