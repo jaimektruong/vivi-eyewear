@@ -9,6 +9,7 @@
 // //     margin-left: 400px;
 // // }
 
+<<<<<<< HEAD
 
 .account{
     display: flex;
@@ -37,7 +38,34 @@
 //   width: 130px;
 //   height: 130px;
 //   margin-left: 10px;
+=======
+// .account{
+//     display: flex;
+//     color: rgb(10, 10, 67);
+//     margin-top: 5px;
+//     height: 520px;
+//     margin: 30px;
+//     margin-left: 400px;
+>>>>>>> c236af1e3c70805b37fb01f3bf5084e8b1101c8e
 // }
+
+// .account {
+//   display: flex;
+//   color: rgb(10, 10, 67);
+//   margin-top: 5px;
+//   height: 520px;
+//   margin: 30px;
+//   margin-left: 400px;
+// }
+
+.avt {
+  justify-content: center;
+  text-align: center;
+  font-size: 100px;
+  width: 130px;
+  height: 130px;
+  margin-left: 10px;
+}
 
 // .box_1 {
 //   // margin: 5px;
@@ -54,69 +82,78 @@
 //   background-color: rgb(255, 255, 255);
 // }
 
-// .button {
-//   float: right;
-//   margin: 10px;
-//   color: aliceblue;
-//   background-color: rgb(2, 2, 135);
-//   border-radius: 5px;
-//   border: 1px solid #09058a;
-//   padding-left: 10px;
-//   padding-right: 10px;
-//   padding-top: 5px;
-//   padding-bottom: 5px;
-//   font-size: small;
-//   margin-right: 55px;
-// }
+.button_account {
+  float: right;
+  margin: 20px;
+  color: aliceblue;
+  background-color: rgb(2, 2, 135);
+  border-radius: 5px;
+  border: 1px solid #09058a;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: small;
+  margin-right: 55px;
+}
 
-// .laber {
-//   margin: 0%;
-// }
+.laber {
+  margin: 0%;
+}
 
 // .laber_1 {
 //   margin-left: 1cap;
 // }
 
-// .input {
-//   margin-left: 0px;
-//   margin: 0px;
-//   border-radius: 5px;
-//   border: 1px solid #0c0963;
-//   padding: 5px;
-// }
+.input_5 {
+  margin-left: 10px;
+  border-radius: 5px;
+  border: 1px solid #0c0963;
+  padding: 5px;
+}
 
-// .input_1 {
-//   margin-left: 33px;
-//   border-radius: 5px;
-//   border: 1px solid #0c0963;
-//   padding: 5px;
-// }
+.input_1 {
+  margin-left: 33px;
+  border-radius: 5px;
+  border: 1px solid #0c0963;
+  padding: 5px;
+}
 
-// .input_2 {
-//   margin-left: 29px;
-//   border-radius: 5px;
-//   border: 1px solid #0c0963;
-//   padding: 5px;
-// }
+.input_4 {
+  border-radius: 5px;
+  border: 1px solid #0c0963;
+  padding: 5px;
+  margin-left: 10px;
+}
 
-// .input_3 {
-//   margin-left: 140px;
-//   border-radius: 5px;
-//   border: 1px solid #0c0963;
-//   padding: 5px;
-// }
+.input_3 {
+  margin-left: 140px;
+  border-radius: 5px;
+  border: 1px solid #0c0963;
+  padding: 5px;
+}
 
 // .hr {
 //   margin: 0px 0; /* Điều chỉnh khoảng cách trên và dưới đường ngang */
 // }
 
+
+.lay_1 {
+  display: flex;
+  margin-left: 10px;
+}
+
+.lay_2 {
+  display: flex;
+  margin-left: 10px;
+}
 // .lay_1 {
 //   display: flex;
 // }
 
-// .lay_2 {
-//   display: flex;
-// }
+.lay_left{
+  margin-left: 15px;
+}
 
 // .in4 {
 //   margin-left: 5px;

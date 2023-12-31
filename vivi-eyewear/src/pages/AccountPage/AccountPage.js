@@ -36,133 +36,130 @@ function Account() {
 
   return (
     <form onSubmit={handleFormSubmit}>
-      <div className="container account">
-        <div className="box_1">
-          <fieldset>
-            <div className="imga">
-                <i class="bi bi-person-circle"></i>
-            </div>
-            <hr className="hr" />
-            <div  className="inf">
-              <i className="fa-solid fa-user"></i>
-              <div  className="in4">
-                <label>Thông tin tài khoản</label> <br />
-              </div>
-            </div>
-            <div className="inf">
-              <i className="fa-solid fa-location-dot"></i>
-              <div  className="in3">
-                <label> Thông tin địa chỉ</label><br />
-              </div>
-            </div>
-            <div className="inf">
-              <i className="fa-solid fa-clock-rotate-left"></i>
-                <div className="in2">
-                  <label>Lịch sử mua hàng </label><br />
+      <div className="container-fluid d-flex justify-content-center text-justify text-color-default ">
+        <div className="container px-5 text-justify">
+          <div className="row text-justify">
+            <div className="introduction-content col-xl-2 col-md-4 col-12 text-justify" style={{ backgroundColor: '#ffffff', border: '1px solid #000000' }}>
+              <fieldset>
+                <div className="avt">
+                    <i class="bi bi-person-circle"></i>
                 </div>
+                <hr className="hr" />
+                <div  className="inf">
+                  <i className="fa-solid fa-user"></i> <label>Thông tin tài khoản</label> <br />
+                </div>
+                <div className="inf">
+                  <i className="fa-solid fa-location-dot"></i> <label> Thông tin địa chỉ</label><br />
+                </div>
+                <div className="inf">
+                  <i className="fa-solid fa-clock-rotate-left"></i> <label>Lịch sử mua hàng </label><br />
+                </div>
+              </fieldset>
             </div>
-          </fieldset>
-        </div>
-        <div className="box_2">
-          <fieldset>
-            <h1>Thông tin tài khoản</h1>
-            <div className="lay_1">
-              <div>
-                <label className="laber" htmlFor="Ho">Họ:{" "}
-                </label> <br />
+
+            <div className="loyal-customer-content col-xl-6 col-md-6 col-12" style={{ backgroundColor: '#ffffff', border: '1px solid #000000', marginLeft: '20px', padding: '10px' }}>
+              <fieldset>
+                <h2>Thông tin tài khoản</h2>
+                <div className="lay_1">
+                  <div>
+                    <label htmlFor="Ho">Họ:{" "}
+                    </label> <br />
+                    <input
+                      className="input_4"
+                      type="text"
+                      placeholder="Enter text..."
+                      name="lastName"
+                      value={formData.lastName}
+                      onChange={handleInputChange}
+                    />
+                  </div>
+                  <div className="lay_left">
+                    <label htmlFor="ten">
+                    Tên:{" "}
+                    </label> <br />
+                    <input
+                      className="input_4"
+                      type="text"
+                      placeholder="Enter name..."
+                      name="firstName"
+                      value={formData.firstName}
+                      onChange={handleInputChange}
+                    />
+                  </div>
+                </div>
+                <div className="lay_2">
+                  <div>
+                    <label className="laber" htmlFor="Email">
+                    Email:{" "}
+                    </label><br />
+                    <input
+                      className="input_4"
+                      type="text"
+                      placeholder="Enter email..."
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                    />
+                  </div>
+                  <div className="lay_left">
+                    <label  htmlFor="SDT">SĐT: </label><br />
+                    <input
+                      className="input_4"
+                      type="text"
+                      placeholder="Enter phone number..."
+                      name="phoneNumber"
+                      value={formData.phoneNumber}
+                      onChange={handleInputChange}
+                    />
+                  </div>
+                </div>
+                <br />
+                <p><b>THAY ĐỔI MẬT KHẨU</b></p>
+                <hr className="hr" />
+                <label className="laber" htmlFor="matkhau">
+                  Mật khẩu hiện tại (để trống nếu không đổi)
+                </label>
                 <input
-                  className="input"
+                  className="input_5"
                   type="text"
-                  placeholder="Enter text..."
-                  name="lastName"
-                  value={formData.lastName}
+                  placeholder="Placeholder..."
+                  name="currentPassword"
+                  value={formData.currentPassword}
+                  onChange={handleInputChange}
+                />{" "}
+                <br />
+                <br />
+                <label className="laber" htmlFor="matkhau">
+                  Mật khẩu mới (để trống nếu không đổi)
+                </label>
+                <input
+                  className="input_1"
+                  type="text"
+                  placeholder="Placeholder..."
+                  name="newPassword"
+                  value={formData.newPassword}
                   onChange={handleInputChange}
                 />
-              </div>
-              <div>
-                <label className="laber" htmlFor="ten">
-                Tên:{" "}
-                </label> <br />
+                <br />
+                <br />
+                <label className="laber" htmlFor="matkhau">
+                  Xác nhận mật khẩu mới
+                </label>
                 <input
-                  className="input"
+                  className="input_3"
                   type="text"
-                  placeholder="Enter name..."
-                  name="firstName"
-                  value={formData.firstName}
+                  placeholder="Placeholder..."
+                  name="confirmPassword"
+                  value={formData.confirmPassword}
                   onChange={handleInputChange}
-                />
-              </div>
+                />{" "}
+                <br />
+                <button className="button_account" type="submit">
+                  Lưu thay đổi
+                </button>
+              </fieldset>
             </div>
-            <div className="lay_2">
-              <div>
-                <label className="laber" htmlFor="Email">
-                Email:{" "}
-                </label><br />
-                <input
-                  className="input"
-                  type="text"
-                  placeholder="Enter email..."
-                  name="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                />
-              </div>
-              <div>
-                <label htmlFor="SDT">SĐT: </label><br />
-                <input
-                  className="input"
-                  type="text"
-                  placeholder="Enter phone number..."
-                  name="phoneNumber"
-                  value={formData.phoneNumber}
-                  onChange={handleInputChange}
-                />
-              </div>
-            </div>
-            <p><b>THAY ĐỔI MẬT KHẨU</b></p>
-            <hr className="hr" />
-            <label className="laber" htmlFor="matkhau">
-              Mật khẩu hiện tại (để trống nếu không đổi)
-            </label>
-            <input
-              className="input"
-              type="text"
-              placeholder="Placeholder..."
-              name="currentPassword"
-              value={formData.currentPassword}
-              onChange={handleInputChange}
-            />{" "}
-            <br />
-            <br />
-            <label className="laber" htmlFor="matkhau">
-              Mật khẩu mới (để trống nếu không đổi)
-            </label>
-            <input
-              className="input_1"
-              type="text"
-              placeholder="Placeholder..."
-              name="newPassword"
-              value={formData.newPassword}
-              onChange={handleInputChange}
-            />
-            <br />
-            <br />
-            <label className="laber" htmlFor="matkhau">
-              Xác nhận mật khẩu mới
-            </label>
-            <input
-              className="input_3"
-              type="text"
-              placeholder="Placeholder..."
-              name="confirmPassword"
-              value={formData.confirmPassword}
-              onChange={handleInputChange}
-            />{" "}
-            <br />
-            <button className="button" type="submit">
-              Lưu thay đổi
-            </button>
-          </fieldset>
+          </div>
         </div>
       </div>
     </form>
