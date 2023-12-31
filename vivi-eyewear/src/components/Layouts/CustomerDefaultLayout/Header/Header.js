@@ -47,7 +47,7 @@ const Header = ({ handleInputChange, query }) => {
 
   return (
     <nav className="navbar navbar-expand-sm align-items-center p-0 container-fluid header__container">
-      <div className="container container-header-styles header__container align-items-center ">
+      <div className="container justify-content-center  container-header-styles header__container align-items-center ">
         <div className="row header__container">
           <Link className="navbar-brand col-xl-1 col-md-1 col-1" to="/">
             <img src={Logo} alt="Logo" style={{ width: "5rem" }} />
@@ -136,19 +136,17 @@ const Header = ({ handleInputChange, query }) => {
               {/* Account */}
               <div className=" col-xl-6 col-md-6 col-6">
                 {user?.access_token ? (
-                  <div className="nav-item dropdown">
+                  <div className="nav-item d-flex justify-content-center align-items-center dropdown">
                     {userAvatar ? (
-                      <img src={user.avatar} alt="avatar" className="" />
+                      <img src={user.avatar} alt="avatar" className="rounded-circle" style={{width: "3rem"}} />
                     ) : (
-                      <i className="bi bi-person-circle text-white"></i>
+                      <i className="bi bi-person-circle text-white dropdown-toggle "></i>
                     )}
 
-                    <span className="text-white"> {user.name}</span>
+                    <span className="text-white"> {user.name} </span>
 
                     <div
-                      className={`dropdown-menu ${
-                        isProductHovered ? "show" : ""
-                      }`}
+                      className="dropdown-menu"
                       aria-labelledby="navbarDropdown"
                     >
                       <button

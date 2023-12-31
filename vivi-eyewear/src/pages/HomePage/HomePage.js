@@ -11,7 +11,7 @@ const HomePage = () => {
   return (
     <div className="d-flex flex-column justify-content-evenly gap-3">
       <Hero></Hero>
-      <div className="d-flex flex-column gap-3 my-3 ">
+      <div className="container d-flex flex-column gap-3 my-3 ">
         <Intro></Intro>
         <FeaturedProducts></FeaturedProducts>
         <LatestProducts></LatestProducts>

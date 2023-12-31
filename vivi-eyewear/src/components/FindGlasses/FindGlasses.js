@@ -22,7 +22,7 @@ function FindGlasses() {
           <img src={glass1} alt="glass1" />
           <div className="text-center my-5">
             <div className="rounded-circle  glasses-icon">
-              <i class="bi bi-eyeglasses text-white"></i>
+              <i className="bi bi-eyeglasses text-white"></i>
             </div>
             <h3>Kích thước khung</h3>
             <p>
@@ -31,14 +31,14 @@ function FindGlasses() {
             </p>
             <button>
               Cách đo khích thước khung của bạn{" "}
-              <i class="bi bi-arrow-right "></i>
+              <i className="bi bi-arrow-right "></i>
             </button>
           </div>
         </div>
         <div className="findglasses__content-2 d-flex align-middle">
           <div className="text-center  my-5">
             <div className="rounded-circle glasses-icon">
-              <i class="bi bi-sunglasses text-white"></i>
+              <i className="bi bi-sunglasses text-white"></i>
             </div>
             <h3>Đo ống kính</h3>
             <p>
@@ -47,7 +47,7 @@ function FindGlasses() {
               tử (PD).
             </p>
             <button>
-              Cách đo khích thước PD của bạn <i class="bi bi-arrow-right"></i>
+              Cách đo khích thước PD của bạn <i className="bi bi-arrow-right"></i>
             </button>
           </div>
           <img src={glass2} alt="glass2" />

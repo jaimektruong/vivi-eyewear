@@ -63,7 +63,7 @@ const ProductDetails = () => {
                 type="button"
                 onClick={handleMinusClick}
               >
-                <i class="bi bi-dash-lg"></i>{" "}
+                <i className="bi bi-dash-lg"></i>{" "}
               </button>
               <input
                 type="number"
@@ -76,12 +76,12 @@ const ProductDetails = () => {
                 type="button"
                 onClick={handlePlusClick}
               >
-                <i class="bi bi-plus-lg"></i>{" "}
+                <i className="bi bi-plus-lg"></i>{" "}
               </button>
             </div>
           </div>
           <div>
-            <button type="button" class="btn btn-danger">
+            <button type="button" className="btn btn-danger">
               Thêm vào giỏ hàng
             </button>
           </div>

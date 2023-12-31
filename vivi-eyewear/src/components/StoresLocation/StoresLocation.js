@@ -17,14 +17,12 @@ function StoresLocation() {
         </div>
         <div className="find justify-content-end">
           <button className="button-find btn--color-primary text-white">
-            <i class="bi bi-cursor"></i> Tìm kiếm cơ sở
+            <i className="bi bi-cursor"></i> Tìm kiếm cơ sở
           </button>
         </div>
       </div>
       <div
-        className="location__content d-flex justify-content-between
-"
-      >
+        className="location__content d-flex justify-content-around" >
         <div>
           <img src={store1} alt="store1" />
         </div>

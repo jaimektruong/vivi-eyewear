@@ -10,7 +10,9 @@ import AdminTable from "../../components/AdminTable/AdminTable";
 import DrawerComponent from "../../components/DrawerComponent/DrawerComponent";
 import Form from "react-bootstrap/Form";
 import { useSelector } from "react-redux";
-function AdminProductManagementPage() {
+
+
+const AdminProductManagementPage = () =>  {
   const user = useSelector((state) => state?.user);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [rowSelected, setRowSelected] = useState("");
