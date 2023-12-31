@@ -17,141 +17,74 @@
   margin-left: 110px;
 }
 .checkout-inner {
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  height: auto; /* Để nội dung trung tâm theo chiều dọc */
   margin-bottom: 20px;
+  padding-top: 20px; /* Add some padding to the top */
 }
 
 .checkout-content {
-  display: flex;
-  flex-direction: column;
-  width: 80vw;
-  button{
-    width: 30%;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 24px;
-    color: white;
-    background-color: rgba(22, 45, 90, 1);
-    border-radius: 5px;
-    margin-top: 40px;
-
-  }
+  width: 100%;
+  max-width: 1100px; /* Limit the content width */
 }
 
-.checkout-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between; /* Hiển thị phần tử ở hai cạnh */
-  width: 75%;
-  // align-items: center;
-  padding-left: 44px;
-  margin-left: 100px;
-}
-
+/* Adjustments for shipping information */
 .shipping-info {
-  display: flex;
-  flex-direction: column;
-  width: 50%; 
-  gap: 10px; /* Khoảng cách giữa các input */
-  h2{
-    font-size: 32px;
-    color:rgba(45, 72, 89, 1) ;
-  }
-  h3{
-    font-size: 24px;
-     border-bottom: 1px solid;
-     width: 80%;
-     color:rgba(45, 72, 89, 1)
-  }
+  width: 100%;
+  gap: 15px; /* Increase the gap between inputs */
 }
 
-.shipping-info input {
-  width: 80%; /* Độ rộng 100% của input */
-  padding: 8px; /* Padding cho input */
-  /* Các thuộc tính CSS khác */
-  border-radius: 5px;
-  border: rgba(32, 67, 135, 1) solid 1px;
+.shipping-info input,
+.shipping-info h3 {
+  width: 100%;
 }
 
+/* Adjustments for order summary */
 .order-summary {
-  margin-top: 20px;
-  width: 45%;;
-  border-radius: 10px;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
-  box-sizing: border-box;
-  color: black;
-  font-size: 16px;
-  padding: 20px;
-  hr{
-    margin-top:20px;
-    margin-bottom: 20px;
-  width: 100%; }
+  width: 100%;
+}
 
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .checkout-nav {
+    margin-left: 0;
   }
 
-  li {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 5px;
+  .checkout-content {
+    padding: 0 20px; /* Add padding to the content */
   }
 
-  .total {
-    font-weight: bold;
+  .checkout-container {
+    flex-direction: column; /* Arrange items in a column on small screens */
+    padding-left: 0;
+    margin-left: 0;
   }
-}
 
-.payment-methods {
-  width: 100%;;
-  display: flex;
-  flex-direction: column;
-  gap: 10px; /* Khoảng cách giữa các phần tử con */
-}
-.payment-methods-TT{
-  display: flex;
-
-}
-.payment-methods-Icon{
-  display: flex;
-  justify-content: space-between;
-  padding-left: 20px;
-  flex:0.5;
-  
-}
-.payment-methods-Icon img{
-  height: 20px;
-  width: auto;
-  margin:2px;
-}
-  
-
-.payment-methods input[type="radio"] {
-  margin-right: 10px;
-}
-.discount-section {
-  width: 90%;
-  display: flex;
-  justify-content: space-between;
-  input::placeholder{
-    font-size: 16px;}
-    button{
-      background-color: rgba(22, 45, 90, 1) ;
-      border:  rgba(32, 67, 135, 1) solid 1px;
-      color: white;
-      font-size: 16px;
-      width: 120px;
-      border-radius: 5px;
-      margin-top: 0;
-      
+  .shipping-info,
+  .order-summary {
+    width: 100%; /* Take full width on small screens */
   }
-}
-.checkout-inner .nav ul li:not(:last-child)::after {
-  content: '/';
-  margin: 0 8px;
+
+  .payment-methods-TT {
+    flex-direction: column;
+  }
+
+  .payment-methods-Icon {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .payment-methods-Icon img {
+    margin: 5px 0;
+  }
+
+  .discount-section {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 20px; /* Adjust margin */
+  }
 }
