@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './CheckoutPage.scss'; // Import your CSS file
 import { Link, useHistory } from 'react-router-dom';
 import { Modal, Button } from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import storeImage1 from "../../assets/Visa_Inc._logo.svg.png";
 import storeImage2 from "../../assets/MasterCard_Logo.svg.png";
 import storeImage3 from "../../assets/MoMo_Logo.png";
