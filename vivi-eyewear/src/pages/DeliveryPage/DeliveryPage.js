@@ -4,7 +4,7 @@ function DeliveryPage() {
     return (
         <div className="container-fluid d-flex justify-content-center ">
             <div className="container row">
-            <div className="Delivery_Page col-md-6 col-xl-4" >
+            <div className="Delivery_Page col-md-6 col-xl-10" >
             <div classname="Content_Delivery"> 
                 <h2>Chính sách Vận chuyển và Kiểm tra hàng ViVi Eyewear</h2>
                 <h3>Vận chuyển sản phẩm</h3>
@@ -34,7 +34,7 @@ function DeliveryPage() {
                 <h4>Yêu cầu đổi/trả hàng</h4>
                 <p> Để yêu cầu đổi/trả hàng, vui lòng liên hệ với chúng tôi trong vòng 7 kể từ ngày nhận hàng. ViVi Eyewear sẽ hỗ trợ bạn trong việc xử lý đổi/trả hàng theo quy định.</p>
             </div>
-                <div className="col-12">
+                <div className="col-12 col-xl-10">
                 <img src={storeImage} alt="Store" />
                 </div>
             </div>
