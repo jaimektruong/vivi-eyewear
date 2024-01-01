@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import "./Login.scss";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from 'react-router-dom'
 import * as UserService from "../../services/UserService";
 import { UseMutationHook } from "../../hooks/UseMutationHook";
-import { jwtDecode } from "jwt-decode";
+import jwt_decode from "jwt-decode";
 import { useDispatch } from "react-redux";
 import { updateUser } from "../../redux/slices/userSlice";
 
@@ -20,26 +20,32 @@ const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
+  const location = useLocation()
+
   useEffect(() => {
     if (isSuccess) {
-      navigate("/");
-      console.log(data);
-      localStorage.setItem("access_token", JSON.stringify(data?.access_token));
+      if(location?.state) {
+        navigate(location?.state)
+      }else {
+        navigate('/')
+      }
+      localStorage.setItem('access_token', JSON.stringify(data?.access_token))
+      localStorage.setItem('refresh_token', JSON.stringify(data?.refresh_token))
       if (data?.access_token) {
-        const decoded = jwtDecode(data?.access_token);
-        console.log(decoded);
+        const decoded = jwt_decode(data?.access_token)
         if (decoded?.id) {
-          handleGetDetailUser(decoded?.id, data?.access_token);
+          handleGetDetailsUser(decoded?.id, data?.access_token)
         }
       }
     }
-  }, [isSuccess]);
+  }, [isSuccess])
 
-  const handleGetDetailUser = async (id, token) => {
-    const res = await UserService.getDetailUser(id, token);
-    dispatch(updateUser({ ...res?.data, access_token: token }));
-    console.log("res", res);
-  };
+  const handleGetDetailsUser = async (id, token) => {
+    const storage = localStorage.getItem('refresh_token')
+    const refreshToken = JSON.parse(storage)
+    const res = await UserService.getDetailsUser(id, token)
+    dispatch(updateUser({ ...res?.data, access_token: token,refreshToken }))
+  }
 
   const handleOnChangeEmail = (value) => {
     setEmail(value);

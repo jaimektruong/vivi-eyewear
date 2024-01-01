@@ -17,7 +17,6 @@ import AdminProductManagementPage from "../pages/AdminProductManagementPage/Admi
 import { AdminDefaultLayout } from "../components/Layouts";
 import { CustomerDefaultLayout } from "../components/Layouts";
 import AdminManagementPage from "../pages/AdminAdminMangagementPage/AdminMangagement";
-import CustomerManagementPage from "../pages/AdminCustomerManagementPage/AdminCustomerManagementPage";
 import OrderManagementPage from "../pages/AdminOrderManagementPage/AdminOrderManagementPage";
 import PromotionManagementPage from "../pages/AdminPromotionManagementPage/AdminPromotionManagement";
 import AdminDashBoard from "../pages/AdminDashBoard/AdminDashBoard";
@@ -31,19 +30,19 @@ export const publicRoutes = [
   },
 
   {
-    path: "/san-pham/:id",
+    path: "/san-pham/:name",
     page: ProductDetailsPage,
     layout: CustomerDefaultLayout,
   },
   {
     path: "/san-pham",
     page: ProductsPage,
-    layout: CustomerDefaultLayout,
+    layout: null,
   },
   {
     path: "/:type",
     page: ProductsPage,
-    layout: CustomerDefaultLayout,
+    layout: null,
   },
   {
     path: "/*",
@@ -133,11 +132,6 @@ export const privateRoutes = [
   {
     path: "/admin/quan-ly-promotion",
     page: PromotionManagementPage,
-    layout: AdminDefaultLayout,
-  },
-  {
-    path: "/admin/quan-ly-khach-hang",
-    page: CustomerManagementPage,
     layout: AdminDefaultLayout,
   },
   {

@@ -41,7 +41,7 @@ const FeaturedProducts = (props) => {
 
         <div
           id="carouselExampleIndicators2"
-          className="carousel slide d-flex align-items-center justify-content-center array-product "
+          className="carousel slide d-flex align-items-center justify-content-center array-product pb-5"
           data-bs-ride="carousel"
           data-bs-interval="4000" // Tự động chuyển trang sau mỗi 4 giây
         >
@@ -62,7 +62,7 @@ const FeaturedProducts = (props) => {
               >
                 <div className="row flex-row gap-2 m-1">
                   {cardArray.map((cardF) => (
-                    <div className="featured-card" key={cardF.id}>
+                    <div className="featured-card " key={cardF.id} style={{width: "fit-content",padding:"0"}}>
                       <Link
                         className="nav-link nav-link-color-style "
                         to={`/san-pham/${cardF.name}`}

@@ -183,7 +183,7 @@ const ProductDetailsPage = () => {
           </div>
           {/* flexbox chứa thông tin khác */}
           <div className="col-xl-12 col-md-12 col-12 d-flex justify-content-center">
-            <hr className="pt-16 pb-16" />
+            <hr className="pt-16 pb-16 hr" />
           </div>
           <div className="row col-xl-12 col-md-12 col-12">
             {/* thông tin về thông số */}

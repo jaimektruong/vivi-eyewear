@@ -78,7 +78,7 @@ function AdminProductManagementPage() {
   };
 
   const fetchGetDetailsUser = async (rowSelected) => {
-    const res = await UserService.getDetailUser(rowSelected);
+    const res = await UserService.getDetailsUser(rowSelected);
     if (res?.data) {
       setStateUserDetail({
         name: res?.data?.name,
@@ -104,21 +104,20 @@ function AdminProductManagementPage() {
     );
   };
 
-  useEffect(() => {
-    if (rowSelected) {
-      fetchGetDetailsUser();
-      setIsOpenDrawer(true);
-    }
-  }, [rowSelected]);
+  // useEffect(() => {
+  //   if (rowSelected && isOpenDrawer) {
+  //     setIsLoadingUpdate(true)
+  //     fetchGetDetailsUser(rowSelected)
+  //   }
+  // }, [rowSelected, isOpenDrawer])
 
   console.log("StateProduct", stateUserDetail);
   const handleDetailsUser = () => {
-    if (rowSelected) {
-      // setIsLoadingUpdate(true);
-      fetchGetDetailsUser();
+    if (rowSelected && isOpenDrawer) {
+      setIsLoadingUpdate(true)
+      fetchGetDetailsUser(rowSelected)
     }
     setIsOpenDrawer(true);
-    console.log("rowSelected", rowSelected);
   };
 
   const {
@@ -151,9 +150,9 @@ function AdminProductManagementPage() {
   const renderAction = () => {
     return (
       <div>
-        <button onClick={handleDetailsUser}>Chỉnh sửa</button>
+        <button className= "btn btn-outline-warning" onClick={handleDetailsUser}>Chỉnh sửa</button>
         <p>Huỷ kích hoạt</p>
-        <button onClick={() => setIsModalOpenDelete(true)}>Xoá</button>
+        <button className= "btn btn-outline-danger" onClick={() => setIsModalOpenDelete(true)}>Xoá</button>
       </div>
     );
   };
@@ -371,7 +370,7 @@ function AdminProductManagementPage() {
 
   return (
     <div className="container-fluid d-flex flex-column sidebar__container--height">
-      <button onClick={() => setIsModalOpen(true)}>Thêm sản phẩm</button>
+      <button className= "btn btn-outline-success"  onClick={() => setIsModalOpen(true)}>Thêm người dùng</button>
       <AdminTable
         columns={columns}
         isLoading={isLoadingUsers}
@@ -393,7 +392,7 @@ function AdminProductManagementPage() {
         onClose={() => {
           setIsOpenDrawer(false);
         }}
-        width="88%"
+        width="50%"
       >
         {" "}
         <Form>
@@ -470,7 +469,7 @@ function AdminProductManagementPage() {
             />
           </Form.Group>
         </Form>
-        <button onClick={onUpdateUser}>Apply</button>
+        <button className= "btn btn-outline-success"  onClick={onUpdateUser}>Apply</button>
       </DrawerComponent>
 
       <div
