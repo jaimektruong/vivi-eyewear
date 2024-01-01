@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./CheckoutPage.scss"; // Import your CSS file
+import "./CheckoutPage.scss"; 
 import { Link, useHistory } from "react-router-dom";
 import { Modal, Button } from "react-bootstrap";
 
@@ -36,17 +36,17 @@ const CheckoutPage = () => {
   const [street, setStreet] = useState("");
   const [district, setDistrict] = useState("");
   const [city, setCity] = useState("");
-  const [selectedPayment, setSelectedPayment] = useState(""); // Định nghĩa setSelectedPayment ở đây
+  const [selectedPayment, setSelectedPayment] = useState(""); 
 
   const applyDiscount = () => {
-    // Kiểm tra mã giảm giá ở đây (có thể thay bằng logic kiểm tra của bạn)
+    
     if (discountCode === "YOUR_DISCOUNT_CODE") {
       setAppliedDiscount(true);
       alert("Mã giảm giá đã được áp dụng!");
-      // Thực hiện các hành động khi mã giảm giá hợp lệ
+    
     } else {
       alert("Mã giảm giá không hợp lệ!");
-      // Xử lý khi mã không hợp lệ, ví dụ: hiển thị thông báo
+      
     }
   };
   const [showModal, setShowModal] = useState(false);
@@ -62,15 +62,15 @@ const CheckoutPage = () => {
       selectedPayment
     ) {
       if (selectedPayment === "bank-transfer") {
-        // Redirect to third-party payment page
-        window.location.href = "/bank-payment"; // Change this to the actual URL
+       
+        window.location.href = "/bank-payment"; 
       } else if (selectedPayment === "cash-on-delivery") {
         setShowModal(true);
-        // Handle other actions for cash on delivery
+       
       }
     } else {
       setShowModal(true);
-      // Handle case when information is incomplete
+    
     }
   };
 
