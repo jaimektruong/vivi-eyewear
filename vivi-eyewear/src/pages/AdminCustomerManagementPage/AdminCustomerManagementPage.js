@@ -1,168 +1,501 @@
-import React, { useState } from "react";
-import "./AdminCustomerManagement.scss";
-import CustomerList from "../../components/CustomerList/CustomerList";
+import { useEffect, useRef, useState } from "react";
+import "./AdminCustomerManagementPage.scss";
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
+import { getBase64 } from "../../utils";
+import * as UserService from "../../services/UserService";
+import { UseMutationHook } from "../../hooks/UseMutationHook";
+import { useQuery } from "@tanstack/react-query";
+import AdminTable from "../../components/AdminTable/AdminTable";
+import DrawerComponent from "../../components/DrawerComponent/DrawerComponent";
+import Form from "react-bootstrap/Form";
+import { useSelector } from "react-redux";
+import { SearchOutlined } from "@ant-design/icons";
+import { Input, Space } from "antd";
 
-const AdminCustomerManagementPage = () => {
-  const [customers, setCustomers] = useState([
-    {
-      name: "John Doe",
-      dateOfBirth: "1990-01-01",
-      group: "Admin",
-      gender: "Male",
-      phone: "1234567890",
-      avatar: "../assets/minhhoa.jpg",
-    },
-    {
-      name: "John Doe",
-      dateOfBirth: "1990-01-01",
-      group: "Admin",
-      gender: "Male",
-      phone: "1234567890",
-      avatar: "URL_HINH_ANH_QUAN_TRI_VIEN",
-    },
-    {
-      name: "John Doe",
-      dateOfBirth: "1990-01-01",
-      group: "Admin",
-      gender: "Male",
-      phone: "1234567890",
-      avatar: "URL_HINH_ANH_QUAN_TRI_VIEN",
-    },
-    // More customer data if needed
-  ]);
+function AdminProductManagementPage() {
+  const user = useSelector((state) => state?.user);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [rowSelected, setRowSelected] = useState("");
+  const [isOpenDrawer, setIsOpenDrawer] = useState(false);
+  const [isLoadingUpdate, setIsLoadingUpdate] = useState(false);
+  const [searchText, setSearchText] = useState("");
+  const [searchedColumn, setSearchedColumn] = useState("");
+  const searchInput = useRef(null);
+  const handleSearch = (selectedKeys, confirm, dataIndex) => {
+    confirm();
+    setSearchText(selectedKeys[0]);
+    setSearchedColumn(dataIndex);
+  };
+  const handleReset = (clearFilters) => {
+    clearFilters();
+    setSearchText("");
+  };
 
-  const [selectedCheckboxes, setSelectedCheckboxes] = useState(0);
+  const [isModalOpenDelete, setIsModalOpenDelete] = useState(false);
+  const [stateUser, setStateUser] = useState({
+    name: "",
+    email: "",
+    isAdmin: false,
+    phone: "",
+    address: "",
+    avatar: "",
+    city: "",
+  });
 
-  const handleCheckboxChange = (e) => {
-    const isChecked = e.target.checked;
-    setSelectedCheckboxes((prevCount) =>
-      isChecked ? prevCount + 1 : prevCount - 1
+  const [stateUserDetail, setStateUserDetail] = useState({
+    name: "",
+    email: "",
+    isAdmin: false,
+    phone: "",
+    address: "",
+    avatar: "",
+    city: "",
+  });
+
+  const mutationUpdate = UseMutationHook((data) => {
+    const { id, token, ...rests } = data;
+    const res = UserService.updateUser(id, token, { ...rests });
+    return res;
+  });
+
+  const mutationDelete = UseMutationHook((data) => {
+    const { token, id } = data;
+    const res = UserService.deleteUser(id, token);
+    return res;
+  });
+
+  const mutationDeleteMany = UseMutationHook((data) => {
+    const { token, ...ids } = data;
+    const res = UserService.deleteManyUser(ids, token);
+    return res;
+  });
+
+  const getAllUser = async () => {
+    const res = await UserService.getAllUser(user?.access_token);
+    console.log("res", res);
+    return res;
+  };
+
+  const fetchGetDetailsUser = async (rowSelected) => {
+    const res = await UserService.getDetailUser(rowSelected);
+    if (res?.data) {
+      setStateUserDetail({
+        name: res?.data?.name,
+        email: res?.data?.email,
+        isAdmin: res?.data?.isAdmin,
+        phone: res?.data?.phone,
+        address: res?.data?.address,
+        avatar: res?.data?.avatar,
+        city: res?.data?.city,
+      });
+    }
+    setIsLoadingUpdate(false);
+  };
+
+  const handleDeleteManyUsers = (ids) => {
+    mutationDeleteMany.mutate(
+      { ids: ids, token: user?.access_token },
+      {
+        onSettled: () => {
+          queryUser.refetch();
+        },
+      }
     );
   };
 
-  const handleEditClick = (customerId) => {
-    console.log(`Edit clicked for customer with ID ${customerId}`);
+  useEffect(() => {
+    if (rowSelected) {
+      fetchGetDetailsUser();
+      setIsOpenDrawer(true);
+    }
+  }, [rowSelected]);
+
+  console.log("StateProduct", stateUserDetail);
+  const handleDetailsUser = () => {
+    if (rowSelected) {
+      // setIsLoadingUpdate(true);
+      fetchGetDetailsUser();
+    }
+    setIsOpenDrawer(true);
+    console.log("rowSelected", rowSelected);
   };
 
-  const handleDeleteClick = (customerId) => {
-    const updatedCustomers = customers.filter(
-      (customer) => customer.id !== customerId
+  const {
+    data: dataUpdated,
+    isLoading: isLoadingUpdated,
+    isSuccess: isSuccessUpdated,
+    isError: isErrorUpdated,
+  } = mutationUpdate;
+  const {
+    data: dataDeleted,
+    isLoading: isLoadingDeleted,
+    isSuccess: isSuccessDeleted,
+    isError: isErrorDeleted,
+  } = mutationDelete;
+
+  const {
+    data: dataDeletedMany,
+    isLoading: isLoadingDeletedMany,
+    isSuccess: isSuccessDeletedMany,
+    isError: isErrorDeletedMany,
+  } = mutationDeleteMany;
+  console.log("dataDeleted", dataDeleted);
+
+  const queryUser = useQuery({
+    queryKey: ["users"],
+    queryFn: getAllUser,
+  });
+  const { isLoading: isLoadingUsers, data: users } = queryUser;
+
+  const renderAction = () => {
+    return (
+      <div>
+        <button onClick={handleDetailsUser}>Chỉnh sửa</button>
+        <p>Huỷ kích hoạt</p>
+        <button onClick={() => setIsModalOpenDelete(true)}>Xoá</button>
+      </div>
     );
-    setCustomers(updatedCustomers);
   };
 
-  const initialSearchValue = "";
-  const initialSelectedRole = "Nhóm";
-  const [searchValue, setSearchValue] = useState(initialSearchValue);
-  const [selectedRole, setSelectedRole] = useState(initialSelectedRole);
-
-  const handleSearchChange = (event) => {
-    setSearchValue(event.target.value);
-    // Handle search based on searchValue
+  const handleCancelDelete = () => {
+    setIsModalOpenDelete(false);
   };
 
-  const handleRoleSelect = (event) => {
-    setSelectedRole(event.target.value);
-    // Handle search based on selectedRole
+  // Product
+
+  const handleOnChange = (e) => {
+    setStateUser({
+      ...stateUser,
+      [e.target.name]: e.target.value,
+    });
   };
 
-  const handleLoadFromFile = () => {
-    // Handle load from file functionality
+  const handleCloseDrawer = () => {
+    setIsOpenDrawer(false);
+    setStateUserDetail({
+      name: "",
+      email: "",
+      isAdmin: "",
+      phone: "",
+      address: "",
+      avatar: "",
+      city: "",
+    });
   };
 
-  const handleExportToExcel = () => {
-    // Handle export to excel functionality
+  const handleOnChangeAvatar = async (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      file.preview = await getBase64(file);
+      setStateUser({
+        ...stateUser,
+        avatar: file.preview,
+      });
+    }
   };
 
-  const handleCopy = () => {
-    // Handle copy functionality
+  // Product Detail
+  const handleOnChangeDetail = (e) => {
+    console.log("check", e.target.name, e.target.value);
+    setStateUserDetail({
+      ...stateUserDetail,
+      [e.target.name]: e.target.value,
+    });
   };
 
-  const handleDelete = () => {
-    // Handle delete functionality
+  const handleOnChangeDetailAvatar = async (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      file.preview = await getBase64(file);
+      setStateUserDetail({
+        ...stateUserDetail,
+        avatar: file.preview,
+      });
+    }
   };
 
-  const handleReset = () => {
-    setSearchValue(initialSearchValue);
-    setSelectedRole(initialSelectedRole);
+  const onUpdateUser = () => {
+    mutationUpdate.mutate(
+      {
+        id: rowSelected,
+        token: user?.access_token,
+        ...stateUserDetail,
+      },
+      {
+        onSettled: () => {
+          queryUser.refetch();
+        },
+      }
+    );
   };
+
+  const dataTable =
+    users?.data?.length &&
+    users?.data?.map((product) => {
+      return { ...product, key: product._id };
+    });
+  console.log(dataTable);
+
+  useEffect(() => {
+    if (!isLoadingUpdated && isSuccessUpdated && dataUpdated?.status === "OK") {
+      alert("Success");
+      handleCloseDrawer();
+    } else if (isErrorUpdated) {
+      alert("Error");
+    }
+  }, [isLoadingUpdated, isSuccessUpdated]);
+
+  useEffect(() => {
+    if (isErrorDeleted && dataDeleted?.status === "OK") {
+      alert("Success");
+      handleCancelDelete();
+    } else if (isErrorDeleted) {
+      alert("Error");
+    }
+  }, [isSuccessDeleted]);
+  useEffect(() => {
+    if (isErrorDeletedMany && dataDeletedMany?.status === "OK") {
+      alert("Success");
+    } else if (isErrorDeletedMany) {
+      alert("Error");
+    }
+  }, [isSuccessDeletedMany]);
+
+  const handleDeleteProduct = () => {
+    mutationDelete.mutate(
+      { id: rowSelected, token: user?.access_token },
+      {
+        onSettled: () => {
+          queryUser.refetch();
+        },
+      }
+    );
+    setIsModalOpenDelete(false);
+  };
+
+  const getColumnSearchProps = (dataIndex) => ({
+    filterDropdown: ({
+      setSelectedKeys,
+      selectedKeys,
+      confirm,
+      clearFilters,
+    }) => (
+      <div
+        style={{
+          padding: 8,
+        }}
+        onKeyDown={(e) => e.stopPropagation()}
+      >
+        <Input
+          ref={searchInput}
+          placeholder={`Search ${dataIndex}`}
+          value={selectedKeys[0]}
+          onChange={(e) =>
+            setSelectedKeys(e.target.value ? [e.target.value] : [])
+          }
+          onPressEnter={() => handleSearch(selectedKeys, confirm, dataIndex)}
+          style={{
+            marginBottom: 8,
+            display: "block",
+          }}
+        />
+        <Space>
+          <Button
+            type="primary"
+            onClick={() => handleSearch(selectedKeys, confirm, dataIndex)}
+            icon={<SearchOutlined />}
+            size="small"
+            style={{
+              width: 90,
+            }}
+          >
+            Search
+          </Button>
+          <Button
+            onClick={() => clearFilters && handleReset(clearFilters)}
+            size="small"
+            style={{
+              width: 90,
+            }}
+          >
+            Reset
+          </Button>
+        </Space>
+      </div>
+    ),
+    filterIcon: (filtered) => (
+      <SearchOutlined
+        style={{
+          color: filtered ? "#1677ff" : undefined,
+        }}
+      />
+    ),
+    onFilter: (value, record) =>
+      record[dataIndex].toString().toLowerCase().includes(value.toLowerCase()),
+    onFilterDropdownOpenChange: (visible) => {
+      if (visible) {
+        setTimeout(() => searchInput.current?.select(), 100);
+      }
+    },
+  });
+
+  const columns = [
+    {
+      title: "Họ và tên",
+      dataIndex: "name",
+      sorter: (a, b) => a.name.length - b.name.length,
+      ...getColumnSearchProps("name"),
+    },
+    {
+      title: "Email",
+      dataIndex: "email",
+      sorter: (a, b) => a.type.length - b.type.length,
+    },
+    {
+      title: "Số điện thoại",
+      dataIndex: "phone",
+      sorter: (a, b) => a.price - b.price,
+    },
+    {
+      title: "Tỉnh/Thành",
+      dataIndex: "city",
+      sorter: (a, b) => a.city - b.city,
+    },
+    {
+      title: "Action",
+      dataIndex: "action",
+      render: renderAction,
+    },
+  ];
 
   return (
-    <div className="customer-management-page">
-      <div className="main-content">
-        <div className="header">
-          <h2>QUẢN LÝ KHÁCH HÀNG</h2>
-          <button>
-            <i className="bi bi-person-plus"></i> Thêm khách hàng
-          </button>
-        </div>
-        {/* Filter section */}
-        <div className="filter-frame">
-          <div className="filter-row">
-            <input
+    <div className="container-fluid d-flex flex-column sidebar__container--height">
+      <button onClick={() => setIsModalOpen(true)}>Thêm sản phẩm</button>
+      <AdminTable
+        columns={columns}
+        isLoading={isLoadingUsers}
+        data={dataTable}
+        onRow={(record, rowIndex) => {
+          return {
+            onClick: (event) => {
+              setRowSelected(record._id);
+            },
+          };
+        }}
+        handleDeleteManyProducts={handleDeleteManyUsers}
+      />
+      {/* dropdown khoảng giá */}
+
+      <DrawerComponent
+        title="Chi tiết sản phẩm"
+        isOpen={isOpenDrawer}
+        onClose={() => {
+          setIsOpenDrawer(false);
+        }}
+        width="88%"
+      >
+        {" "}
+        <Form>
+          <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+            <Form.Label>Tên sản phẩm</Form.Label>
+            <Form.Control
               type="text"
-              placeholder="Tìm kiếm khách hàng..."
-              value={searchValue}
-              onChange={handleSearchChange}
+              placeholder="Điền tên sản phẩm"
+              name="name"
+              value={stateUserDetail.name}
+              onChange={handleOnChangeDetail}
             />
-            <select value={selectedRole} onChange={handleRoleSelect}>
-              <option value="">Nhóm</option>
-              <option value="manager">Mới</option>
-              <option value="staff">Thân thiết</option>
-            </select>
-            <button id="reset" onClick={handleReset}>
-              Đặt lại
-            </button>
-          </div>
-          <div className="filter-row">
-            <div>Đã chọn: {selectedCheckboxes}</div>
-            <button onClick={handleLoadFromFile}>Tải từ file</button>
-            <button onClick={handleExportToExcel}>Xuất Excel</button>
-            <button onClick={handleCopy}>Sao chép</button>
-            <button onClick={handleDelete}>Xóa</button>
-          </div>
-        </div>
-        {/* Table section */}
-        <table className="admin-table-customer">
-          <thead id ="">
-            <tr>
-              <th>
-                <input type="checkbox" />
-              </th>
-              <th>Họ tên</th>
-              <th>Nhóm</th>
-              <th>Giới tính</th>
-              <th>Ngày sinh</th>
-              <th>Số điện thoại</th>
-              <th>Hành động</th>
-            </tr>
-          </thead>
-          <tbody>
-            {customers.map((customer) => (
-              <tr key={customer.id}>
-                <td>
-                  <input type="checkbox" onChange={handleCheckboxChange} />
-                </td>
-                <td>{customer.name}</td>
-                <td>{customer.group}</td>
-                <td>{customer.gender}</td>
-                <td>{customer.dateOfBirth}</td>
-                <td>{customer.phone}</td>
-                <td className="action-column">
-                  <div>
-                    <a href={`/edit/${customer.id}`}>Chi tiết</a>
-                  </div>
-                  <div>
-                    <a href={`/delete/${customer.id}`}>Xóa</a>
-                  </div>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+            <Form.Label>Loại sản phẩm</Form.Label>
+            <Form.Control
+              type="text"
+              name="email"
+              value={stateUserDetail.email}
+              onChange={handleOnChangeDetail}
+            />
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+            <Form.Label>San pham boi bat</Form.Label>
+            <Form.Control
+              type="text"
+              name="isAdmin"
+              value={stateUserDetail.isAdmin}
+              onChange={handleOnChangeDetail}
+            />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+            <Form.Label>Tồn kho</Form.Label>
+            <Form.Control
+              type="text"
+              name="phone"
+              value={stateUserDetail.phone}
+              onChange={handleOnChangeDetail}
+            />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+            <Form.Label>Giảm giá</Form.Label>
+            <Form.Control
+              type="text"
+              name="address"
+              value={stateUserDetail.address}
+              onChange={handleOnChangeDetail}
+            />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+            <Form.Label>Giảm giá</Form.Label>
+            <Form.Control
+              type="text"
+              name="city"
+              value={stateUserDetail.city}
+              onChange={handleOnChangeDetail}
+            />
+          </Form.Group>
+          <Form.Group controlId="exampleForm.ControlTextarea1" className="mb-3">
+            <Form.Label>Ảnh thủ nhỏ</Form.Label>
+            {stateUserDetail?.avatar && (
+              <img
+                src={stateUserDetail.avatar}
+                style={{ width: "64px", height: "64px" }}
+                alt="image_thumb"
+              />
+            )}
+            <Form.Control
+              type="file"
+              name="avatar"
+              onChange={handleOnChangeDetailAvatar}
+              multiple={false}
+            />
+          </Form.Group>
+        </Form>
+        <button onClick={onUpdateUser}>Apply</button>
+      </DrawerComponent>
+
+      <div
+        className="modal show"
+        style={{ display: "block", position: "initial" }}
+      >
+        <Modal show={isModalOpenDelete} onHide={handleCancelDelete}>
+          <Modal.Header closeButton>
+            <Modal.Title>Xoá sản phẩm</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <div>Bạn có muốn xoá sản phẩm không?</div>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="primary" onClick={handleDeleteProduct}>
+              Có
+            </Button>
+            <Button variant="secondary" onClick={handleCancelDelete}>
+              Không
+            </Button>
+          </Modal.Footer>
+        </Modal>
       </div>
     </div>
   );
-};
+}
 
-export default AdminCustomerManagementPage;
+export default AdminProductManagementPage;

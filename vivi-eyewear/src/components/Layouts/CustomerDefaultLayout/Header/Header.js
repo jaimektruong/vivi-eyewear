@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Logo from "../../../../assets/logo.png";
 import { Link } from "react-router-dom";
 import "./Header.scss";
+import { searchProduct } from "../../../../redux/slices/productSlice";
 
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -13,6 +14,8 @@ const Header = ({ handleInputChange, query }) => {
   const navigate = useNavigate();
   const user = useSelector((state) => state.user);
   const dispatch = useDispatch();
+  const [search, setSearch] = useState("");
+
   const [loading, setLoading] = useState(false);
   const [userName, setUserName] = useState("");
   const [userAvatar, setUserAvatar] = useState("");
@@ -44,7 +47,11 @@ const Header = ({ handleInputChange, query }) => {
   const handleProductMouseLeave = () => {
     setIsProductHovered(false);
   };
-
+  const onSearch = (e) => {
+    setSearch(e.target.value);
+    dispatch(searchProduct(e.target.value));
+  };
+  const isOnProductPage = window.location.pathname === "/san-pham";
   return (
     <nav className="navbar navbar-expand-sm align-items-center p-0 container-fluid header__container">
       <div className="container justify-content-center  container-header-styles header__container align-items-center ">
@@ -127,9 +134,14 @@ const Header = ({ handleInputChange, query }) => {
                 type="search"
                 placeholder="Nhập từ khoá cần tìm"
                 aria-label="Search"
-                value={query}
-                onChange={handleInputChange}
-                style={{ width: "300px", height: "40px" }}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") {
+                    onSearch(e);
+                    if (!isOnProductPage) {
+                      navigate("/san-pham");
+                    }
+                  }
+                }}
               />
             </div>
             <div className="col-xl-2 col-md-2 col-12 row">
@@ -138,7 +150,12 @@ const Header = ({ handleInputChange, query }) => {
                 {user?.access_token ? (
                   <div className="nav-item d-flex justify-content-center align-items-center dropdown">
                     {userAvatar ? (
-                      <img src={user.avatar} alt="avatar" className="rounded-circle" style={{width: "3rem"}} />
+                      <img
+                        src={user.avatar}
+                        alt="avatar"
+                        className="rounded-circle"
+                        style={{ width: "3rem" }}
+                      />
                     ) : (
                       <i className="bi bi-person-circle text-white dropdown-toggle "></i>
                     )}
@@ -146,9 +163,22 @@ const Header = ({ handleInputChange, query }) => {
                     <span className="text-white"> {user.name} </span>
 
                     <div
-                      className="dropdown-menu"
+                      className={`dropdown-menu ${
+                        isProductHovered ? "show" : ""
+                      }`}
                       aria-labelledby="navbarDropdown"
                     >
+                      {user?.isAdmin && (
+                        <button
+                          className="dropdown-item"
+                          onClick={() => {
+                            navigate("/admin");
+                          }}
+                        >
+                          Quản lý hệ thống
+                        </button>
+                      )}
+
                       <button
                         className="dropdown-item"
                         onClick={() => {
