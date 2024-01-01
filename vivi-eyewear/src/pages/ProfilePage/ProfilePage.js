@@ -55,14 +55,14 @@ function ProfilePage() {
   useEffect(() => {
     if (isSuccess) {
       alert("Sucess");
-      handleGetDetailUser(user?.id, user?.access_token);
+      handleGetDetailsUser(user?.id, user?.access_token);
     } else if (isError) {
       alert("Failed");
     }
   });
 
-  const handleGetDetailUser = async (id, token) => {
-    const res = await UserService.getDetailUser(id, token);
+  const handleGetDetailsUser = async (id, token) => {
+    const res = await UserService.getDetailsUser(id, token);
     dispatch(updateUser({ ...res?.data, access_token: token }));
   };
 

@@ -5,11 +5,11 @@ export const getAllProduct = async (search, limit) => {
   let res = {};
   if (search?.length > 0) {
     res = await axios.get(
-      `http://localhost:3000/api/product/get-all?filter=name&filter=${search}&limit=${limit}`
+      `http://localhost:3001/api/product/get-all?filter=name&filter=${search}&limit=${limit}`
     );
   } else {
     res = await axios.get(
-      `http://localhost:3000/api/product/get-all?limit=${limit}`
+      `http://localhost:3001/api/product/get-all?limit=${limit}`
     );
   }
   return res.data;
@@ -18,7 +18,7 @@ export const getAllProduct = async (search, limit) => {
 export const getProductType = async (type, page, limit) => {
   if (type) {
     const res = await axios.get(
-      `http://localhost:3000/api/product/get-all?filter=type&filter=${type}&limit=${limit}&page=${page}`
+      `http://localhost:3001/api/product/get-all?filter=type&filter=${type}&limit=${limit}&page=${page}`
     );
     return res.data;
   }
@@ -26,7 +26,7 @@ export const getProductType = async (type, page, limit) => {
 
 export const createProduct = async (data) => {
   const res = await axios.post(
-    `http://localhost:3000/api/product/create`,
+    `http://localhost:3001/api/product/create`,
     data
   );
   return res.data;
@@ -34,14 +34,14 @@ export const createProduct = async (data) => {
 
 export const getDetailsProduct = async (id) => {
   const res = await axios.get(
-    `http://localhost:3000/api/product/get-details/${id}`
+    `http://localhost:3001/api/product/get-details/${id}`
   );
   return res.data;
 };
 
 export const updateProduct = async (id, access_token, data) => {
   const res = await axiosJWT.put(
-    `http://localhost:3000/api/product/update/${id}`,
+    `http://localhost:3001/api/product/update/${id}`,
     data,
     {
       headers: {
@@ -54,7 +54,7 @@ export const updateProduct = async (id, access_token, data) => {
 
 export const deleteProduct = async (id, access_token) => {
   const res = await axiosJWT.delete(
-    `http://localhost:3000/api/product/delete/${id}`,
+    `http://localhost:3001/api/product/delete/${id}`,
     {
       headers: {
         token: `Bearer ${access_token}`,
@@ -66,7 +66,7 @@ export const deleteProduct = async (id, access_token) => {
 
 export const deleteManyProduct = async (data, access_token) => {
   const res = await axiosJWT.post(
-    `http://localhost:3000/api/product/delete-many`,
+    `http://localhost:3001/api/product/delete-many`,
     data,
     {
       headers: {
@@ -78,6 +78,6 @@ export const deleteManyProduct = async (data, access_token) => {
 };
 
 export const getAllTypeProduct = async () => {
-  const res = await axios.get(`http://localhost:3000/api/product/get-all-type`);
+  const res = await axios.get(`http://localhost:3001/api/product/get-all-type`);
   return res.data;
 };

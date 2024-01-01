@@ -31,37 +31,23 @@ function AdminProductManagementPage() {
     clearFilters();
     setSearchText("");
   };
-
+  const inittial = () => ({
+    name: "",
+    color: "",
+    material: "",
+    shape: "",
+    image_thumb: "",
+    image_detail: "",
+    type: "",
+    price: "",
+    featuredFlag: "",
+    countInStock: "",
+    discount: "",
+    description: "",
+  });
   const [isModalOpenDelete, setIsModalOpenDelete] = useState(false);
-  const [stateProduct, setStateProduct] = useState({
-    name: "",
-    color: "",
-    material: "",
-    shape: "",
-    image_thumb: "",
-    image_detail: "",
-    type: "",
-    price: "",
-    featuredFlag: "",
-    countInStock: "",
-    discount: "",
-    description: "",
-  });
-
-  const [stateProductDetail, setStateProductDetail] = useState({
-    name: "",
-    color: "",
-    material: "",
-    shape: "",
-    image_thumb: "",
-    image_detail: "",
-    type: "",
-    price: "",
-    featuredFlag: "",
-    countInStock: "",
-    discount: "",
-    description: "",
-  });
+  const [stateProduct, setStateProduct] = useState(inittial());
+  const [stateProductDetail, setStateProductDetail] = useState(inittial());
 
   const mutation = UseMutationHook((data) => {
     const {
@@ -135,24 +121,19 @@ function AdminProductManagementPage() {
       });
     }
     setIsLoadingUpdate(false);
-  };
+  }
 
   useEffect(() => {
-    if (rowSelected) {
-      fetchGetDetailsProduct(rowSelected);
-      setIsOpenDrawer(true);
+    if (rowSelected && isOpenDrawer) {
+      setIsLoadingUpdate(true)
+      fetchGetDetailsProduct(rowSelected)
     }
-  }, [rowSelected]);
+  }, [rowSelected, isOpenDrawer])
 
   console.log("StateProduct", stateProductDetail);
   const handleDetailsProduct = () => {
-    if (rowSelected) {
-      setIsLoadingUpdate(true);
-      fetchGetDetailsProduct();
-    }
-    setIsOpenDrawer(true);
-    console.log("rowSelected", rowSelected);
-  };
+    setIsOpenDrawer(true)
+  }
 
   const { data, isLoading, isSuccess, isError } = mutation;
   const {
@@ -184,9 +165,19 @@ function AdminProductManagementPage() {
   const renderAction = () => {
     return (
       <div>
-        <button onClick={handleDetailsProduct}>Chỉnh sửa</button>
+        <button
+          className="btn btn-outline-warning"
+          onClick={handleDetailsProduct}
+        >
+          Chỉnh sửa
+        </button>
         <p>Huỷ kích hoạt</p>
-        <button onClick={() => setIsModalOpenDelete(true)}>Xoá</button>
+        <button
+          className="btn btn-outline-danger"
+          onClick={() => setIsModalOpenDelete(true)}
+        >
+          Xoá
+        </button>
       </div>
     );
   };
@@ -519,7 +510,12 @@ function AdminProductManagementPage() {
 
   return (
     <div className="container-fluid d-flex flex-column sidebar__container--height">
-      <button onClick={() => setIsModalOpen(true)}>Thêm sản phẩm</button>
+      <button
+        className="btn btn-outline-success "
+        onClick={() => setIsModalOpen(true)}
+      >
+        Thêm sản phẩm
+      </button>
       <AdminTable
         columns={columns}
         isLoading={isLoadingProducts}
@@ -726,7 +722,7 @@ function AdminProductManagementPage() {
         onClose={() => {
           setIsOpenDrawer(false);
         }}
-        width="88%"
+        width="50%"
       >
         {" "}
         <Form>
@@ -858,7 +854,9 @@ function AdminProductManagementPage() {
             />
           </Form.Group>
         </Form>
-        <button onClick={onUpdateProduct}>Apply</button>
+        <button className="btn btn-outline-success" onClick={onUpdateProduct}>
+          Apply
+        </button>
       </DrawerComponent>
 
       <div
